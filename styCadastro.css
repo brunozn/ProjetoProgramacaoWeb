@@ -1,0 +1,57 @@
+body {
+    font-family: 'open sans', helvetica, arial, sans;
+  background:url(http://farm8.staticflickr.com/7064/6858179818_5d652f531c_h.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  #sitename{
+      font: Arial;
+      font-size: 30px;
+  }
+  
+  #navegacao {
+      background-color:rgb(86, 58, 245);
+      border-radius:  0;
+      border: 0;
+      /*height: 100px;*/
+      padding-top: 15px;
+      padding-bottom: 25px;
+  }
+  
+  #links-navegacao {
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+  }
+  
+  #links-navegacao a:hover {
+      background: #E7E7E7;
+  }
+  
+  #main-content {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+  }
+  
+  #main-content .jumbotron {
+      background-size: auto;
+      /*height: 250px;*/
+      /*position: relative; */
+      position: center;
+      text-align: center;
+  }
+  
+  .slideTwo {
+    width: 80px;
+    height: 30px;
+    background: #333;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 50px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  }
+  
