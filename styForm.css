@@ -5,3 +5,26 @@
 .h1{
     text-align: center;
 }
+
+#navegacao {
+    background-color:rgb(86, 58, 245);
+    border-radius:  0;
+    border: 0;
+    /*height: 100px;*/
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+
+#links-navegacao {
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#links-navegacao a:hover {
+    background: #E7E7E7;
+}
+
+#btn-primary{
+text-align: center;
+}
