@@ -39,13 +39,15 @@ h1{
 
 #search-form {
 	position: relative;
-	width: 80%;
+	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 15em;
+	padding-top: 3em;
 	padding-bottom: 15em;
-	text-align: center;
+  text-align: center;
+  background-size: 100px;
 }
+
 
 /* Banner dois.. area das vagas*/
 #main-banner2{
@@ -57,12 +59,13 @@ h1{
 
 #search-form2 {
 	position: relative;
-	width: 80%;
+	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 15em;
+	padding-top: 5em;
 	padding-bottom: 15em;
-	text-align: center;
+  text-align: center;
+
 }
 
 .btn-container1{
@@ -111,13 +114,24 @@ h1{
   margin-right: auto;
 }
 
+.account-pages b{
+  text-align: center;
+
+}
+
+#colorido:hover{
+  /* visited link */
+    color: #00FF00;  
+  /*color: #00FF00;*/
+}
+
 #navegacao {
     background-color: #062F4F;
     border-radius:  0;
     border: 0;
-    /*height: 100px;*/
+    height: 50px;
     padding-top: 15px;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
 }
 
 #links-navegacao {
@@ -176,10 +190,11 @@ div #testmony-box{
 }
 
 img {
-  width: 100px;
+  /*width: 100px;*/
   height: 100px;
   object-fit: scale-down;
 }
+
 
 .carousel_area {
   width: 100%;
@@ -392,6 +407,96 @@ row{
   transition: opacity .15s ease;
 }
 
+/*Tela de caadastro*/
+
+.btn-bordered.btn-custom {
+  background-color: #55748f;
+  border-bottom: 2px solid #55748f!important;
+}
+
+.container-alt {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.radio {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.radio input[type=radio] {
+  position: absolute;
+  margin-top: 4px\9;
+  margin-left: -20px;
+  line-height: normal;
+}
+
+.col-xs-12 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+
+.row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+#register-cont {
+  margin: 5% auto;
+  position: relative;
+  max-width: 640px;
+}
+
+.m-t-30 {
+  margin-top: 30px!important;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.text-center {
+  text-align: center!important;
+  margin-top: 30px;
+}
+
+.text-uppercase {
+  text-transform: uppercase!important;
+  margin-bottom: .5rem;
+  font-weight: 1000;
+  line-height: 1.2;
+  margin-top: auto;
+  margin-top: 10px;
+}
+
+/* pagina anuncio*/
+
+.w3-bar{
+margin-left: auto;
+margin-right: auto;
+}
+
+#conteine {
+  background-color: turquoise;
+  padding-bottom: 100px;
+}
+
+img-fluid{
+  block-size: 100px;
+}
+
+
+
 /*
 #eventos, #grupos, #mapa{
     position: relative;
@@ -458,6 +563,210 @@ row{
     width: 80%;
     background-color: white;
 }
+
+
+/*------------------ FORMULRIO */
+.page-container {
+  width: auto;
+  margin: auto;
+  display: grid;
+}
+
+.posting-container {
+  border: none;
+  padding: 20px;
+}
+
+.error-notification {
+  top: 20px;
+  padding: 5px;
+  background-color: #ffd2d2;
+  border-radius: 3px;
+  border: 1px #f72626 solid;
+  display: none;
+}
+
+.mobile-panels {
+  padding-bottom: 60px;
+}
+/* */
+.col-md-4{
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+ padding-left: 70px;
+}
+
+
+
+.mobile-panels>div.show {
+  display: block;
+}
+
+.mobile-panels>div {
+  position: absolute;
+  left: 0;
+  width: 90%;
+  padding: 0 5% 20px;
+  height: calc(100% - 135px);
+  overflow: auto;
+  margin-bottom: 60px;
+  animation: none;
+  display: none;
+}
+
+.align-center {
+  text-align: center;
+}
+
+
+.blue {
+  color:#062F4F;
+}
+
+.heading.grey {
+  color: #555;
+}
+.margin-top {
+  margin-top: 15px;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+.bold {
+  font-weight: 400;
+}
+.heading--medium {
+  font-size: 1.25rem;
+  font-weight: 200;
+}
+
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.heading.grey {
+  color: #555;
+}
+
+h2.heading {
+  border-bottom: 1px #cdcdcd solid;
+  padding: 10px 0;
+  margin-bottom: 30px;
+}
+
+label {
+  margin: 30px 0 10px;
+  display: block;
+}
+
+.address-button-left {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right-width: 0;
+  float: left;
+  user-select: none;
+  background: #fff;
+  width: 85%;
+}
+.input_field {
+  font-weight: 400;
+  color: #333;
+  font-size: 1rem;
+  line-height: 20px;
+  height: 45px;
+  line-height: 45px;
+  width: 100%;
+  border-radius: 3px;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 0 15px;
+  color: #323232;
+  border: 1px #dcdcdc solid;
+  background-color: #fff;
+}
+
+.address-button-right {
+  height: 45px;
+  width: 15%;
+  border-radius: 0 4px 4px 0;
+  float: right;
+  padding: 0;
+  outline: 0;
+}
+
+.btn-blue {
+  background:#062F4F;
+  border-color: #062F4F;
+}
+
+element.style {
+  display: none;
+}
+
+.has-error .error-msg {
+  /* display: block; */
+}
+
+.error-msg, .error-msg-specific {
+  font-weight: 400;
+  color: #f72626;
+  font-size: .75rem;
+  line-height: 18px;
+  display: none;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.location_field_results_title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #525252;
+  margin-bottom: 5px;
+}
+
+.error-msg, .error-msg-specific {
+  font-weight: 400;
+  color: #f72626;
+  font-size: .75rem;
+  /* line-height: 18px; */
+  display: none;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.location_field_results_area {
+  position: relative;
+  top: 0;
+}
+
+.location_field_results_area {
+  color: #525252;
+  display: none;
+  position: absolute;
+  top: 65px;
+  width: 100%;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+/* -------------------------- */
 
 /*----------------------------------------------------*/
 @grey:#2a2a2a;

@@ -1,23 +1,150 @@
 <DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home</title>
+  <title>Formulario</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="styForm.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+  <script>
+    
+    $(document).ready(function() {
+    $('#contact_form').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            first_name: {
+                validators: {
+                        stringLength: {
+                        min: 2,
+                    },
+                        notEmpty: {
+                        message: 'Please supply your first name'
+                    }
+                }
+            },
+             last_name: {
+                validators: {
+                     stringLength: {
+                        min: 2,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your last name'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your email address'
+                    },
+                    emailAddress: {
+                        message: 'Please supply a valid email address'
+                    }
+                }
+            },
+            phone: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your phone number'
+                    },
+                    phone: {
+                        country: 'US',
+                        message: 'Please supply a vaild phone number with area code'
+                    }
+                }
+            },
+            address: {
+                validators: {
+                     stringLength: {
+                        min: 8,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your street address'
+                    }
+                }
+            },
+            city: {
+                validators: {
+                     stringLength: {
+                        min: 4,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your city'
+                    }
+                }
+            },
+            state: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select your state'
+                    }
+                }
+            },
+            zip: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your zip code'
+                    },
+                    zipCode: {
+                        country: 'US',
+                        message: 'Please supply a vaild zip code'
+                    }
+                }
+            },
+            comment: {
+                validators: {
+                      stringLength: {
+                        min: 10,
+                        max: 200,
+                        message:'Please enter at least 10 characters and no more than 200'
+                    },
+                    notEmpty: {
+                        message: 'Please supply a description of your project'
+                    }
+                    }
+                }
+            }
+        })
+        .on('success.form.bv', function(e) {
+            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                $('#contact_form').data('bootstrapValidator').resetForm();
+
+            // Prevent form submission
+            e.preventDefault();
+
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
+});
+
+
+    </script>
 
         <nav id="navegacao" class="navbar navbar-expand-sm navbar-dark">
  
                 <div class="container">
                 <!-- Brand/logo -->
                 <a class="navbar-brand" href="#">
-                  <img src="./logo.png" alt="logo" style="width:100px;">
+                  <img src="Imgs/logo.png" alt="logo" style="width:50px;">
                 </a>
                 <p id="sitename">Ajudaí</p>
                 
@@ -28,1239 +155,259 @@
                 </button>
               
                 <!-- Links -->
-                <div class="collapse navbar-collapse ml-auto" id="links-navegacao">
-                    <ul class="navbar-nav ml-auto"> <!--ml-auto to the right-->
-                      <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="anuncio.html">Vagas Disponíveis</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="Cadastrar.html">Anuncie Aqui</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="anuncio.html">Login</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre</a>
-                      </li>
-                    </ul>
+<div class="collapse navbar-collapse ml-auto" id="links-navegacao">
+        <ul class="navbar-nav ml-auto"> <!--ml-auto to the right-->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Cadastrar.html">  <strong> Anuncie Aqui </strong>  </a>
+          </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#last-container">Vagas Recentes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="anuncioProcura.html">Pessoas procurando</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="anuncio.html">Vagas Disponíveis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contato1">Sobre</a>
+            </li>
+      </ul>
+      </div>
+      
+        </div>
+      </nav>
+
+
+      <!---------------------------------------------------------------------------------------------------
+    -->
+    <div class="container">
+
+        <div class="mobile-panels">
+            <div data-mobile="1" id="mobStep1" class="show"> <!--inicio  mobStep1-->
+                <div class="box-content align-center">
+                    <h1 class="blue">Anuncie seu quarto</h1>
+                        <p class="text--small">Os campos marcados com asteríscos * são obrigatórios</p>
                 </div>
-              
-              </div>
-              </nav>
+
+            </div>
+        </div>
+
+      <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+  <fieldset>
+  
+  
+  <div class="form-group">
+    <label class="col-md-4 control-label">First Name</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Text input-->
+  
+  <div class="form-group">
+    <label class="col-md-4 control-label" >Last Name</label> 
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Text input-->
+         <div class="form-group">
+    <label class="col-md-4 control-label">E-Mail</label>  
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+    <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Text input-->
+         
+  <div class="form-group">
+    <label class="col-md-4 control-label">Phone #</label>  
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+    <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Text input-->
+        
+  <div class="form-group">
+    <label class="col-md-4 control-label">Address</label>  
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+    <input name="address" placeholder="Address" class="form-control" type="text">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Text input-->
+   
+  <div class="form-group">
+    <label class="col-md-4 control-label">City</label>  
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+    <input name="city" placeholder="city" class="form-control"  type="text">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Select Basic -->
+     
+  <div class="form-group"> 
+    <label class="col-md-4 control-label">State</label>
+      <div class="col-md-4 selectContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+      <select name="state" class="form-control selectpicker" >
+        <option value=" " >Please select your state</option>
+        <option>Alabama</option>
+        <option>Alaska</option>
+        <option >Arizona</option>
+        <option >Arkansas</option>
+        <option >California</option>
+        <option >Colorado</option>
+        <option >Connecticut</option>
+        <option >Delaware</option>
+        <option >District of Columbia</option>
+        <option> Florida</option>
+        <option >Georgia</option>
+        <option >Hawaii</option>
+        <option >daho</option>
+        <option >Illinois</option>
+        <option >Indiana</option>
+        <option >Iowa</option>
+        <option> Kansas</option>
+        <option >Kentucky</option>
+        <option >Louisiana</option>
+        <option>Maine</option>
+        <option >Maryland</option>
+        <option> Mass</option>
+        <option >Michigan</option>
+        <option >Minnesota</option>
+        <option>Mississippi</option>
+        <option>Missouri</option>
+        <option>Montana</option>
+        <option>Nebraska</option>
+        <option>Nevada</option>
+        <option>New Hampshire</option>
+        <option>New Jersey</option>
+        <option>New Mexico</option>
+        <option>New York</option>
+        <option>North Carolina</option>
+        <option>North Dakota</option>
+        <option>Ohio</option>
+        <option>Oklahoma</option>
+        <option>Oregon</option>
+        <option>Pennsylvania</option>
+        <option>Rhode Island</option>
+        <option>South Carolina</option>
+        <option>South Dakota</option>
+        <option>Tennessee</option>
+        <option>Texas</option>
+        <option> Uttah</option>
+        <option>Vermont</option>
+        <option>Virginia</option>
+        <option >Washington</option>
+        <option >West Virginia</option>
+        <option>Wisconsin</option>
+        <option >Wyoming</option>
+      </select>
+    </div>
+  </div>
+  </div>
+  
+  <!-- Text input-->
+  
+  <div class="form-group">
+    <label class="col-md-4 control-label">Zip Code</label>  
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+    <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+      </div>
+  </div>
+  </div>
+  
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label">Website or domain name</label>  
+     <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+    <input name="website" placeholder="Website or domain name" class="form-control" type="text">
+      </div>
+    </div>
+  </div>
+  
+  <!-- radio checks -->
+   <div class="form-group">
+                          <label class="col-md-4 control-label">Do you have hosting?</label>
+                          <div class="col-md-4">
+                              <div class="radio">
+                                  <label>
+                                      <input type="radio" name="hosting" value="yes" /> Yes
+                                  </label>
+                              </div>
+                              <div class="radio">
+                                  <label>
+                                      <input type="radio" name="hosting" value="no" /> No
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+  
+  <!-- Text area -->
+    
+  <div class="form-group">
+    <label class="col-md-4 control-label">Project Description</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+            <textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+    </div>
+    </div>
+  </div>
+  
+  <!-- Success message -->
+  <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+  
+  <!-- Button -->
+  <div class="form-group">
+    <label class="col-md-4 control-label"></label>
+    <div class="col-md-4">
+      <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+    </div>
+  </div>
+  
+  </fieldset>
+  </form>
+  </div>
+      </div><!-- /.container -->
 
 
-<div class="page-container" id="roomPosting" style="min-height: calc(100% - 70px);">
-    \<form>
-      <div class="posting-container">
+</body>
   
-          <div id="page-wrap">
-  
-              <div id="errorNote" class="error-notification desktop-hide">Por favor, corrija os erros marcados antes de continuar</div>
-  
-              <div class="mobile-panels">
-                  <div data-mobile="1" id="mobStep1" class="show">
-                      <div class="box-content align-center">
-                          <h1 class="orange">Anuncie seu quarto</h1>
-                              <p class="text--small">Os campos marcados com asteríscos * são obrigatórios</p>
-                      </div>
-  
-                      <h2 class="heading heading--info grey bold">Sobre a localização</h2>
-  <div class="location_field_div" id="location_field_div">
-      <location-search-properties data-api-key="AIzaSyDPBQPr3cEuwJ-JCHUIWC04hxWbEYwaU2M" data-country-code="BR" data-language-code="pt">
-      </location-search-properties>
-  
-      <div class="box-content location-area">
-          <div>
-              <label>Indique seu endereço completo</label>
-              <input type="text" id="search-location" class="input_field address-button-left" data-test="pf-searchtext" placeholder="ex: Rua Três Rios 285, Bom Retiro, São Paulo..." value="" autocomplete="off">
-              <button id="map-search" class="btn-orange address-button-right">
-                  <svg id="ico-search" viewBox="0 0 30.239 30.239" width="100%" height="100%" style="height: 22px;vertical-align: bottom;"><g style="fill: #fff;"><path d="M20.194,3.46c-4.613-4.613-12.121-4.613-16.734,0c-4.612,4.614-4.612,12.121,0,16.735    c4.108,4.107,10.506,4.547,15.116,1.34c0.097,0.459,0.319,0.897,0.676,1.254l6.718,6.718c0.979,0.977,2.561,0.977,3.535,0    c0.978-0.978,0.978-2.56,0-3.535l-6.718-6.72c-0.355-0.354-0.794-0.577-1.253-0.674C24.743,13.967,24.303,7.57,20.194,3.46z    M18.073,18.074c-3.444,3.444-9.049,3.444-12.492,0c-3.442-3.444-3.442-9.048,0-12.492c3.443-3.443,9.048-3.443,12.492,0    C21.517,9.026,21.517,14.63,18.073,18.074z"></path></g></svg>
-                  <div class="clear"></div>
-              </button>
-          </div>
-  
-          <!-- error location field -->
-          <div class="location_field_error location-not-found" data-test="pf-invalid-location" style="display: none;">
-              <p class="error-msg">Não pudemos reconhecer o endereço. Por favor indique seu endereço completo.</p>
-          </div>
-  
-          <div class="location_field_error location-not-selected" data-test="pf-blank-location" style="display: none;">Não pudemos reconhecer o endereço. Por favor indique seu endereço completo.</div>
-          <!-- end error location field -->
-          <!-- google map api location results -->
-          <div class="location_field_results_area" style="display: none;">
-              <div class="location_field_results_title has-error">
-                  <p class="error-msg">Nós temos múltiplas seleções para esta localidade. Favor selecionar a localizção correta da sua propriedade. </p>
-              </div>
-              <div class="location_field_results">
-              </div>
-          </div>
-          <!-- end google map api location results -->
-  
-          <div class="map-parent margin-top">
-              <p class="align-center">Confirme a localização do seu endereço</p>
-              <div id="map" class="map-element" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div style="overflow: hidden;"></div><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;"><div style="z-index: 4; position: absolute; left: 50%; top: 50%; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div></div><iframe aria-hidden="true" frameborder="0" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;" src="about:blank"></iframe></div></div></div>
-                  <div class="mobile-hide">
-                      <button class="button button-orange button--flat button--long button--large margin-top" id="confirmLocBtn">Confirmar endereço</button>
-                  </div>
-          </div>
-  
-      </div>
-      <div class="clear"></div>
-  </div>
-                  </div>
-  
-                  <div data-mobile="2" id="mobStep2" class="desktop-hide">
-                      <h2 id="one" class="scroll-section heading heading--info grey bold" data-screen="2">A propriedade</h2>
-  <div class="box-content">
-  
-      <div id="dwellingCode" class="validation-box is-mandatory">
-          <label>Tipo de moradia</label>          
-          <div class="radio-container button-3">
-              <div>
-                  <input type="radio" id="propertyType1" name="radio2" data-prop="dwellingCode" data-value="01">
-                  <label for="propertyType1">Apartamento</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="propertyType2" name="radio2" data-prop="dwellingCode" data-value="02">
-                  <label for="propertyType2">Casa</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="propertyType3" name="radio2" data-prop="dwellingCode" data-value="05">
-                  <label for="propertyType3">Kitnet</label>
-              </div>
-          </div>
-          <p class="error-msg">Escolha o tipo de moradia</p>
-      </div>
-  
-      <div id="numBedrooms" class="validation-box">
-          <label>nº de quartos</label>
-          <div class="num-increment desktop-hide" data-prop="totalBedrooms">
-              <div class="num-increment--minus adjust" data-type="-"></div>
-              <input type="number" class="num-increment--num" value="1" data-prop="totalBedrooms" data-min="1" data-max="9">
-              <div class="num-increment--plus adjust" data-type="+"></div>
-          </div>
-  
-          <div class="radio-container button-9 mobile-hide" data-field="numBedrooms">
-              <div>
-                  <input type="radio" id="numBedrooms1" name="numBedrooms" data-prop="totalBedrooms" data-value="1" checked="checked">
-                  <label for="numBedrooms1">1</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBedrooms2" name="numBedrooms" data-prop="totalBedrooms" data-value="2">
-                  <label for="numBedrooms2">2</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBedrooms3" name="numBedrooms" data-prop="totalBedrooms" data-value="3">
-                  <label for="numBedrooms3">3</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBedrooms4" name="numBedrooms" data-prop="totalBedrooms" data-value="4">
-                  <label for="numBedrooms4">4</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBedrooms5" name="numBedrooms" data-prop="totalBedrooms" data-value="5">
-                  <label for="numBedrooms5">5</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBedrooms6" name="numBedrooms" data-prop="totalBedrooms" data-value="6">
-                  <label for="numBedrooms6">6</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBedrooms7" name="numBedrooms" data-prop="totalBedrooms" data-value="7">
-                  <label for="numBedrooms7">7</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBedrooms8" name="numBedrooms" data-prop="totalBedrooms" data-value="8">
-                  <label for="numBedrooms8">8</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBedrooms9" name="numBedrooms" data-prop="totalBedrooms" data-value="9">
-                  <label for="numBedrooms9">9+</label>
-              </div>
-          </div>
-      </div>
-  
-      <div>
-          <label>nº de banheiros</label>
-          <div class="num-increment desktop-hide" data-prop="totalBathrooms">
-              <div class="num-increment--minus adjust" data-type="-"></div>
-              <input type="number" class="num-increment--num" value="1" data-prop="totalBathrooms" data-min="1" data-max="9">
-              <div class="num-increment--plus adjust" data-type="+"></div>
-          </div>
-  
-          <div class="radio-container button-9 mobile-hide" data-field="numBathRooms">
-              <div>
-                  <input type="radio" id="numBathRooms1" name="numBathRooms" data-prop="totalBathrooms" data-value="1" checked="checked">
-                  <label for="numBathRooms1">1</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBathRooms2" name="numBathRooms" data-prop="totalBathrooms" data-value="2">
-                  <label for="numBathRooms2">2</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBathRooms3" name="numBathRooms" data-prop="totalBathrooms" data-value="3">
-                  <label for="numBathRooms3">3</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBathRooms4" name="numBathRooms" data-prop="totalBathrooms" data-value="4">
-                  <label for="numBathRooms4">4</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBathRooms5" name="numBathRooms" data-prop="totalBathrooms" data-value="5">
-                  <label for="numBathRooms5">5</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBathRooms6" name="numBathRooms" data-prop="totalBathrooms" data-value="6">
-                  <label for="numBathRooms6">6</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBathRooms7" name="numBathRooms" data-prop="totalBathrooms" data-value="7">
-                  <label for="numBathRooms7">7</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBathRooms8" name="numBathRooms" data-prop="totalBathrooms" data-value="8">
-                  <label for="numBathRooms8">8</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="numBathRooms9" name="numBathRooms" data-prop="totalBathrooms" data-value="9">
-                  <label for="numBathRooms9">9+</label>
-              </div>
-          </div>
-      </div>
-  
-      <div id="availableRooms" class="validation-box">
-          <label>Quartos disponíveis para alugar</label>            
-          <div class="num-increment desktop-hide" data-prop="availableBedrooms">
-              <div class="num-increment--minus adjust" data-type="-"></div>
-              <input type="number" class="num-increment--num" value="1" data-min="1" data-max="9">
-              <div class="num-increment--plus adjust" data-type="+"></div>
-          </div>
-  
-          <div class="radio-container button-9 mobile-hide" data-field="availableRooms">
-              <div>
-                  <input type="radio" id="availableRooms1" name="availableRooms" data-prop="availableBedrooms" data-value="1" checked="checked">
-                  <label for="availableRooms1">1</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="availableRooms2" name="availableRooms" data-prop="availableBedrooms" data-value="2">
-                  <label for="availableRooms2">2</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="availableRooms3" name="availableRooms" data-prop="availableBedrooms" data-value="3">
-                  <label for="availableRooms3">3</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="availableRooms4" name="availableRooms" data-prop="availableBedrooms" data-value="4">
-                  <label for="availableRooms4">4</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="availableRooms5" name="availableRooms" data-prop="availableBedrooms" data-value="5">
-                  <label for="availableRooms5">5</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="availableRooms6" name="availableRooms" data-prop="availableBedrooms" data-value="6">
-                  <label for="availableRooms6">6</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="availableRooms7" name="availableRooms" data-prop="availableBedrooms" data-value="7">
-                  <label for="availableRooms7">7</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="availableRooms8" name="availableRooms" data-prop="availableBedrooms" data-value="8">
-                  <label for="availableRooms8">8</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="availableRooms9" name="availableRooms" data-prop="availableBedrooms" data-value="9">
-                  <label for="availableRooms9">9+</label>
-              </div>
-          </div>
-          <p class="error-msg">Favor selecionar o número de quartos disponíveis</p>
-      </div>
-  
-      <div>
-          <label>Comodidades da propriedade</label>
-  
-          <div class="align-center">
-              <div class="form_field custom-checkbox image-checkbox opt-tv">
-                  <input type="checkbox" id="testCheck15" data-prop="amenityTv">
-                  <label for="testCheck15">TV</label>
-              </div>
-  
-              <div class="form_field custom-checkbox image-checkbox opt-parking">
-                  <input type="checkbox" id="testCheck14" data-prop="amenityParking">
-                  <label for="testCheck14">Garagem</label>
-              </div>
-  
-              <div class="form_field custom-checkbox image-checkbox opt-garden">
-                  <input type="checkbox" id="testCheck13" data-prop="amenityGarden">
-                  <label for="testCheck13">Quintal</label>
-              </div>
-  
-              <div class="form_field custom-checkbox image-checkbox opt-terrace">
-                  <input type="checkbox" id="testCheck12" data-prop="amenityBalcony">
-                  <label for="testCheck12">Varanda/ sacada</label>
-              </div>
-  
-              <div class="form_field custom-checkbox image-checkbox opt-concierge">
-                  <input type="checkbox" id="testCheck11" data-prop="amenityBikeStorageOrDoorMan">
-                  <label for="testCheck11">Porteiro</label>
-              </div>
-  
-              <div class="form_field custom-checkbox image-checkbox opt-gym">
-                  <input type="checkbox" id="testCheck10" data-prop="amenityGym">
-                  <label for="testCheck10">Academia</label>
-              </div>
-  
-              <div class="form_field custom-checkbox image-checkbox opt-elevator">
-                  <input type="checkbox" id="testCheck9" data-prop="amenityElevator">
-                  <label for="testCheck9">Elevador</label>
-              </div>
-  
-              <div class="form_field custom-checkbox image-checkbox opt-wifi">
-                  <input type="checkbox" id="testCheck8" data-prop="amenityWifi">
-                  <label for="testCheck8">Internet</label>
-              </div>
-          </div>
-      </div>
-  
-  </div><!-- box content -->
-  
-  
-                  </div>
-  
-                  <div data-mobile="3" id="mobStep3" class="desktop-hide">
-                      <h2 id="two" class="scroll-section heading heading--info grey bold" data-screen="3">Sobre o quarto</h2>
-  <div class="box-content">
-      <div id="rent" class="validation-box is-mandatory">
-          <label>Aluguel por mês (R$)</label>           
-          <div class="currency_input">
-              <div>R$</div>
-              <input type="number" min="1" maxlength="4" name="MaxRent" pattern="\d*" placeholder="0" data-prop="rent" class="input_field" autocomplete="off" value="">
-          </div>
-          <p class="error-msg">Ao digitar o preço do aluguel, por favor, faça sem usar qualquer símbolo decimal ou moeda. Ex: R $ 500,00 seria inserido como 500.</p>
-      </div>
-              
-      <div class="form_field custom-checkbox">
-          <input type="checkbox" id="utilsNotIncluded" data-prop="utilitiesNotIncluded">
-          <label for="utilsNotIncluded">Contas não incluídas</label>
-      </div>
-  
-      <div id="utilitiesAmount" class="validation-box hidden">
-          <label>Contas por mês (R$)</label>          
-          <div class="currency_input">
-              <div>R$</div>
-              <input type="number" name="utilitiesAmount" placeholder="0" data-prop="utilitiesAmount" pattern="\d*" class="input_field" autocomplete="off">
-          </div>
-          <p class="error-msg">Por favor entre um valor numérico, sem caracteres especiais</p>
-      </div>
-  
-      <div id="roomType" class="validation-box is-mandatory">
-          <label>Tipo de Quarto</label>                
-          <div class="radio-container button-3">
-              <div>
-                  <input type="radio" id="roomType1" name="roomType" data-prop="roomType" data-value="1">
-                  <label for="roomType1">Solteiro</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="roomType2" name="roomType" data-prop="roomType" data-value="2">
-                  <label for="roomType2">Casal</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="roomType3" name="roomType" data-prop="roomType" data-value="4">
-                  <label for="roomType3">Compartilhado</label>
-              </div>
-          </div>
-          <p class="error-msg">Favor selecionar o tamanho do quarto</p>
-      </div>
-  
-      <div id="squareMeters" class="validation-box">
-          <label>Quarto em metros quadrados</label>
-          <input type="number" name="squareMeters" data-prop="squareMeters" pattern="\d*" class="input_field" autocomplete="off">
-          <p class="error-msg">Por favor entre um valor numérico, sem caracteres especiais</p>
-      </div>
-  
-      <div id="amenityFurnished" class="validation-box is-mandatory">
-          <label>Mobiliado ou não mobiliado</label>              
-          <div class="radio-container button-2">
-              <div>
-                  <input type="radio" id="furnishedRoom1" name="furnishedRoom" data-prop="amenityFurnished" data-value="true">
-                  <label for="furnishedRoom1">Mobiliado</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="furnishedRoom2" name="furnishedRoom" data-prop="amenityFurnished" data-value="false">
-                  <label for="furnishedRoom2">Sem mobília</label>
-              </div>
-          </div>
-          <p class="error-msg">Favor selecionar se o quarto é mobiliado</p>
-      </div>
-      <div class="form_field custom-checkbox">
-          <input type="checkbox" id="AmenityEnsuiteBathroom" data-prop="amenityEnsuiteBathroom">
-          <label for="AmenityEnsuiteBathroom">Banheiro privativo</label>
-      </div>
-  
-      <div id="availableFrom" class="validation-box">
-          <label>Disponível a partir de</label>
-          <div class="desktop-hide">
-              <input type="date" class="input_field" data-prop="availableFrom" data-init-value="" min="2019-10-31">
-          </div>
-          <div class="mobile-hide">
-              <input type="text" class="input_field" readonly="" data-toggle="datepicker" data-prop="availableFrom" data-init-value="">
-          </div>
-      </div>
-  
-      <div id="minimumStay" class="validation-box">
-          <label>Mínimo de estadia (meses)</label>
-          <select name="minimumStay" class="custom-select half-width" data-prop="minimumStay">
-                  <option value="-100">Sem tempo mínimo</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-  
-          </select>
-      </div>
-  
-  </div><!-- box content -->
-  
-                  </div>
-  
-                  <div data-mobile="4" id="mobStep4" class="desktop-hide">
-                      <h2 id="three" class="scroll-section heading heading--info grey bold" data-screen="4">Colegas de quarto</h2>
-  <div class="box-content">
-      <div id="houseTotalHousemates" class="validation-box">
-          <label>Número de pessoas morando atualmente</label>
-          <div class="num-increment desktop-hide" data-prop="houseTotalHousemates">
-              <div class="num-increment--minus adjust" data-type="-"></div>
-              <input type="number" class="num-increment--num" value="0" data-min="0" data-max="9" data-prop="houseTotalHousemates">
-              <div class="num-increment--plus adjust" data-type="+"></div>
-          </div>
-      </div>
-      <div class="radio-container button-10 mobile-hide" data-field="houseTotalHousemates">
-          <div>
-              <input type="radio" id="numRoommates0" name="numRoommates" data-prop="houseTotalHousemates" data-value="0" checked="checked">
-              <label for="numRoommates0">0</label>
-          </div>
-  
-          <div>
-              <input type="radio" id="numRoommates1" name="numRoommates" data-prop="houseTotalHousemates" data-value="1">
-              <label for="numRoommates1">1</label>
-          </div>
-  
-          <div>
-              <input type="radio" id="numRoommates2" name="numRoommates" data-prop="houseTotalHousemates" data-value="2">
-              <label for="numRoommates2">2</label>
-          </div>
-  
-          <div>
-              <input type="radio" id="numRoommates3" name="numRoommates" data-prop="houseTotalHousemates" data-value="3">
-              <label for="numRoommates3">3</label>
-          </div>
-  
-          <div>
-              <input type="radio" id="numRoommates4" name="numRoommates" data-prop="houseTotalHousemates" data-value="4">
-              <label for="numRoommates4">4</label>
-          </div>
-  
-          <div>
-              <input type="radio" id="numRoommates5" name="numRoommates" data-prop="houseTotalHousemates" data-value="5">
-              <label for="numRoommates5">5</label>
-          </div>
-  
-          <div>
-              <input type="radio" id="numRoommates6" name="numRoommates" data-prop="houseTotalHousemates" data-value="6">
-              <label for="numRoommates6">6</label>
-          </div>
-  
-          <div>
-              <input type="radio" id="numRoommates7" name="numRoommates" data-prop="houseTotalHousemates" data-value="7">
-              <label for="numRoommates7">7</label>
-          </div>
-  
-          <div>
-              <input type="radio" id="numRoommates8" name="numRoommates" data-prop="houseTotalHousemates" data-value="8">
-              <label for="numRoommates8">8</label>
-          </div>
-  
-          <div>
-              <input type="radio" id="numRoommates9" name="numRoommates" data-prop="houseTotalHousemates" data-value="9">
-              <label for="numRoommates9">9+</label>
-          </div>
-      </div>
-  
-      <div id="roommateDetails" class="room-details" style="display: none;">
-  
-          <div id="houseOccupation">
-              <label>Ocupação do colega de quarto</label>
-              <div class="radio-container button-2">
-                  <div>
-                      <input type="radio" id="roommatesOccupation1" name="roommatesOccupation" data-prop="houseOccupation" data-value="1">
-                      <label for="roommatesOccupation1">Estudante</label>
-                  </div>
-  
-                  <div>
-                      <input type="radio" id="roommatesOccupation2" name="roommatesOccupation" data-prop="houseOccupation" data-value="2">
-                      <label for="roommatesOccupation2">Profissional</label>
-                  </div>
-  
-                  <div class="group-option" style="display: none;">
-                      <input type="radio" id="roommatesOccupation3" name="roommatesOccupation" data-prop="houseOccupation" data-value="3">
-                      <label for="roommatesOccupation3">Misto </label>
-                  </div>
-              </div>
-          </div>
-  
-          <div class="grid-wrapper grid-4">
-              <div id="houseMinimumAge" class="grid-box">
-                  <label>Idade mínima</label>
-                  <select class="custom-select" data-prop="houseMinimumAge" id="min-age" name="min-age"><option selected="selected" value="18">18</option>
-  <option value="19">19</option>
-  <option value="20">20</option>
-  <option value="21">21</option>
-  <option value="22">22</option>
-  <option value="23">23</option>
-  <option value="24">24</option>
-  <option value="25">25</option>
-  <option value="26">26</option>
-  <option value="27">27</option>
-  <option value="28">28</option>
-  <option value="29">29</option>
-  <option value="30">30</option>
-  <option value="31">31</option>
-  <option value="32">32</option>
-  <option value="33">33</option>
-  <option value="34">34</option>
-  <option value="35">35</option>
-  <option value="36">36</option>
-  <option value="37">37</option>
-  <option value="38">38</option>
-  <option value="39">39</option>
-  <option value="40">40</option>
-  <option value="41">41</option>
-  <option value="42">42</option>
-  <option value="43">43</option>
-  <option value="44">44</option>
-  <option value="45">45</option>
-  <option value="46">46</option>
-  <option value="47">47</option>
-  <option value="48">48</option>
-  <option value="49">49</option>
-  <option value="50">50</option>
-  <option value="51">51</option>
-  <option value="52">52</option>
-  <option value="53">53</option>
-  <option value="54">54</option>
-  <option value="55">55</option>
-  <option value="56">56</option>
-  <option value="57">57</option>
-  <option value="58">58</option>
-  <option value="59">59</option>
-  <option value="60">60</option>
-  <option value="61">61</option>
-  <option value="62">62</option>
-  <option value="63">63</option>
-  <option value="64">64</option>
-  <option value="65">65</option>
-  <option value="66">66</option>
-  <option value="67">67</option>
-  <option value="68">68</option>
-  <option value="69">69</option>
-  <option value="70">70</option>
-  <option value="71">71</option>
-  <option value="72">72</option>
-  <option value="73">73</option>
-  <option value="74">74</option>
-  <option value="75">75</option>
-  <option value="76">76</option>
-  <option value="77">77</option>
-  <option value="78">78</option>
-  <option value="79">79</option>
-  <option value="80">80</option>
-  <option value="81">81</option>
-  <option value="82">82</option>
-  <option value="83">83</option>
-  <option value="84">84</option>
-  <option value="85">85</option>
-  <option value="86">86</option>
-  <option value="87">87</option>
-  <option value="88">88</option>
-  <option value="89">89</option>
-  <option value="90">90</option>
-  <option value="91">91</option>
-  <option value="92">92</option>
-  <option value="93">93</option>
-  <option value="94">94</option>
-  <option value="95">95</option>
-  <option value="96">96</option>
-  <option value="97">97</option>
-  <option value="98">98</option>
-  <option value="99">99</option>
-  </select>
-              </div>
-              <div id="houseMaximumAge" class="grid-box age-max">
-                  <label>Idade máxima</label>
-                  <select class="custom-select" data-prop="houseMaximumAge" id="max-age" name="max-age"><option value="18">18</option>
-  <option value="19">19</option>
-  <option value="20">20</option>
-  <option value="21">21</option>
-  <option value="22">22</option>
-  <option value="23">23</option>
-  <option value="24">24</option>
-  <option value="25">25</option>
-  <option value="26">26</option>
-  <option value="27">27</option>
-  <option value="28">28</option>
-  <option value="29">29</option>
-  <option value="30">30</option>
-  <option value="31">31</option>
-  <option value="32">32</option>
-  <option value="33">33</option>
-  <option value="34">34</option>
-  <option value="35">35</option>
-  <option value="36">36</option>
-  <option value="37">37</option>
-  <option value="38">38</option>
-  <option value="39">39</option>
-  <option value="40">40</option>
-  <option value="41">41</option>
-  <option value="42">42</option>
-  <option value="43">43</option>
-  <option value="44">44</option>
-  <option value="45">45</option>
-  <option value="46">46</option>
-  <option value="47">47</option>
-  <option value="48">48</option>
-  <option value="49">49</option>
-  <option value="50">50</option>
-  <option value="51">51</option>
-  <option value="52">52</option>
-  <option value="53">53</option>
-  <option value="54">54</option>
-  <option value="55">55</option>
-  <option value="56">56</option>
-  <option value="57">57</option>
-  <option value="58">58</option>
-  <option value="59">59</option>
-  <option value="60">60</option>
-  <option value="61">61</option>
-  <option value="62">62</option>
-  <option value="63">63</option>
-  <option value="64">64</option>
-  <option value="65">65</option>
-  <option value="66">66</option>
-  <option value="67">67</option>
-  <option value="68">68</option>
-  <option value="69">69</option>
-  <option value="70">70</option>
-  <option value="71">71</option>
-  <option value="72">72</option>
-  <option value="73">73</option>
-  <option value="74">74</option>
-  <option value="75">75</option>
-  <option value="76">76</option>
-  <option value="77">77</option>
-  <option value="78">78</option>
-  <option value="79">79</option>
-  <option value="80">80</option>
-  <option value="81">81</option>
-  <option value="82">82</option>
-  <option value="83">83</option>
-  <option value="84">84</option>
-  <option value="85">85</option>
-  <option value="86">86</option>
-  <option value="87">87</option>
-  <option value="88">88</option>
-  <option value="89">89</option>
-  <option value="90">90</option>
-  <option value="91">91</option>
-  <option value="92">92</option>
-  <option value="93">93</option>
-  <option value="94">94</option>
-  <option value="95">95</option>
-  <option value="96">96</option>
-  <option value="97">97</option>
-  <option value="98">98</option>
-  <option selected="selected" value="99">99</option>
-  </select>
-              </div>
-          </div>
-  
-          <div id="houseGender" class="validation-box is-mandatory">
-              <label>Gênero do colega de quarto</label>               
-              <div class="radio-container button-2">
-                  <div>
-                      <input type="radio" id="roommatesGender1" name="roommatesGender" data-prop="houseGender" data-value="1">
-                      <label for="roommatesGender1">Masculino</label>
-                  </div>
-  
-                  <div>
-                      <input type="radio" id="roommatesGender2" name="roommatesGender" data-prop="houseGender" data-value="2">
-                      <label for="roommatesGender2">Feminino</label>
-                  </div>
-  
-                  <div class="group-option" style="display: none;">
-                      <input type="radio" id="roommatesGender3" name="roommatesGender" data-prop="houseGender" data-value="3">
-                      <label for="roommatesGender3">Misto</label>
-                  </div>
-              </div>
-              <p class="error-msg">Por favor introduza o sexo dos actuais residentes</p>
-          </div>
-  
-          <div id="houseSmoker">
-              <label>Fumante</label>
-              <div class="radio-container button-3">
-                  <div>
-                      <input type="radio" id="roommatesSmoking1" name="roommatesSmoking" data-prop="houseSmoker" data-value="1">
-                      <label for="roommatesSmoking1">Sim</label>
-                  </div>
-  
-                  <div>
-                      <input type="radio" id="roommatesSmoking2" name="roommatesSmoking" data-prop="houseSmoker" data-value="2">
-                      <label for="roommatesSmoking2">Não</label>
-                  </div>
-  
-                  <div>
-                      <input type="radio" id="roommatesSmoking3" name="roommatesSmoking" data-prop="houseSmoker" data-value="3">
-                      <label for="roommatesSmoking3">Somente fora </label>
-                  </div>
-              </div>
-          </div>
-  
-      </div>
-  
-  </div><!-- box content -->
-  
-                  </div>
-  
-                  <div data-mobile="5" id="mobStep5" class="desktop-hide">
-                      <h2 id="five" class="scroll-section heading heading--info grey bold" data-screen="5">Indique aqui as suas restrições</h2>
-  <div class="box-content">
-      <div id="preferredGender" class="validation-box">
-          <label>Gênero preferido do colega de quarto</label>
-          <div class="radio-container button-3">
-              <div>
-                  <input type="radio" id="roommateGender1" name="roommateGender" data-prop="preferredGender" data-value="1">
-                  <label for="roommateGender1">Masculino</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="roommateGender2" name="roommateGender" data-prop="preferredGender" data-value="2">
-                  <label for="roommateGender2">Feminino</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="roommateGender3" name="roommateGender" data-prop="preferredGender" data-value="0">
-                  <label for="roommateGender3">Não importa</label>
-              </div>
-          </div>
-      </div>
-  
-      <div>
-          <label>Ocupação preferida do colega de quarto</label>
-          <div class="radio-container button-3">
-              <div>
-                  <input type="radio" id="roommateProfession1" name="occupation1" data-prop="preferredOccupation" data-value="1">
-                  <label for="roommateProfession1">Estudante</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="roommateProfession2" name="occupation1" data-prop="preferredOccupation" data-value="2">
-                  <label for="roommateProfession2">Profissional</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="roommateProfession3" name="occupation1" data-prop="preferredOccupation" data-value="0">
-                  <label for="roommateProfession3">Não importa</label>
-              </div>
-          </div>
-      </div>
-  
-      <div class="grid-wrapper grid-4">
-          <div class="grid-box">
-              <label>Idade preferida mínima</label>
-              <select class="custom-select half-width margin-bottom" data-prop="preferredMinimumAge" id="pref-min-age" name="pref-min-age"><option selected="selected" value="18">18</option>
-  <option value="19">19</option>
-  <option value="20">20</option>
-  <option value="21">21</option>
-  <option value="22">22</option>
-  <option value="23">23</option>
-  <option value="24">24</option>
-  <option value="25">25</option>
-  <option value="26">26</option>
-  <option value="27">27</option>
-  <option value="28">28</option>
-  <option value="29">29</option>
-  <option value="30">30</option>
-  <option value="31">31</option>
-  <option value="32">32</option>
-  <option value="33">33</option>
-  <option value="34">34</option>
-  <option value="35">35</option>
-  <option value="36">36</option>
-  <option value="37">37</option>
-  <option value="38">38</option>
-  <option value="39">39</option>
-  <option value="40">40</option>
-  <option value="41">41</option>
-  <option value="42">42</option>
-  <option value="43">43</option>
-  <option value="44">44</option>
-  <option value="45">45</option>
-  <option value="46">46</option>
-  <option value="47">47</option>
-  <option value="48">48</option>
-  <option value="49">49</option>
-  <option value="50">50</option>
-  <option value="51">51</option>
-  <option value="52">52</option>
-  <option value="53">53</option>
-  <option value="54">54</option>
-  <option value="55">55</option>
-  <option value="56">56</option>
-  <option value="57">57</option>
-  <option value="58">58</option>
-  <option value="59">59</option>
-  <option value="60">60</option>
-  <option value="61">61</option>
-  <option value="62">62</option>
-  <option value="63">63</option>
-  <option value="64">64</option>
-  <option value="65">65</option>
-  <option value="66">66</option>
-  <option value="67">67</option>
-  <option value="68">68</option>
-  <option value="69">69</option>
-  <option value="70">70</option>
-  <option value="71">71</option>
-  <option value="72">72</option>
-  <option value="73">73</option>
-  <option value="74">74</option>
-  <option value="75">75</option>
-  <option value="76">76</option>
-  <option value="77">77</option>
-  <option value="78">78</option>
-  <option value="79">79</option>
-  <option value="80">80</option>
-  <option value="81">81</option>
-  <option value="82">82</option>
-  <option value="83">83</option>
-  <option value="84">84</option>
-  <option value="85">85</option>
-  <option value="86">86</option>
-  <option value="87">87</option>
-  <option value="88">88</option>
-  <option value="89">89</option>
-  <option value="90">90</option>
-  <option value="91">91</option>
-  <option value="92">92</option>
-  <option value="93">93</option>
-  <option value="94">94</option>
-  <option value="95">95</option>
-  <option value="96">96</option>
-  <option value="97">97</option>
-  <option value="98">98</option>
-  <option value="99">99</option>
-  </select>
-          </div>
-          <div class="grid-box age-max">
-              <label>Idade preferida máxima</label>
-              <select class="custom-select half-width margin-bottom" data-prop="preferredMaximumAge" id="pref-max-age" name="pref-max-age"><option value="18">18</option>
-  <option value="19">19</option>
-  <option value="20">20</option>
-  <option value="21">21</option>
-  <option value="22">22</option>
-  <option value="23">23</option>
-  <option value="24">24</option>
-  <option value="25">25</option>
-  <option value="26">26</option>
-  <option value="27">27</option>
-  <option value="28">28</option>
-  <option value="29">29</option>
-  <option value="30">30</option>
-  <option value="31">31</option>
-  <option value="32">32</option>
-  <option value="33">33</option>
-  <option value="34">34</option>
-  <option value="35">35</option>
-  <option value="36">36</option>
-  <option value="37">37</option>
-  <option value="38">38</option>
-  <option value="39">39</option>
-  <option value="40">40</option>
-  <option value="41">41</option>
-  <option value="42">42</option>
-  <option value="43">43</option>
-  <option value="44">44</option>
-  <option value="45">45</option>
-  <option value="46">46</option>
-  <option value="47">47</option>
-  <option value="48">48</option>
-  <option value="49">49</option>
-  <option value="50">50</option>
-  <option value="51">51</option>
-  <option value="52">52</option>
-  <option value="53">53</option>
-  <option value="54">54</option>
-  <option value="55">55</option>
-  <option value="56">56</option>
-  <option value="57">57</option>
-  <option value="58">58</option>
-  <option value="59">59</option>
-  <option value="60">60</option>
-  <option value="61">61</option>
-  <option value="62">62</option>
-  <option value="63">63</option>
-  <option value="64">64</option>
-  <option value="65">65</option>
-  <option value="66">66</option>
-  <option value="67">67</option>
-  <option value="68">68</option>
-  <option value="69">69</option>
-  <option value="70">70</option>
-  <option value="71">71</option>
-  <option value="72">72</option>
-  <option value="73">73</option>
-  <option value="74">74</option>
-  <option value="75">75</option>
-  <option value="76">76</option>
-  <option value="77">77</option>
-  <option value="78">78</option>
-  <option value="79">79</option>
-  <option value="80">80</option>
-  <option value="81">81</option>
-  <option value="82">82</option>
-  <option value="83">83</option>
-  <option value="84">84</option>
-  <option value="85">85</option>
-  <option value="86">86</option>
-  <option value="87">87</option>
-  <option value="88">88</option>
-  <option value="89">89</option>
-  <option value="90">90</option>
-  <option value="91">91</option>
-  <option value="92">92</option>
-  <option value="93">93</option>
-  <option value="94">94</option>
-  <option value="95">95</option>
-  <option value="96">96</option>
-  <option value="97">97</option>
-  <option value="98">98</option>
-  <option selected="selected" value="99">99</option>
-  </select>
-          </div>
-      </div>
-  </div><!-- box content -->
-  
-                  </div>
-  
-                  <div data-mobile="6" id="mobStep6" class="desktop-hide">
-                      <h2 id="six" class="scroll-section heading heading--info grey bold" data-screen="6">Regras da casa</h2>
-  <div class="box-content">
-      <div class="form_field custom-checkbox">
-          <input type="checkbox" id="famillies" data-prop="childrenAccepted">
-          <label for="famillies">Aceito crianças
-  </label>
-      </div>
-      <div class="form_field custom-checkbox">
-          <input type="checkbox" id="couples" data-prop="couplesAccepted">
-          <label for="couples">Aceito casais</label>
-      </div>
-      <div class="form_field custom-checkbox">
-          <input type="checkbox" id="pets" data-prop="petsAccepted">
-          <label for="pets">Aceito animais</label>
-      </div>
-      <div class="form_field custom-checkbox">
-          <input type="checkbox" id="smoking" data-prop="smokersAccepted">
-          <label for="smoking">Aceitos fumantes</label>
-      </div>
-  </div><!-- box content -->
-                  </div>
-  
-  
-                      <div data-mobile="7" id="mobStep7" class="desktop-hide">
-                          <h2 id="seven" class="scroll-section heading heading--info grey bold" data-screen="7">Sobre você</h2>
-  <div class="box-content">
-      <div id="roomMateType" class="validation-box is-mandatory">
-          <label>Estou publicando como:</label>
-          <div class="radio-container button-3">
-              <div>
-                  <input type="radio" id="advertizeAsRoommate" name="advertizeAs" data-prop="roomMateType" data-value="1">
-                  <label for="advertizeAsRoommate">Companheiro de Quarto</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="advertizeAsLandlord" name="advertizeAs" data-prop="roomMateType" data-value="2">
-                  <label for="advertizeAsLandlord">Proprietário</label>
-              </div>
-  
-              <div>
-                  <input type="radio" id="advertizeAsAgent" name="advertizeAs" data-prop="roomMateType" data-value="3">
-                  <label for="advertizeAsAgent">Imobiliária</label>
-              </div>
-          </div>
-      </div>
-  
-      <div class="form_field custom-checkbox advertise-as-hide" data-adtype="landlord" style="display: none;">
-          <input type="checkbox" id="landlordLiveIn" data-prop="ownFlat">
-          <label for="landlordLiveIn">Eu moro na propriedade</label>
-      </div>
-  
-          <div id="firstName" class="validation-box is-mandatory">
-              <label>Primeiro Nome</label>
-              <input type="text" data-prop="firstName" name="First name" class="input_field" autocomplete="off">
-              <p class="error-msg">Insira seu nome</p>
-          </div>
-          <div id="lastName" class="validation-box is-mandatory">
-              <label>Sobrenome</label>
-              <input type="text" data-prop="lastName" name="Last name" class="input_field" autocomplete="off">
-              <p class="error-msg">Insira seu sobrenome</p>
-          </div>
-          <div id="age" class="validation-box advertise-as-hide is-mandatory" data-adtype="roommate,liveInLandlord" style="display: none;">
-              <label>Idade</label>
-              <select class="custom-select" data-prop="age" id="advertise-as-age" name="advertise-as-age"><option value="18">18</option>
-  <option value="19">19</option>
-  <option value="20">20</option>
-  <option value="21">21</option>
-  <option value="22">22</option>
-  <option value="23">23</option>
-  <option value="24">24</option>
-  <option value="25">25</option>
-  <option value="26">26</option>
-  <option value="27">27</option>
-  <option value="28">28</option>
-  <option value="29">29</option>
-  <option value="30">30</option>
-  <option value="31">31</option>
-  <option value="32">32</option>
-  <option value="33">33</option>
-  <option value="34">34</option>
-  <option value="35">35</option>
-  <option value="36">36</option>
-  <option value="37">37</option>
-  <option value="38">38</option>
-  <option value="39">39</option>
-  <option value="40">40</option>
-  <option value="41">41</option>
-  <option value="42">42</option>
-  <option value="43">43</option>
-  <option value="44">44</option>
-  <option value="45">45</option>
-  <option value="46">46</option>
-  <option value="47">47</option>
-  <option value="48">48</option>
-  <option value="49">49</option>
-  <option value="50">50</option>
-  <option value="51">51</option>
-  <option value="52">52</option>
-  <option value="53">53</option>
-  <option value="54">54</option>
-  <option value="55">55</option>
-  <option value="56">56</option>
-  <option value="57">57</option>
-  <option value="58">58</option>
-  <option value="59">59</option>
-  <option value="60">60</option>
-  <option value="61">61</option>
-  <option value="62">62</option>
-  <option value="63">63</option>
-  <option value="64">64</option>
-  <option value="65">65</option>
-  <option value="66">66</option>
-  <option value="67">67</option>
-  <option value="68">68</option>
-  <option value="69">69</option>
-  <option value="70">70</option>
-  <option value="71">71</option>
-  <option value="72">72</option>
-  <option value="73">73</option>
-  <option value="74">74</option>
-  <option value="75">75</option>
-  <option value="76">76</option>
-  <option value="77">77</option>
-  <option value="78">78</option>
-  <option value="79">79</option>
-  <option value="80">80</option>
-  <option value="81">81</option>
-  <option value="82">82</option>
-  <option value="83">83</option>
-  <option value="84">84</option>
-  <option value="85">85</option>
-  <option value="86">86</option>
-  <option value="87">87</option>
-  <option value="88">88</option>
-  <option value="89">89</option>
-  <option value="90">90</option>
-  <option value="91">91</option>
-  <option value="92">92</option>
-  <option value="93">93</option>
-  <option value="94">94</option>
-  <option value="95">95</option>
-  <option value="96">96</option>
-  <option value="97">97</option>
-  <option value="98">98</option>
-  <option value="99">99</option>
-  </select>
-              <p class="error-msg">Favor selecionar sua idade</p>
-          </div>
-          <div id="gender" class="validation-box advertise-as-hide is-mandatory" data-adtype="roommate,liveInLandlord" style="display: none;">
-              <label>Gênero</label>
-              <div class="radio-container button-3">
-                  <div>
-                      <input type="radio" id="advertizeAsGenderMale" name="advertizeAsGender" data-prop="gender" data-value="1">
-                      <label for="advertizeAsGenderMale">Masculino</label>
-                  </div>
-  
-                  <div>
-                      <input type="radio" id="advertizeAsGenderFemale" name="advertizeAsGender" data-prop="gender" data-value="2">
-                      <label for="advertizeAsGenderFemale">Feminino</label>
-                  </div>
-  
-                  <div>
-                      <input type="radio" id="advertizeAsGenderCouple" name="advertizeAsGender" data-prop="gender" data-value="3">
-                      <label for="advertizeAsGenderCouple">Casal</label>
-                  </div>
-              </div>
-              <p class="error-msg">Escolha seu sexo</p>
-          </div>
-          <div id="occupation" class="validation-box advertise-as-hide is-mandatory" data-adtype="roommate,liveInLandlord" style="display: none;">
-              <label>Ocupação</label>
-              <div class="radio-container button-3">
-                  <div>
-                      <input type="radio" id="advertizeAsOccupationStudent" name="advertizeAsOccupation" data-prop="occupation" data-value="1">
-                      <label for="advertizeAsOccupationStudent">Estudante</label>
-                  </div>
-  
-                  <div>
-                      <input type="radio" id="advertizeAsOccupationProfessional" name="advertizeAsOccupation" data-prop="occupation" data-value="2">
-                      <label for="advertizeAsOccupationProfessional">Profissional</label>
-                  </div>
-  
-                  <div>
-                      <input type="radio" id="advertizeAsOccupationOther" name="advertizeAsOccupation" data-prop="occupation" data-value="3">
-                      <label for="advertizeAsOccupationOther">Outro</label>
-                  </div>
-              </div>
-              <p class="error-msg">Selecione sua ocupação</p>
-          </div>
-          <div id="phone" class="validation-box is-mandatory">
-              <label>Telefone</label>
-              <input type="number" pattern="\d*" data-prop="phone" name="Phone number" class="input_field" autocomplete="off">
-              <p class="error-msg">Insira um número de telefone</p>
-          </div>
-          <div class="form_field custom-checkbox">
-              <input type="checkbox" id="showPhoneNum" data-prop="doNotShowPhone">
-              <label for="showPhoneNum">Clique para não mostrar o número do telefone</label>
-          </div>
-  </div><!-- box content -->
-  
-                      </div>
-                  <div data-mobile="8" id="mobStep8" class="desktop-hide">
-                      <h2 id="eight" class="scroll-section heading heading--info grey bold" data-screen="8">Seu anúncio</h2>
-  <div class="box-content">
-      <div id="title" class="validation-box is-mandatory">
-          <label>Título do seu anúncio</label>
-          <input type="text" data-prop="title" name="ad-title" class="input_field" autocomplete="off">
-          <p class="error-msg">Crie um título</p>
-      </div>
-  
-      <div id="description" class="validation-box is-mandatory">
-          <label>Descrição</label>
-          <div class="textarea-wrapper">
-              <textarea data-prop="description" class="details" name="textarea" rows="5" placeholder="Dê mais detalhes sobre a acomodação, quem você está procurando e o que um potencial colega de quarto deve esperar morando com você. Para sua segurança, dados pessoais (telefone, e-mail ou links) que forem incluídos na descrição serão removidos. "></textarea>
-          </div>
-          <p class="error-msg">Dê mais detalhes sobre a acomodação, quem você está procurando e o que um potencial colega de quarto deve esperar morando com você. Para sua segurança, dados pessoais (telefone, e-mail ou links) que forem incluídos na descrição serão removidos. </p>
-      </div>
-  
-          <div style="display:none">
-              <label>Fotos</label>
-              <p>Você pode fazer o upload de 8 fotos. Escolha as melhores fotos para anunciar sua propriedade. Você verá seus contatos aumentarem. </p>
-              <p id="imgError" class="error-msg">Por favor, faça o upload de uma imagem válida sem exceder o limite de tamanho. (20MB)</p>
-              <div id="imgUploads" class="image-list">
-  
-              <div id="uploadBox" class="upload-box-outer">
-                  <div id="imageSelectorContainer" class="upload-button">
-                      <div id="userImg" class="browse-btn-panel">
-                          <svg class="sg-icon">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico-plus"></use>
-                          </svg>
-                          <p>Buscar</p>
-                      </div>
-                      <input type="file" id="uploadBtn" class="image-selector" accept="image/*">
-                  </div>
-              </div>
-  
-              </div>
-  
-              <script id="uploadImageTemplate" type="text/template">
-              <div data-index="<%= index %>">
-                  <div>
-                      <img src="<%= imageContentString %>" />
-                  </div>
-                  <a class="remove-img">
-                      <svg>
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico-sidemenu-close"></use>
-                      </svg>
-                  </a>
-              </div>
-          </script>
-          </div>
-  </div>
-  
-  
-                          <hr>
-  
-                          <div class="box-content posting-box">
-      <p id="saveErrorMsg" class="error-msg align-center margin-bottom" style="display: none;">Oops! Alguma coisa deu errado! Por favor tente novamente.</p>
-      <button id="submitForm" class="button button-green button--flat button--long button--large cta post-room-submit">
-          <span class="button-text">Salvar e Continuar!</span>
-          <div class="ui-loader">
-              <div class="ui-loader_wht visible" data-test="ds-loader">
-                  <span class="loader-1"></span><span class="loader-2"></span><span class="loader-3"></span><span class="loader-4"></span>
-              </div>
-          </div>
-      </button>
-  </div>
-</form>
-                      </div>
-              </div> <!-- panel 3-->
-          </div><!-- page wrap -->
-  
+
+    
