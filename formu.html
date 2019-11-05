@@ -12,6 +12,8 @@
 </head>
 <body>
 
+
+
   <script>
     
     $(document).ready(function() {
@@ -187,35 +189,33 @@
 
       <!---------------------------------------------------------------------------------------------------
     -->
-    <div class="container">
-
+    <div class="caixaform">
         <div class="mobile-panels">
             <div data-mobile="1" id="mobStep1" class="show"> <!--inicio  mobStep1-->
                 <div class="box-content align-center">
                     <h1 class="blue">Anuncie seu quarto</h1>
                         <p class="text--small">Os campos marcados com asteríscos * são obrigatórios</p>
+                  </div> <!--box-content -->
+              </div> <!-- modstep1-->
+        </div> <!--mobile panels-->
+        <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+          <fieldset>
+  
+
+
+            <div class="form-group-form">
+              <label class="col-md-4 control-label">Nome e sobrenome</label>  
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input  name="first_name" placeholder="Digite seu nome" class="form-control"  type="text">
+                  </div>
                 </div>
-
-            </div>
-        </div>
-
-      <form class="well form-horizontal" action=" " method="post"  id="contact_form">
-  <fieldset>
-  
-  
-  <div class="form-group">
-    <label class="col-md-4 control-label">First Name</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-    <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
-      </div>
-    </div>
-  </div>
+              </div>
   
   <!-- Text input-->
   
-  <div class="form-group">
+  <div class="form-group-form">
     <label class="col-md-4 control-label" >Last Name</label> 
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
@@ -226,7 +226,7 @@
   </div>
   
   <!-- Text input-->
-         <div class="form-group">
+         <div class="form-group-form">
     <label class="col-md-4 control-label">E-Mail</label>  
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
@@ -239,7 +239,7 @@
   
   <!-- Text input-->
          
-  <div class="form-group">
+  <div class="form-group-form">
     <label class="col-md-4 control-label">Phone #</label>  
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
@@ -251,7 +251,7 @@
   
   <!-- Text input-->
         
-  <div class="form-group">
+  <div class="form-group-form">
     <label class="col-md-4 control-label">Address</label>  
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
@@ -263,7 +263,7 @@
   
   <!-- Text input-->
    
-  <div class="form-group">
+  <div class="form-group-form">
     <label class="col-md-4 control-label">City</label>  
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
@@ -275,7 +275,7 @@
   
   <!-- Select Basic -->
      
-  <div class="form-group"> 
+  <div class="form-group-form"> 
     <label class="col-md-4 control-label">State</label>
       <div class="col-md-4 selectContainer">
       <div class="input-group">
@@ -340,7 +340,7 @@
   
   <!-- Text input-->
   
-  <div class="form-group">
+  <div class="form-group-form">
     <label class="col-md-4 control-label">Zip Code</label>  
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
@@ -351,7 +351,7 @@
   </div>
   
   <!-- Text input-->
-  <div class="form-group">
+  <div class="form-group-form">
     <label class="col-md-4 control-label">Website or domain name</label>  
      <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
@@ -362,7 +362,7 @@
   </div>
   
   <!-- radio checks -->
-   <div class="form-group">
+   <div class="form-group-form">
                           <label class="col-md-4 control-label">Do you have hosting?</label>
                           <div class="col-md-4">
                               <div class="radio">
@@ -380,7 +380,7 @@
   
   <!-- Text area -->
     
-  <div class="form-group">
+  <div class="form-group-form">
     <label class="col-md-4 control-label">Project Description</label>
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
@@ -394,7 +394,7 @@
   <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
   
   <!-- Button -->
-  <div class="form-group">
+  <div class="form-group-form">
     <label class="col-md-4 control-label"></label>
     <div class="col-md-4">
       <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
@@ -404,7 +404,6 @@
   </fieldset>
   </form>
   </div>
-      </div><!-- /.container -->
 
 
 </body>

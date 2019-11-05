@@ -54,7 +54,8 @@ h1{
   background: url('Imgs/quartoBranco.jpg') no-repeat;
 	background-size: cover;
 	background-position: 0 55%;
-	position: relative;
+  position: relative;
+  background-size: 1600px;
 }
 
 #search-form2 {
@@ -478,6 +479,18 @@ row{
   margin-top: auto;
   margin-top: 10px;
 }
+
+/* pagina de formulario*/
+.caixaform{
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+
+.form-group-form{
+  margin-top: 30px;  /* distancia de uma caixa pra outra*/
+}
+
 
 /* pagina anuncio*/
 
