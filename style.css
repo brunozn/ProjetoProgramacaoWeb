@@ -12,6 +12,26 @@ background:url(http://farm8.staticflickr.com/7064/6858179818_5d652f531c_h.jpg) n
 }
 */
 
+
+#topo {
+  width: 100%;
+  height: 100px;
+  background-color: #FFFFFF;
+  background-image: url(Imgs/cidade2.png);
+  background-size: 100px no-repeat;
+  background-repeat: repeat-x;
+  /* margin: 0 auto; */
+  padding: 0;
+  clear: both;
+  display: table;
+}
+
+#corpo_topo {
+  width: 1300px;
+  height: 250px;
+  margin: 0 auto;
+}
+
 #sitename{
     font: Arial;
     font-size: 40px;
@@ -22,6 +42,12 @@ h1{
   text-align: center;
   font-style: normal;
   border-color: white;
+}
+
+.carousel-inner33 {
+  position: initial;
+  width: 100%;
+  /* overflow: hidden; */
 }
 
 .grid-box, .grid-wrapper {
@@ -53,14 +79,14 @@ h1{
 #main-banner2{
   background: url('Imgs/quartoBranco.jpg') no-repeat;
 	background-size: cover;
-	background-position: 0 55%;
+	background-position: 0 30%;
   position: relative;
   background-size: 1600px;
 }
 
 #search-form2 {
 	position: relative;
-	width: 50%;
+	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 5em;
@@ -70,7 +96,7 @@ h1{
 }
 
 .btn-container1{
-  margin-top: 100px;
+  margin-top: 400px;
   font-size: 100px;
 }
 
@@ -149,17 +175,15 @@ h1{
 text-align: center;
 }
 
-#main-content {
-  
-    /*margin-top: 1px;
-    margin-bottom: 10px;*/
-}
+
 
 div #testmony-box{
   border: 1px solid black;
   width: 100px;
   height: 100px;
 }
+
+
 
 
 /* Style all font awesome icons */
@@ -408,7 +432,21 @@ row{
   transition: opacity .15s ease;
 }
 
-/*Tela de caadastro*/
+/*Tela de Cadastrar*/
+
+#main-content-CADASTRAR {
+  
+  margin-top: 1px;
+  margin-bottom: 10px;
+}
+
+.jumbotron-cadastrar{
+width: 1000px;
+background-color: #CCC;
+margin-left: 60px;
+margin-right: auto;
+}
+
 
 .btn-bordered.btn-custom {
   background-color: #55748f;
@@ -448,8 +486,8 @@ row{
 
 
 .row {
-  margin-right: -10px;
-  margin-left: -10px;
+  margin-right: -50px;
+  margin-left: -50px;
 }
 
 #register-cont {
@@ -481,15 +519,99 @@ row{
 }
 
 /* pagina de formulario*/
+/*-------------------------------------------------------------*/
+
+#dwellingCode .moradia:hover{
+  background-color: cyan;
+}
+
 .caixaform{
-  margin-top: 50px;
-  margin-left: 50px;
+  margin-top: 1px;
+  margin-left: 0px;
 }
 
 
 .form-group-form{
   margin-top: 30px;  /* distancia de uma caixa pra outra*/
 }
+
+
+#dwellingCode {
+  width: 700px;
+  margin-left: 70px;
+}
+
+.radio-container {
+  clear: both;
+  height: 44px;
+}
+
+.radio-container.button-3 div {
+  width: 33%;
+}
+
+.radio-container div {
+  margin: 0;
+  display: inline-block;
+  float: left;
+}
+
+.form_field {
+  position: relative;
+  margin: 0 0 20px;
+  padding: 0;
+  margin-left: 50px;
+}
+
+
+.currency_input {
+  position: relative;
+  width: 400px;
+  margin-left: 50px;
+}
+
+.radio-container div input[type=radio] {
+  display: none;
+}
+
+
+label {
+  margin: 50px 0 10px;
+  display: block;
+}
+
+label.classlabel {
+  margin: 1px 0 1px;
+  display: block;
+  margin-left: 70px;
+}
+
+.input-group-addon{
+  width: 1000px;
+}
+
+
+.radio-container div input[type=radio]+label {
+  color: #555;
+  font-family: Arial,sans-serif;
+  font-size: .875rem;
+  background: #fff;
+  border: 1px #cdcdcd solid;
+  border-left: none;
+  padding: 14px;
+  margin: 0;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.radio1{
+  margin-left: 10px;
+}
+
+
 
 
 /* pagina anuncio*/
@@ -607,7 +729,7 @@ img-fluid{
   position: relative;
   width: 100%;
   padding-right: 15px;
- padding-left: 70px;
+ padding-left: 1px;
 }
 
 
@@ -693,7 +815,7 @@ label {
   color: #333;
   font-size: 1rem;
   line-height: 20px;
-  height: 45px;
+  height: 40px;
   line-height: 45px;
   width: 100%;
   border-radius: 3px;
@@ -703,7 +825,7 @@ label {
   -ms-appearance: none;
   box-sizing: border-box;
   outline: 0;
-  margin: 0;
+  margin-left: 20px;
   padding: 0 15px;
   color: #323232;
   border: 1px #dcdcdc solid;
@@ -901,3 +1023,133 @@ transform: translate(0%,0%);
   
 }
 
+/* anuncio perso*/
+/* FontAwesome for working BootSnippet :> */
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#team {
+    background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: blue;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #062F4F;
+    border-color: #062F4F;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color:  #062F4F;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color:#062F4F !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color:#062F4F !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}

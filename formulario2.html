@@ -1,0 +1,212 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+
+  <div id="topo">
+    <div id="corpo_topo">
+          <h1> AJUDAÍ </h1>                    
+    </div>
+  
+  </div>
+
+
+<nav id="navegacao" class="navbar navbar-expand-sm navbar-dark">
+  <div class="container">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="index.html">
+      <img src="Imgs/logo.png" alt="logo" style="width:50px; height: 100px;">
+    </a>
+    <p id="sitename">Ajudaí.com</p>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#links-navegacao">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+<!-- Links -->
+<div class="collapse navbar-collapse ml-auto" id="links-navegacao">
+  <ul class="navbar-nav ml-auto"> <!--ml-auto to the right-->
+      <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  class="colorido" class="btn btn-primary" href="Cadastrar.html">  Anuncie Aqui  </a>
+    </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#last-container">Vagas Recentes</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="anuncioProcura.html">Pessoas procurando</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="anuncio.html">Vagas Disponíveis</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">Login</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#contato1">Sobre</a>
+      </li>
+</ul>
+</div>
+
+  </div>
+</nav>
+
+
+<form id="email" name="email" method="post" action="divulgue2.php">
+        <table width="90%" border="0" align="center">
+              <tbody><tr>
+                <td height="35" colspan="2" class="texto-blogs"><h3>Dados do Proprietário:</h3></td>
+              </tr>
+              <tr>
+                <td class="texto-blogs"><div align="right" class="texto-data"><strong>Seu nome</strong><strong>: </strong></div></td>
+                <td><input name="nome" type="text" id="recado_input" size="50"></td>
+              </tr>
+              <tr>
+                <td width="16%" class="texto-blogs"><div align="right" class="texto-data"><strong>Seu e-mail</strong><strong>: </strong></div></td>
+                <td width="84%"><input name="email_from" type="text" id="recado_input" size="40"></td>
+              </tr>
+              <tr>
+                <td class="texto-blogs"><div align="right" class="texto-data"><strong>Telefone Residencial: </strong></div></td>
+                <td><input name="tel_residencial" type="text" id="recado_input2" size="20" maxlength="16"></td>
+              </tr>
+              <tr>
+                <td class="texto-blogs"><div align="right" class="texto-data"><strong>Telefone Comercial</strong><strong>: </strong></div></td>
+                <td><input name="tel_comercial" type="text" id="recado_input3" size="20" maxlength="16"></td>
+              </tr>
+              <tr>
+                <td class="texto-blogs"><div align="right" class="texto-data"><strong>Celular</strong><strong>: </strong></div></td>
+                <td><input name="celular" type="text" id="recado_input4" size="20" maxlength="16"></td>
+              </tr>
+              <tr>
+                <td height="35" colspan="2" class="texto-blogs"><h3>Dados do Imóvel:</h3></td>
+              </tr>
+              <tr>
+                <td class="texto-blogs"><div align="right" class="texto-data"><strong>Tipo de Imóvel</strong><strong>: </strong></div></td>
+                <td><select name="tipo_imovel" id="tipo_imovel">
+                    <option value="">Selecione uma opção:</option>
+                    <option value="apartamento">Apartamento</option>
+                    <option value="casa">Casa</option>
+                    <option value="chacara">Chácara</option>
+                    <option value="kitnete">Kitnete</option>
+                    <option value="loja">Loja</option>
+                    <option value="loteamente">Loteamento</option>
+                    <option value="predio_comercial">Prédio Comercial</option>
+                    <option value="sala_comercial">Sala Comercial</option>
+                    <option value="terreno">Terreno</option>
+                  
+          
+
+  ?&gt;
+                </select></td>
+              </tr>
+              <tr>
+                <td class="texto-blogs"><div align="right" class="texto-data"><strong>Endereço</strong><strong>: </strong></div></td>
+                <td><input name="endereco" type="text" id="recado_input5" size="55" maxlength="200"></td>
+              </tr>
+              <tr>
+                <td class="texto-blogs"><div align="right" class="texto-data"><strong>Bairro</strong><strong>: </strong></div></td>
+                <td><input name="bairro" type="text" id="recado_input6" size="30" maxlength="100"></td>
+              </tr>
+              <tr>
+                <td class="texto-blogs"><div align="right" class="texto-data"><strong>Cidade:</strong><strong> </strong></div></td>
+                <td><input name="cidade" type="text" id="recado_input7" size="40" maxlength="100"></td>
+              </tr>
+              <tr>
+                <td class="texto-blogs"><div align="right" class="texto-data"><strong>Área total (m²)</strong><strong>: </strong></div></td>
+                <td><input name="area_total" type="text" id="recado_input8" size="20" maxlength="20"></td>
+              </tr>
+              <tr>
+                <td class="texto-blogs"><div align="right" class="texto-data"><strong>Área Construída (m²)</strong><strong>: </strong></div></td>
+                <td><input name="area_construida" type="text" id="recado_input9" size="20" maxlength="20"></td>
+              </tr>
+              <tr>
+                <td class="texto-blogs"><div align="right" class="texto-data"><strong>Observações:</strong></div></td>
+                <td><textarea name="mensagem" cols="50" rows="10" id="recado_input"></textarea>
+                    <br></td>
+              </tr>
+              <tr>
+                <td class="texto-blogs"><div align="right" class="texto-data"><strong>Anexo</strong></div></td>
+                <td><input name="arquivo" type="file" id="recado_input"></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td><input name="Submit" type="submit" id="recado_input" value="Enviar"></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody></table>
+        </form>
+
+
+
+
+<footer class="card-footer">
+  <div class="container">
+    <div class="row">
+      <section id="endereco" class="col-sm-4">
+        <div>Navegar</div> <br>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="Cadastrar.html">Anuncie Aqui</a>
+      </li>
+        <li class="nav-item">
+            <a href="#last-container">Vagas Recentes</a>
+        </li>
+        <li class="nav-item">
+            <a href="anuncio.html">Vagas Disponíveis</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">Pessoas Procurando</a>
+      </li>
+        <li class="nav-item">
+          <a href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+            <a href="#contato1">Sobre</a>
+        </li>
+        <hr class="d-block d-sm-none">
+      </section>
+
+      <section id="contato1" class="col-sm-4">
+        <div>Redes Sociais:</div> <br>
+        <!-- Add icon library -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+          <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            
+        <hr class="d-block d-sm-none">
+      </section>
+      <section id="sobre" class="col-sm-4">
+        <div>Sobre</div> <br>
+        Ferramenta inteligente para ajudar você a encontrar o lugar perfeito. Plataforma mais simples e completa para quem está buscando ou oferecendo quartos para alugar ou moradias compartilhadas. Em poucos passos, você encontra o lugar perfeito para morar com seu colega de quarto ideal.
+        <hr class="d-block d-sm-none">
+      </section>
+    </div>
+    <div class="text-center"> &copy; Copyright ZeND 2018
+
+    </div>
+  </div> 
+</footer>
+
+</body>
+</html>
