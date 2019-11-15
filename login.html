@@ -6,229 +6,28 @@
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src='main.js'></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/compile/bootstrap.css">
+  
+  
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+    
+  
+    <link rel="stylesheet" type="text/css" href="styLOGIN.css">
+    <script src='mainLOGIN.js'></script>
 </head>
-
-<style>
-
-@import "bourbon";
-
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700);
-@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css);
-
-$shadow-color: #23203b;
-$input-color: lighten(#AB9E95, 10%);
-$input-border-color: #5E5165;
-$button-background-color: #27AE60;
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html { 
-  background: url(https://dl.dropboxusercontent.com/u/159328383/background.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-body {
-  background: transparent;
-}
-
-body, input, button {
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-@mixin normalize-input {
-  display: block;
-  width: auto;
-  height: auto;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  background: none;
-  border-radius: 0px;
-}
-
-.login {
-  padding: 15px;
-  width: 400px;
-  min-height: 400px;
-  margin: 2% auto 0 auto;
-
-.heading {
-    text-align: center;
-    margin-top: 1%;
-  }
-
-h2 {
-      font-size: 3em;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.7);
-      display: inline-block;
-      padding-bottom: 5px;
-      text-shadow: 1px 1px 3px $shadow-color;
-    }
-
-
-  form {
-    .input-group {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-
-      &:last-of-type {
-        border-top: none;
-      }
-
-      span {
-        background: transparent;
-        min-width: 53px;
-        border: none;
-
-        i {
-          font-size: 1.5em;
-          color: rgba(255, 255, 255, 0.2);
-        }
-      }
-    }
-
-    input.form-control {
-      @include normalize-input;
-
-      padding: 10px;
-      font-size: 1.6em;
-      width: 100%;
-      background: transparent;
-      color: $input-color;
-
-      &:focus {
-        border: none;
-      }
-    }
-
-    button {
-      margin-top: 20px;
-      background: $button-background-color;
-      border: none;
-      font-size: 1.6em;
-      font-weight: 300;
-      padding: 5px 0;
-      width: 100%;
-      border-radius: 3px;
-      color: lighten($button-background-color, 40%);
-      border-bottom: 4px solid darken($button-background-color, 10%);
-
-      &:hover {
-        background: tint($button-background-color, 4%);
-        -webkit-animation: hop 1s;
-        animation: hop 1s;
-      }
-    }
-  }
-}
-
-.float {
-  display: inline-block;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-
-.float:hover, .float:focus, .float:active {
-  -webkit-transform: translateY(-3px);
-  transform: translateY(-3px);
-}
-
-/* Large Devices, Wide Screens */
-
-@media only screen and (max-width : 1500px) {
-}
-
-@media only screen and (max-width : 1200px) {
-  .login {
-    width: 600px;
-    font-size: 2em;
-  }
-}
-
-@media only screen and (max-width : 1100px) {
-  .login {
-    margin-top: 2%;
-    width: 600px;
-    font-size: 1.7em;
-  }
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-  .login {
-    margin-top: 1%;
-    width: 550px;
-    font-size: 1.7em;
-    min-height: 0;
-  }
-}
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-  .login {
-    margin-top: 0;
-    width: 500px;
-    font-size: 1.3em;
-    min-height: 0;
-  }
-}
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
-  .login {
-
-    h2 {
-      margin-top: 0;
-    }
-
-    margin-top: 0;
-    width: 400px;
-    font-size: 1em;
-    min-height: 0;
-  }
-}
-
-/* Custom, iPhone Retina */ 
-@media only screen and (max-width : 320px) {
-  .login {
-    margin-top: 0;
-    width: 200px;
-    font-size: 0.7em;
-    min-height: 0;
-  }
-}
-
-
-</style>
 
 <body>
 
   <nav id="navegacao" class="navbar navbar-expand-sm navbar-dark">
   <div class="container">
     <!-- Brand/logo -->
-    <a class="navbar-brand" href="#">
-      <img src="Imgs/logo.png" alt="logo" style="width:80px;">
+    <a class="navbar-brand" href="index.html">
+      <img src="Imgs/logo.png" alt="logo" style="width:50px; height: 100px;">
     </a>
-    <p id="sitename">Ajudaí</p>
+    <p id="sitename">Ajudaí.com</p>
 
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#links-navegacao">
@@ -248,10 +47,10 @@ h2 {
           <a class="nav-link" href="#last-container">Vagas Recentes</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="anuncioProcura.html">Pessoas procurando</a>
+          <a class="nav-link" href="anuncioProcura2.html">Pessoas procurando</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="anuncio.html">Vagas Disponíveis</a>
+          <a class="nav-link" href="anuncio2.html">Vagas Disponíveis</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="login.html">Login</a>
@@ -265,25 +64,135 @@ h2 {
   </div>
 </nav>
 
-        <div class="login">
-                <div class="heading">
-                  <h2>Sign in</h2>
-                  <form action="#">
-              
-                    <div class="input-group input-group-lg">
-                      <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                      <input type="text" class="form-control" placeholder="Username or email">
-                        </div>
-              
-                      <div class="input-group input-group-lg">
-                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <input type="password" class="form-control" placeholder="Password">
-                      </div>
-              
-                      <button type="submit" class="float">Login</button>
-                     </form>
-                       </div>
-               </div>
-    
+<!------ Include the above in your HEAD tag ---------->
+
+<!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+    <div class="fundo-login">
+
+    <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+
+  </div> 
+
+
+
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+<footer class="footer_area">
+			<div class="container">
+				<div class="row">				
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Contacts</h4>
+							<ul>
+								<li>4080 Repperts Coaol Road Sackson, MS 00201 USA</li>
+								<li>(+123) 685 78 455 <br> (+064) 336 987 245</li>
+								<li>Contact@yourcompany.com</li>
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Information</h4>
+							<ul>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Delivery Information</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Services</h4>
+							<ul>
+								<li><a href="#">Returns</a></li>
+								<li><a href="#">Site Map</a></li>
+								<li><a href="#">Wish List</a></li>
+								<li><a href="#">My Account</a></li>
+								<li><a href="#">Order History</a></li>
+							</ul>
+						</div>
+					</div> <!--  End Col -->	
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Newsletter</h4>
+							<div class="newsletter_form">
+								<p>There are many variations of passages of Lorem Ipsum available, but the majority have </p>
+								<form method="post" class="form-inline">				
+									<input name="EMAIL" id="email" placeholder="Enter Your Email" class="form-control" type="email">
+									<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+								</form>
+							</div>
+						</div>
+					</div> <!--  End Col -->
+					
+				</div>
+			</div>
+	
+		
+			<div class="ftr_btm_area">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="ftr_social_icon">
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-google"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-rss"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<p class="copyright_text text-center">© 2019 All Rights Reserved Bootstrap 4 footer</p>
+						</div>
+						
+						<div class="col-sm-4">
+							<div class="payment_mthd_icon text-right">
+								<ul>
+									<li><i class="fa fa-cc-paypal"></i></li>
+									<li><i class="fa fa-cc-visa"></i></li>
+									<li><i class="fa fa-cc-discover"></i></li>
+									<li><i class="fa fa-cc-mastercard"></i></li>
+									<li><i class="fa fa-cc-amex"></i></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+
 </body>
 </html>

@@ -1,0 +1,180 @@
+/* pagina anuncio*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
+
+
+
+/*  INDEX*/
+
+/* Menu ----  Barra de Navegação ----  */
+#navegacao {
+  background-color: #062F4F;
+  font-family: 'open sans', helvetica, arial, sans;
+  background-size: cover;
+  border-radius:  0;
+  border: 0;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+#links-navegacao {
+color: #ffffff;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+.links-navegacao li {
+  margin-left: 10px;
+  color: red;
+}
+
+#nav-item{
+  color: #00FF00;
+}
+
+
+.links-navegacao a:hover {
+  background: red;
+}
+
+#sitename {
+  font: Arial;
+  color: #ffffff;
+  font-size: 40px;
+}
+
+
+#colorido:hover{
+  /* visited link */
+    color: #00FF00;  
+  /*color: #00FF00;*/
+}
+
+.btn-container1{
+  margin-top: 400px;
+  font-size: 100px;
+}
+
+
+#btn-primary{
+  text-align: center;
+  }
+/*  */
+
+
+/*----------------------------------------------------------------------*/
+/* Imagem topo do site */
+/*
+#topo {
+  width: 100%;
+  height: 100px;
+  background-color: #FFFFFF;
+  background-image: url(Imgs/cidade2.png);
+  background-size: 100px no-repeat;
+  background-repeat: repeat-x;
+  padding: 0;
+  clear: both;
+  display: table;
+}
+
+#corpo_topo {
+  width: 1300px;
+  height: 250px;
+  margin: 0 auto;
+}
+*/
+/* FIM topo do site*/
+
+
+
+/*Parte dos anuncis*/
+#container {
+  
+}
+
+#last-container {
+	text-align: center;
+	padding: 100px 0;
+}
+
+
+row{
+  background-color: yellow;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+
+#conteine {
+  background-color: turquoise;
+  padding-bottom: 100px;
+}
+/*
+img-fluid{
+  block-size: 100px;
+}
+*/
+
+img {
+  /*width: 100px;*/
+  height: 100px;
+  object-fit: scale-down;
+}
+
+
+.btn {
+  display: inline-block;
+  background: @blue;
+  border: 1px solid darken(@blue, 5%);
+  padding: .5em 2em;
+  margin-right: .5em;
+  box-shadow: inset 0px 1px 0px fadeout(white, 80%); 
+  &:hover {
+    background: lighten(@blue, 5%);
+  }
+  &:active {
+    background: @blue; 
+    box-shadow: inset 0px 1px 1px fadeout(black, 90%); 
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+
+/*PAGINAÇÃO pagination*/
+.pagination>li>a, .pagination>li>span { 
+    border-radius: 50% !important; /* DEIXA ARRENDODADO*/
+    margin: 0 5px; /*espaçamento entre elas*/
+  }
+
+.pagination{
+  padding-left: 500px;
+  padding-top: 50px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Rodape footer*/
+.card-footer {
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #222;
+  border-top: 0;
+  color: #ffffff;
+}
+
+.card-footer div.row {
+  margin-bottom: 35px;
+}
+
+.card-footer hr {
+  width: 80%;
+  background-color: white;
+}

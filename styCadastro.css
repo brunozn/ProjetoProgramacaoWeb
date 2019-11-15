@@ -6,6 +6,81 @@ body {
     -o-background-size: cover;
     background-size: cover;
   }
+
+  /*  INDEX*/
+
+/* Menu ----  Barra de Navegação ----  */
+#navegacao {
+  background-color: #062F4F;
+  border-radius:  0;
+  border: 0;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+#links-navegacao {
+color: #ffffff;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+#links-navegacao li {
+  margin-left: 10px;
+}
+
+
+#links-navegacao a:hover {
+  background: #E7E7E7;
+}
+
+#sitename {
+  font: Arial;
+  color: #ffffff;
+  font-size: 40px;
+}
+
+
+#colorido:hover{
+  /* visited link */
+    color: #00FF00;  
+  /*color: #00FF00;*/
+}
+
+.btn-container1{
+  margin-top: 400px;
+  font-size: 100px;
+}
+
+
+#btn-primary{
+  text-align: center;
+  }
+/*  */
+
+
+/*----------------------------------------------------------------------*/
+/* Imagem topo do site */
+/*
+#topo {
+  width: 100%;
+  height: 100px;
+  background-color: #FFFFFF;
+  background-image: url(Imgs/cidade2.png);
+  background-size: 100px no-repeat;
+  background-repeat: repeat-x;
+  padding: 0;
+  clear: both;
+  display: table;
+}
+
+#corpo_topo {
+  width: 1300px;
+  height: 250px;
+  margin: 0 auto;
+}
+*/
+/* FIM topo do site*/
   
   #sitename{
       font: Arial;
@@ -54,4 +129,194 @@ body {
     border-radius: 50px;
     box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
   }
+
+
+  /*Tela de Cadastrar*/
+
+#main-content-CADASTRAR {
+  
+    margin-top: 1px;
+    margin-bottom: 10px;
+  }
+  
+  .jumbotron-cadastrar{
+  width: 1000px;
+  background-color: #CCC;
+  margin-left: 60px;
+  margin-right: auto;
+  }
+  
+  
+  .btn-bordered.btn-custom {
+    background-color: #55748f;
+    border-bottom: 2px solid #55748f!important;
+  }
+  
+  .container-alt {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  
+  
+  
+  
+  .radio {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .radio input[type=radio] {
+    position: absolute;
+    margin-top: 4px\9;
+    margin-left: -20px;
+    line-height: normal;
+  }
+  
+  .col-xs-12 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+
+
+  /*---------------------------------------------------------------*/
+/* Footer */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #062F4F;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background: #062F4F; !important;
+    background-size: 300px;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 1px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 1px 0;
+	margin-left:5px;
+	font-weight:500;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 500;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+
+  
+  
+  
+  
+  .row {
+    margin-right: -50px;
+    margin-left: -50px;
+  }
+  
+  #register-cont {
+    margin: 5% auto;
+    position: relative;
+    max-width: 640px;
+  }
+  
+  .m-t-30 {
+    margin-top: 30px!important;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .text-center {
+    text-align: center!important;
+    margin-top: 30px;
+  }
+  
+  .text-uppercase {
+    text-transform: uppercase!important;
+    margin-bottom: .5rem;
+    font-weight: 1000;
+    line-height: 1.2;
+    margin-top: auto;
+    margin-top: 10px;
+  }
+
+
+
+  .card-footer {
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background-color: #222;
+    border-top: 0;
+    color: #ffffff;
+}
+
+.card-footer div.row {
+    margin-bottom: 35px;
+}
+
+.card-footer hr {
+    width: 80%;
+    background-color: white;
+}
+  
   

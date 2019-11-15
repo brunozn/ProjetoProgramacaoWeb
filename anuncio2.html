@@ -5,56 +5,55 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/compile/bootstrap.css">
+
+
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+
+ 
+  <link rel="stylesheet" type="text/css" href="style_anuncio.css">
 </head>
 <body>
 
-    <nav id="navegacao" class="navbar navbar-expand-sm navbar-dark">
-        <div class="container">
-          <!-- Brand/logo -->
-          <a class="navbar-brand" href="#">
-            <img src="Imgs/logo.png" alt="logo" style="width:50px;">
-          </a>
-          <p id="sitename">Ajudaí</p>
-      
-          <!-- Toggler/collapsibe Button -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#links-navegacao">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-<!-- Links -->
-<div class="collapse navbar-collapse ml-auto" id="links-navegacao">
-    <ul class="navbar-nav ml-auto"> <!--ml-auto to the right-->
-        <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Cadastrar.html">  <strong> Anuncie Aqui </strong>  </a>
-      </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#last-container">Vagas Recentes</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="anuncioProcura2.html">Pessoas procurando</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="anuncio2.html">Vagas Disponíveis</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.html">Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#contato1">Sobre</a>
-        </li>
-  </ul>
-  </div>
+   <nav id="navegacao" class="navbar navbar-expand-lg navbar-light navbar-laravel" id="links-navegacao">
+      <div class="container">
+              <a class="navbar-brand" href="index.html">
+                    <!-- <img src="#" alt="logo" style="width:50px; height: 50px;"> --> 
+                    </a>
+      <a class="navbar-brand" href="#">Ajudaí</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
   
-    </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link"  class="colorido" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  class="colorido" class="btn btn-primary" href="Cadastrar.html">  Anuncie Aqui  </a>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="anuncioProcura2.html">Pessoas procurando</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="anuncio2.html">Vagas Disponíveis</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#contato1">Sobre</a>
+              </li>
+          </ul>
+  
+      </div>
+      </div>
   </nav>
+  <!-------------------------------->
       
 
 <!-- Page Content -->
@@ -75,12 +74,13 @@
                   <a class="text-dark" href="#">Casa para alugar no centro</a>
                </h6>
                <div class="mb-1 text-muted small">Nov 12</div>
-               <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+               <p class="card-text mb-auto">Casa a 5 minutos da Facep, </p>
                <a class="btn btn-outline-primary btn-sm" role="button" href="index.html">Ver Detalhes</a>
             </div>
             <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="Imgs/casa.jpg" style="width: 200px; height: 250px;">
          </div>
       </div>
+
       <div class="col-md-6">
          <div class="card flex-md-row mb-4 shadow-sm h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
@@ -97,18 +97,18 @@
       </div>
    </div>
    <div class="row">
-      <div class="col-md-6">
-         <div class="card border-primary flex-md-row mb-4 shadow-sm h-md-250">
+            <div class="col-md-6">
+         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
                <strong class="d-inline-block mb-2 text-primary">Casa</strong>
                <h6 class="mb-0">
-                  <a class="text-dark" href="#">Casa pra alugar em algum lugar</a>
+                  <a class="text-dark" href="#">Casa para alugar no centro</a>
                </h6>
-               <div class="mb-1 text-muted small">08 de Novembro</div>
-               <p class="card-text mb-auto">Casa pra alugar no centro, com três quartos, dois banheiros, sala, cozinha</p>
+               <div class="mb-1 text-muted small">Nov 12</div>
+               <p class="card-text mb-auto">Casa a 5 minutos da Facep, </p>
                <a class="btn btn-outline-primary btn-sm" role="button" href="index.html">Ver Detalhes</a>
             </div>
-            <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="Imgs/quarto.jpg" style="width: 200px; height: 250px;">
+            <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="Imgs/casa.jpg" style="width: 200px; height: 250px;">
          </div>
       </div>
       <div class="col-md-6">
@@ -126,14 +126,28 @@
          </div>
       </div>
 
-      
-    <div class="w3-bar">
-      <a href="anuncio.html" class="w3-button w3-blue">1</a>
-      <a href="anuncio2.html" class="w3-button">2</a>
-      <a href="#" class="w3-button">3</a>
-      <a href="#" class="w3-button">4</a>
-      <a href="#" class="w3-button">5</a>
-    </div>
+<!-- PAGINAÇÃO DA PÁGINA pagination personalidade -->
+   <nave aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">«</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">»</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nave>
+
+
 
    </div> <!--ROW-->
 
