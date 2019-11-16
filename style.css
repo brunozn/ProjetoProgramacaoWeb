@@ -24,6 +24,14 @@ background:url(http://farm8.staticflickr.com/7064/6858179818_5d652f531c_h.jpg) n
   padding-bottom: 10px;
 }
 
+/*Cor da letra da barra de navegação */
+.navbar-light .navbar-nav .nav-link{
+  color: white;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: inherit;
+}
+
+
 #links-navegacao {
 color: #ffffff;
 text-decoration: none;
@@ -36,13 +44,14 @@ text-transform: uppercase;
 
 
 #links-navegacao a:hover {
-  background: #E7E7E7;
+  background: green;
 }
 
 #sitename {
   font: Arial;
   color: #ffffff;
   font-size: 40px;
+  margin-top: -35px;
 }
 
 
@@ -60,7 +69,9 @@ text-transform: uppercase;
 
 #btn-primary{
   text-align: center;
+  margin-top: 200px;
   }
+
 /*  */
 
 
@@ -91,13 +102,13 @@ text-transform: uppercase;
 
 
 /*----------------------------------------------------------------------------------------------*/
-/***************   BAnner **************************/
+/***************   BAnner inicial **************************/
 /* banner */
-#main-banner {
+#main-banner{
 	background: url('Imgs/quartoIniciar.jpg') no-repeat;
 	background-size: cover;
 	background-position: 0 55%;
-	position: relative;
+  position: relative;
 }
 
 #search-form {
@@ -146,10 +157,6 @@ text-transform: uppercase;
 
 /*----------------------------------------------------------------------------------------------*/
 /*  parte branca do site.... apos banner inicial    container */
-#container {
-  background-color: turquoise;
-}
-
 row{
   background-color: yellow;
     display: -ms-flexbox;
@@ -185,14 +192,170 @@ row{
   width: 100%;
 }
 
-
-
-
+.contato p {
+	margin-top: 50px;
+}
 
 /* FIM container  */
 
 
+/*-----------------------------------------------------------------------*/
+/* container  carousel vagas Vagas Recentes*/
 
+.main-recentes h2{
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.main-recentes {
+  /*padding-bottom: 5%;*/ /* 540/720 */
+  /*background: url('Imgs/quartoBranco.jpg') no-repeat;*/
+  background-color: #e5e5e5;
+}
+
+#title-main-recentes{
+  margin-top: -30px;
+}
+
+.container-pessoas{
+  margin-top: -100px;
+}
+
+
+.cta-100 {
+  margin-top: 100px;
+  padding-left: 8%;
+  padding-top: 7%;
+}
+.col-md-4{
+    padding-bottom:20px;
+}
+
+.white {
+  color: #fff !important;
+}
+.mt{float: left;margin-top: -20px;padding-top: 20px;}
+.bg-blue-ui {
+  background-color: #708198 !important;
+}
+figure img{
+  width:300px;
+}
+
+#blogCarousel {
+  padding-bottom: 100px;
+}
+
+.blog .carousel-indicators {
+  left: 0;
+  top: -50px;
+  height: 50%;
+}
+
+
+/* The colour of the indicators */
+
+.blog .carousel-indicators li {
+  background: #708198;
+  border-radius: 50%;
+  /*width: 5px;
+  height: 5px;*/
+}
+
+.blog .carousel-indicators .active {
+  background: #0fc9af;
+}
+
+
+
+
+.item-carousel-blog-block {
+  outline: medium none;
+  padding: 15px;
+}
+
+.item-box-blog {
+  border: 1px solid #dadada;
+  text-align: center;
+  z-index: 4;
+  padding: 20px;
+}
+
+.item-box-blog-image {
+  position: relative;
+}
+
+.item-box-blog-image figure img {
+  width: 100%;
+  height: auto;
+}
+
+.item-box-blog-date {
+  position: absolute;
+  z-index: 5;
+  padding: 4px 20px;
+  top: -20px;
+  right: 8px;
+  background-color: #41cb52;
+}
+
+.item-box-blog-date span {
+  color: #fff;
+  display: block;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.item-box-blog-date span.mon {
+  font-size: 18px;
+}
+
+.item-box-blog-date span.day {
+  font-size: 16px;
+}
+
+.item-box-blog-body {
+  padding: 10px;
+}
+
+.item-heading-blog a h5 {
+  margin: 0;
+  line-height: 1;
+  text-decoration:none;
+  transition: color 0.3s;
+}
+
+.item-box-blog-heading a {
+    text-decoration: none;
+}
+
+
+.item-box-blog-text {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.mt-10 {
+  float: left;
+  margin-top: -10px;
+  padding-top: 10px;
+}
+
+.btn.bg-blue-ui.white.read {
+  cursor: pointer;
+  padding: 4px 20px;
+  float: left;
+  margin-top: 10px;
+}
+
+.btn.bg-blue-ui.white.read:hover {
+  box-shadow: 0px 5px 15px inset #4d5f77;
+}
+
+
+
+/*--*/
 
 
 
@@ -204,24 +367,6 @@ row{
 
 
 /* Banner dois.. area das vagas*/
-#main-banner2{
-  background: url('Imgs/quartoBranco.jpg') no-repeat;
-	background-size: cover;
-	background-position: 0 30%;
-  position: relative;
-  background-size: 1600px;
-}
-
-#search-form2 {
-	position: relative;
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 5em;
-	padding-bottom: 15em;
-  text-align: center;
-
-}
 
 
 
@@ -308,39 +453,8 @@ div #testmony-box{
 
 
 
-/* Style all font awesome icons */
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-}
 
-/* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
-}
 
-/* Set a specific color for each brand */
-
-/* Facebook */
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-/* Twitter */
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-img {
-  /*width: 100px;*/
-  height: 100px;
-  object-fit: scale-down;
-}
 
 
 .carousel_area {
@@ -374,7 +488,7 @@ img {
 
 #last-container {
 	text-align: center;
-	padding: 100px 0;
+	padding: 50px 0;
 }
 
 .wrapper {
@@ -406,7 +520,6 @@ img {
 
 #last-container ul li:after {
 	clear: both;
-	content: "";
 	display: block;
 }
 
@@ -493,139 +606,144 @@ img {
 
 
 
+
+
 /* Area de depoimentos*/
-#testmony-container {
-	background: url('Imgs/quartoIniciar2.jpg') no-repeat;
-	background-size: cover;
+
+.mx-auto{    
+  margin-left: auto !important;
+  }
+  
+  .fa {
+      font-weight: 900;
+  }
+  
+ .fas {
+      font-family: "Font Awesome 5 Free";
+  }
+
+  .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+  
+  .blue-text {
+      color: #2196f3 !important;
+  }
+  
+  .font-weight-bold {
+      font-weight: 700 !important;
+  }
+  
+  .my-3 {
+      margin-bottom: 1rem !important;
+  }
+
+  .my-5 {
+    margin-bottom: 8rem!important;
 }
 
-#testmony-container h2, #testmony-container p {
-	color: black;
-	text-align: center;
+.my-5 {
+  margin-top: 1rem!important; 
+}
+  
+  
+.text-center {
+      text-align: center !important;
+      margin-right: 100px;
+      margin-left: 100px;
+  }
+
+.text-duo1{
+  margin: auto;
+  margin-top: 5px;
+  }
+
+.text-duo2{
+    margin: auto;
+  margin-top: 50px;
+}
+  
+  .dark-grey-text {
+      color: #4f4f4f !important;
+  }
+  
+  .font-weight-normal {
+      font-weight: 400 !important;
+  }
+
+.testimonial{
+    min-height: 100px;
+  }
+  
+  .testimonial p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+  }
+
+  .p-1 {
+    padding: 0.25rem !important;
 }
 
-#testmony-container h2 {
-	font-size: 36px;
-	margin-bottom: 50px;
-}
-
-#testmony-container p {
-	margin-bottom: 50px;
-}
-
-.testmony-box {
-	display: inline-block;
-	width: 24.5%;
-	text-align: center;
-}
-
-#testmony-container .testmony-box .testmony-msg {
-	background-color: #FFF;
-	color: #666;
-	border-radius: 10px;
-	padding: 20px;
-	width: 50%;
-	position: relative;
-	margin: 35px auto;
-	font-style: italic;
-}
-
-.carousel slide{
-    background-size: cover;
-    height: 120px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.carousel-control-next {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin-right: -150px;
-  z-index: 1;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 15%;
-  color: #fff;
-  text-align: center;
-  opacity: .5;
-  transition: opacity .15s ease;
-}
-
-.carousel-control-prev {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin-left: -150px;
-  z-index: 1;
-  align-items: center;
-  justify-content: center;
-  width: 15%;
-  color: #fff;
-  text-align: center;
-  opacity: .5;
-  transition: opacity .15s ease;
+.rounded-circle {
+  border-radius: 50%!important;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/** RODAPE FOOTER/
-.card-footer {
-    padding-top: 35px;
-    padding-bottom: 30px;
-    background-color: #222;
-    border-top: 0;
-    color: #ffffff;
+img {
+  width: 100px;
+  height: 100px;
+  object-fit: scale-down;
 }
 
-.card-footer div.row {
-    margin-bottom: 35px;
-}
+/*ESTRELAS DEPOIMENTO STAR*/
+.estrelas input[type=radio] {
+  display: none;}
 
-.card-footer hr {
-    width: 80%;
-    background-color: white;
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #FC0;
 }
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #FC0;
+}
+/*FIM ESTRELAS STAR*/
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -774,34 +892,29 @@ width: 100%;
 width: 100%;
 }
 
-/*
+
+/*---------------------------------------------------------------*/
+/** RODAPE FOOTER
+*/
 .card-footer {
-  /margin-top: 3px;/
   padding-top: 35px;
   padding-bottom: 30px;
-  background-color: #222;
+  background-color: #062F4F;
   border-top: 0;
-  color: #ffffff;
+  color: white
 }
 
 .card-footer div.row {
   margin-bottom: 35px;
-  height: 300px;
+  margin-left: 100px;
 }
-
-#endereco div, #contato div, #tele div {
-  margin-bottom: 5px;
-  text-align: center;
-  width: 100%;
-}
-
-
 
 .card-footer hr {
   width: 80%;
   background-color: white;
 }
-*/
+
+
 
 /*---------------------------------------------------------------*/
 /* Footer */
@@ -879,4 +992,84 @@ section .section-title {
     padding-bottom: 0px;
     margin-bottom: 10px;
 }
+}
+
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+/* links-rodape*/
+.single_rodape form{
+	margin-top: 8px;
+}
+.single_rodape p{
+	margin-bottom: 10px;
+}
+
+.single_rodape li {
+  padding-bottom: 8px;
+  color: #fff;
+}
+.single_rodape a {
+  color: #fff;
+}
+
+.single_rodape li {
+  font-size: 20px;
+  
+}
+.single_rodape a:hover {
+  color: #33d286;
+}
+
+.single_rodape p{
+	display: inline-block;
+}
+
+.title-secao-rodape{
+    text-transform: uppercase;
+    font-size: 24px;
+	  margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+  margin-bottom: 0;
+}
+
+.ftr_btm_area {
+  background: transparent;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px dotted #888;
+  margin-top: 28px;
+  z-index: 100px;
+  position: relative;
 }

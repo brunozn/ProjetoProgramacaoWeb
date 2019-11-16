@@ -14,20 +14,21 @@
 
 
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src='main-index.js'></script>
 
   
 </head>
 <body>
 
 
-
-<nav id="navegacao" class="navbar navbar-expand-sm navbar-dark">
+    <nav id="navegacao" class="navbar navbar-expand-lg navbar-light navbar-laravel">
+<!--<nav id="navegacao" class="navbar navbar-expand-sm navbar-dark"> -->
   <div class="container">
     <!-- Brand/logo -->
     <a class="navbar-brand" href="index.html">
-      <img src="Imgs/logo.png" alt="logo" style="width:50px; height: 100px;">
+      <img src="Imgs/logo.png" alt="logo" style="width:50px; height: 50px;">
     </a>
-    <p id="sitename">Ajudaí.com</p>
+    <p id="sitename">Ajudaí</p>
 
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#links-navegacao">
@@ -105,185 +106,274 @@
 
 
 <!--<footer class="card-footer"> -->
-    <div class="container">
+>
+    <div class="container-rodape">
         <div class="row">
           <section id="endereco" class="col-sm-4">
-              <div class="grid-box span-4">
-                  <svg class="hp-icon"> </svg>
-                  <h4>Encontre inquilinos</h4>
-          <p>Encontre pessoas buscando quartos para alugar na sua área e encontre o companheiro de casa ou inquilino ideal. Ofereça seu quarto diretamente para quem procura casa para dividir</p>
-          <a href="anuncioProcura.html" class="btn-green small full no-wrap">Anuncie seu quarto</a>
+              <div class="col-lg col-md-6 col-12">
+
+                  <!--<svg class="hp-icon"> </svg> -->
+                  <img src="Imgs/home.svg" alt="hom" />
+                  <h4 style="margin-top: 30px;">Encontre inquilinos</h4>
+          <p>Encontre pessoas buscando casa ou quarto para alugar na sua área </p>
+          <button href="anuncioProcura.html" type="button" class="btn btn-success" style="margin-top: 20px;">Anuncie seu quarto</button>
       </div>
               <br>
             <hr class="d-block d-sm-none">
           </section>
     
           <section id="contato" class="col-sm-4">
-              <div class="grid-box span-4">
-                  <svg class="hp-icon"></svg>
-                  <h4>Encontre um quarto</h4>
+              <div class="col-lg col-md-6 col-12" >
+                  <img class="iconi" src="Imgs/user-group.svg" alt="gru" />
+                  <h4 style="margin-top: 30px;">Encontre um quarto</h4>
           <p>Encontre o quarto perfeito para você, contate o dono e marque uma visita hoje mesmo!</p>
-          <a id="whyUseFindRoom" href="anuncio.html" class="btn-orange small full no-wrap">Encontre um quarto</a>
+          <button href="anuncio.html" type="button" class="btn btn-warning" style="margin-top: 20px;">Encontre um quarto</button>
       </div>
        <br>
             <hr class="d-block d-sm-none">
           </section>
           <section id="tele" class="col-sm-4">
-              <div class="grid-box span-4">
-                  <svg class="hp-icon">
-                  </svg>
-                  <h4>Estamos aqui para ajudar</h4>
-                  <p>Ferramenta inteligente para ajudar você a encontrar o lugar perfeito</p>
-                  <a target="_blank" href="#" class="btn-grey small full no-wrap">Entenda como funciona</a>
+              <div class="col-lg col-md-6 col-12">
+                <img src="Imgs/information.svg" alt="info" />
+                  <h4 style="margin-top: 30px;">Estamos aqui para ajudar</h4>
+                  <p>Ferramenta inteligente para ajudar você a encontrar o lugar perfeito.</p>
+                  <button href="#" class="btn btn-info" style="margin-top: 20px;">Entenda como funciona</a>
               </div> <br>
             <hr class="d-block d-sm-none">
           </section>
         </div>
       </div> 
+
     <!--</footer> -->
   
 
 
-<!---------------------------------------------->
-
-    <div id="main-banner2"> 
-      <br> <br> <br>
-      <br> <br> <br>
-      <h1 class="tituloPessoa" > Pessoas procurando uma vaga</h1>
-      <div id="search-form2">
-
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> <!--INICIO carouselExampleControls-->
-              <div class="carousel-inner33"> <!--INICIO carousel-inner -->
-                  <div class="carousel-item active"> <!-- Carroseul Item 1 Inicio -->
-                      <hr class="mt-2 mb-5">
-                        <div class="row text-center text-lg-left">
-
-                        
-                              
-                              <div class="col-lg-3 col-md-4 col-6">
-                            <a href="#" class="d-block mb-4">
-                              <img class="img-fluid img-thumbnail" src="Imgs/pessoas/009909.jpg" alt="">
-                            </a>
-                            <div class="desc">Procuro quarto em apartamento, localizado por tras do Banco do Brasil. Valor:500,00 
-                            </div>
+ <div class="main-recentes"> 
+	  <div id="title-main-recentes">
+      <br> <br>
+        <h2> Pessoas procurando um lugar</h2>
+      </div>
+    <div class="container cta-100 ">
+    
+        <div class="container-pessoas">
+          <div class="row blog">
+            <div class="col-md-12">
+              <div id="blogCarousel" class="carousel slide container-blog" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#blogCarousel" data-slide-to="1"></li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-md-3" >
+                        <div class="item-box-blog">
+                          <div class="item-box-blog-image">
+                            <!--Date-->
+                            <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">Quarto</span> </div>
+                            <!--Image-->
+                            <figure> <img alt="" src="Imgs/rostos/ana.jpg"> </figure>
                           </div>
-                        
-                      
-                          <div class="col-lg-3 col-md-4 col-6">
-                            <a href="#" class="d-block mb-4">
-                              <img class="img-fluid img-thumbnail" src="Imgs/pessoas/009928.jpg" alt="">
-                            </a>
-                            <div class="desc">Em busca de apartamento proximo ao Titanic <br> Valor: R$ 300,00
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-4 col-6">
-                            <a href="#" class="d-block mb-4">
-                              <img class="img-fluid img-thumbnail" src="Imgs/pessoas/009950.jpg" alt="">
-                            </a>
-                            <div class="desc">Preciso de um lugar para morar, pois irei estudar na cidade e não tenho condições de morar sozinha</div>
-                          </div>
-                          <div class="col-lg-3 col-md-4 col-6">
-                            <a href="#" class="d-block mb-4">
-                              <img class="img-fluid img-thumbnail" src="Imgs/pessoas/019998.jpg" alt="">
-                            </a>
-                            <div class="desc"> Procuro uma casa para aluga com garagem. <br> Até 300,00</div>
-                        </div>
-                        </div>
-                    </div> <!-- Carroseul Item 1 Fim -->
-
-                <div class="carousel-item"> <!-- Carousel item 2 Inicio  -->
-                  <hr class="mt-2 mb-5">
-                    <div class="row text-center text-lg-left">
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4">
-                          <img class="img-fluid img-thumbnail" src="Imgs/pessoas/009909.jpg" alt="">
-                        </a>
-                        <div class="desc">Procuro casa para alugar com garagem. Bairro Princesinha do Oeste ou prox a rodoviaria
-                        </div>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4">
-                          <img class="img-fluid img-thumbnail" src="Imgs/pessoas/009928.jpg" alt="">
-                        </a>
-                        <div class="desc">Procuro casa para alugar, com dois quartos, garagem de preferência no centro. <br> Até: 500,00
-                          </div>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4">
-                          <img class="img-fluid img-thumbnail" src="Imgs/pessoas/009944.jpg" alt="">
-                        </a>
-                        <div class="desc">Procuro quarto para morar, preferência no centro. <br> Até: 500,00
-                        </div>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4">
-                          <img class="img-fluid img-thumbnail" src="Imgs/pessoas/019998.jpg" alt="">
-                        </a>
-                        <div class="desc"> Procuro casa ou apartamento para alugar no bairro Princesinha do Oeste, em bom estado. <br> Até R$ 550,00</div>
-                        </div>
-                    </div>
-                 </div> <!-- Fim do Carrosel Item2 -->
-
-
-
-                <div class="carousel-item"> <!-- Carousel item 3 Inicio  -->
-                  <hr class="mt-2 mb-5">
-                        <div class="row text-center text-lg-left">
-                          <div class="col-lg-3 col-md-4 col-6">
-                            <a href="#" class="d-block mb-4">
-                              <img class="img-fluid img-thumbnail" src="Imgs/pessoas/009909.jpg" alt="">
-                            </a>
-                            <div class="desc">Busco vaga para morar, que seja perto do restaurante popular, banco, Queiroz.
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-4 col-6">
-                            <a href="#" class="d-block mb-4">
-                              <img class="img-fluid img-thumbnail" src="Imgs/pessoas/009928.jpg" alt="">
-                            </a>
-                            <div class="desc"> Procuro uma casa para alugar diretamente com o proprietário uma casa de dois ou três quartos cosinha sala
-                                Garagem para dois carros 
-                            </div>
-                            </div>
-                          <div class="col-lg-3 col-md-4 col-6">
-                            <a href="#" class="d-block mb-4">
-                              <img class="img-fluid img-thumbnail" src="Imgs/pessoas/009944.jpg" alt="">
-                            </a>
-                            <div class="desc">Casa situada na rua Hemeterio Fernandes, 38. Com dois quartos,garagem. <br> Valor: 300,00 R$ 
-                            </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6"> <!--col-lg-3 col-md-4 col-6 inicio-->
-                              <a href="#" class="d-block mb-4">
-                                <img class="img-fluid img-thumbnail" src="Imgs/pessoas/019972.jpg" alt="">
+                          <div class="item-box-blog-body">
+                            <!--Heading-->
+                            <div class="item-box-blog-heading">
+                              <a href="#" tabindex="0">
+                                <h5>Ana Ana</h5>
                               </a>
-                              <div class="desc">Casa com três quartos, sendo 1 suíte, armário na suíte, sala, copa, cozinha com armário, banho social, garagem. <br> Valor: 600,00 R$
-                                </div>
-                                </div> <!-- FIM col-lg-3 col-md-4 col-6-->
+                            </div>
+                            <!--Text-->
+                            <div class="item-box-blog-text">
+                              <p>Quarto pra morar, sou nova na cidade, estudo em alguem lugar. Estou atrAs de emprego, logo é interessante que a casa seja perto do centro</p>
+                            </div>
+                            <div class="mt"> <a href="#" tabindex="0" class="btn bg-blue-ui white read">Mais informações</a> </div>
+                            <!--Read More Button-->
                           </div>
-                          
-                  </div> <!-- FIM Carousel item 3  -->
+                        </div>
+                      </div>
 
-                </div> <!--FIM carousel-inner -->
-              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-         
+                      <div class="col-md-3" >
+                          <div class="item-box-blog">
+                            <div class="item-box-blog-image">
+                              <!--Date-->
+                              <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">Casa</span> </div>
+                              <!--Image-->
+                              <figure> <img alt="" src="Imgs/rostos/karol1.jpg"> </figure>
+                            </div>
+                            <div class="item-box-blog-body">
+                              <!--Heading-->
+                              <div class="item-box-blog-heading">
+                                <a href="#" tabindex="0">
+                                  <h5>Maria Maria</h5>
+                                </a>
+                              </div>
+                              <!--Text-->
+                              <div class="item-box-blog-text">
+                                <p> Procuro mansão, com no mínimo cinco quartos, família pequena mas que gosta de conforto. Que tenha garagem para três carros e um caminhão</S> .</p>
+                              </div>
+                              <div class="mt"> <a href="#" tabindex="0" class="btn bg-blue-ui white read">Mais informações</a> </div>
+                              <!--Read More Button-->
+                            </div>
+                          </div>
+                        </div>
 
-      </div> <!-- FIM carouselExampleControls-->
-
-      <div class="btn-container1">
-          <a href="anuncioProcura.html" class="btn"> <strong> Ver mais vagas</strong></a>
+                      <div class="col-md-3" >
+                        <div class="item-box-blog">
+                          <div class="item-box-blog-image">
+                            <!--Date-->
+                            <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">Casa</span> </div>
+                            <!--Image-->
+                            <figure> <img alt="" src="Imgs/rostos/andre.jpg"> </figure>
+                          </div>
+                          <div class="item-box-blog-body">
+                            <!--Heading-->
+                            <div class="item-box-blog-heading">
+                              <a href="#" tabindex="0">
+                                <h5>Joao joao</h5>
+                              </a>
+                            </div>
+                            <!--Data-->
+                            <!--Text-->
+                            <div class="item-box-blog-text">
+                              <p>Procuro casa que tenha teto, paredes e portas, não sou muito exigente, que tenha agua, luz...bla bla bla.</p>
+                            </div>
+                            <div class="mt"> <a href="#" tabindex="0" class="btn bg-blue-ui white read">Mais Informações</a> </div>
+                            <!--Read More Button-->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3" >
+                        <div class="item-box-blog">
+                          <div class="item-box-blog-image">
+                            <!--Date-->
+                            <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">Quarto</span> </div>
+                            <!--Image-->
+                            <figure> <img alt="" src="Imgs/rostos/etie.jpg"> </figure>
+                          </div>
+                          <div class="item-box-blog-body">
+                            <!--Heading-->
+                            <div class="item-box-blog-heading">
+                              <a href="#" tabindex="0">
+                                <h5>André André</h5>
+                              </a>
+                            </div>
+                            <!--Data-->
+                            <!--Text-->
+                            <div class="item-box-blog-text">
+                              <p>Busco morada em casa, tenho cama apenas, ajudo nas despesas e pago aluguel.</p>
+                            </div>
+                            <div class="mt"> <a href="#" tabindex="0" class="btn bg-blue-ui white read">Mais informações</a> </div>
+                            <!--Read More Button-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--.row-->
+                  </div>
+                  <!--.item-->
+                  <div class="carousel-item ">
+                    <div class="row">
+                      <div class="col-md-4" >
+                        <div class="item-box-blog">
+                          <div class="item-box-blog-image">
+                            <!--Date-->
+                            <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">Augu 01</span> </div>
+                            <!--Image-->
+                            <figure> <img class="tamanho" alt="" src="Imgs/rostos/italo.png"> </figure>
+                          </div>
+                          <div class="item-box-blog-body">
+                            <!--Heading-->
+                            <div class="item-box-blog-heading">
+                              <a href="#" tabindex="0">
+                                <h5>News Title</h5>
+                              </a>
+                            </div>
+                            <!--Data-->
+                            <!--Text-->
+                            <div class="item-box-blog-text">
+                              <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor.</p>
+                            </div>
+                            <div class="mt"> <a href="#" tabindex="0" class="btn bg-blue-ui white read">read more</a> </div>
+                            <!--Read More Button-->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4" >
+                        <div class="item-box-blog">
+                          <div class="item-box-blog-image">
+                            <!--Date-->
+                            <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">Augu 01</span> </div>
+                            <!--Image-->
+                            <figure> <img alt="" src="Imgs/rostos/jua.jpg"> </figure>
+                          </div>
+                          <div class="item-box-blog-body">
+                            <!--Heading-->
+                            <div class="item-box-blog-heading">
+                              <a href="#" tabindex="0">
+                                <h5>News Title</h5>
+                              </a>
+                            </div>
+                            <!--Data-->
+                            <div class="item-box-blog-data" style="padding: px 15px;">
+                              <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comments(3)</p>
+                            </div>
+                            <!--Text-->
+                            <div class="item-box-blog-text">
+                              <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor.</p>
+                            </div>
+                            <div class="mt"> <a href="#" tabindex="0" class="btn bg-blue-ui white read">read more</a> </div>
+                            <!--Read More Button-->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="depoi" class="col-md-4" >
+                        <div class="item-box-blog">
+                          <div class="item-box-blog-image">
+                            <!--Date-->
+                            <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">Augu 01</span> </div>
+                            <!--Image-->
+                            <figure> <img class="tamanho" alt="" src="Imgs/rostos/karol1.jpg"> </figure>
+                          </div>
+                          <div class="item-box-blog-body">
+                            <!--Heading-->
+                            <div class="item-box-blog-heading">
+                              <a href="#" tabindex="0">
+                                <h5>News Title</h5>
+                              </a>
+                            </div>
+                            <!--Data-->
+                            <div class="item-box-blog-data" style="padding: px 15px;">
+                              <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comments(3)</p>
+                            </div>
+                            <!--Text-->
+                            <div class="item-box-blog-text">
+                              <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor.</p>
+                            </div>
+                             <div class="mt"> <a href="#" tabindex="0" class="btn bg-blue-ui white read">read more</a> </div>
+                            <!--Read More Button-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--.row-->
+                  </div>
+                  <!--.item-->
+                </div>
+                <!--.carousel-inner-->
+              </div>
+              <!--.Carousel-->
+            </div>
+          </div>
         </div>
-
-    </div> <!-- searc-form-->
-  </div> <!-- main-banner2-->
+      </div>
 
 
+    </div>
+    
+<!-------------------------------------------------------------------------------------->
 
+
+  
 
 <!-- ------------------------------------------>
     <main id="last-container" class="wrapper">
@@ -359,55 +449,150 @@
       </main>
             
 
-  <section id="testmony-container">
-      <div class="wrapper">
-          <h1>Depoimentos</h1>
-                <div class="testmony-box">
-					      <p class="testmony-msg">Através do site que encontrei um lugar pra morar, recomendo muito! </p>
-					        <img src="Imgs/jua.jpg">
-					      <p class="testmony-name">Bruno</p>
-              </div>
+<!-- Section: Testimonials v.3 -->
+<section class="team-section text-center my-5">
 
-              <div class="testmony-box">
-			          <p class="testmony-msg"> Vem fazendo muita diferença, facilitando a vida de estudantes, asssim como eu, que graças ao olhar estratégico criou uma ferramenta tão interessante</p>
-			            <img src="Imgs/italo.png">
-			              <p class="testmony-name">José</p>
-		          </div>
-    
-              <div class="testmony-box">
-			          <p class="testmony-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				          <img src="Imgs/bru.jpg">
-				            <p class="testmony-name">Pedro</p>
-              </div>
-    
-              <div class="testmony-box">
-                  <p class="testmony-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <img src="Imgs/pessoas/019998.jpg">
-                      <p class="testmony-name">Maria</p>
-                </div>
-     
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold my-5">Depoimentos</h2>
+    <!--Grid row-->
+    <div class="row text-center" >
+            <div class="row text-duo1" > 
+      <!--Grid column-->
+      <div class="col-md-6 mb-md-0 mb-6">
+  
+        <div class="testimonial">
+          <!--Avatar-->
+          <div class="avatar mx-auto">
+            <img src="Imgs/rostos/fati.jpg" class="rounded-circle z-depth-1 img-fluid">
+          </div>
+          <!--Content-->
+          <h4 class="font-weight-bold dark-grey-text mt-4">Fatima da Silva</h4>
+          <h6 class="font-weight-bold blue-text my-3">Estudante</h6>
+          <p class="font-weight-normal dark-grey-text">
+            <i class="fa fa-quote-left pr-2"></i>O site me ajudou muito, agradeço por mais.</p>
+          <!--Review-->
+          <div class="estrelas">
+              <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+              <label for="cm_star-1"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-1" name="fb" value="1"/>
+              <label for="cm_star-2"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-2" name="fb" value="2"/>
+              <label for="cm_star-3"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-3" name="fb" value="3"/>
+              <label for="cm_star-4"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-4" name="fb" value="4"/>
+              <label for="cm_star-5"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-5" name="fb" value="5"/>
             </div>
-  </section>
-
-
-<!--
-<div id="home-tiles" class="row">
-    <div class="col-md-3 col-sm-6 col-12">
-        <a href="menu-categories.html">
-          <div id="grupos"><span>Noticias</span></div>
-        </a>
-    </div>
-    <div class="col-md-12 col-sm-12 col-12">
-      <a href="https://goo.gl/maps/ZDVcDQvLXqDL6f967" target="_blank">
-        <div id="mapa">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1813877049053!2d-38.18612928586345!3d-6.106261661588351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bb32fb967ce7ed%3A0xc1598bca44aabc30!2sUFERSA%20-%20Universidade%20Federal%20Rural%20do%20Semi-%C3%81rido%2C%20Campus%20de%20Pau%20dos%20Ferros!5e0!3m2!1spt-BR!2sbr!4v1567367125801!5m2!1spt-BR!2sbr" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-          <span>Localização</span>
         </div>
-      </a>
+
+
+      </div>
+
+      <div class="col-md-6 mb-md-0 mb-6">
+      <div class="testimonial">
+          <!--Avatar-->
+          <div class="avatar mx-auto">
+            <img src="Imgs/rostos/paul.jpg" class="rounded-circle z-depth-1 img-fluid">
+          </div>
+          <!--Content-->
+          <h4 class="font-weight-bold dark-grey-text mt-4">Maicon</h4>
+          <h6 class="font-weight-bold blue-text my-3">Trabalhador</h6>
+          <p class="font-weight-normal dark-grey-text">
+            <i class="fa fa-quote-left pr-2"></i>Achei uma galera muito legal para dividir despesas, graças a plataforma.</p>
+          <!--Review-->
+          <div class="estrelas">
+              <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+              <label for="cm_star-1"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-1" name="fb" value="1"/>
+              <label for="cm_star-2"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-2" name="fb" value="2"/>
+              <label for="cm_star-3"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-3" name="fb" value="3"/>
+              <label for="cm_star-4"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-4" name="fb" value="4"/>
+              <label for="cm_star-5"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-5" name="fb" value="5"/>
+            </div>
+        </div>
+      <!--Grid column-->
     </div>
-</div>
-</div>
--->
+  </div> <!--duo1-->
+
+  <div class="row text-duo2" > 
+      <!--Grid column-->
+      <div class="col-md-6">
+  
+        <div class="testimonial">
+          <!--Avatar-->
+          <div class="avatar mx-auto">
+            <img src="Imgs/rostos/diog.jpg" class="rounded-circle z-depth-1 img-fluid">
+          </div>
+          <!--Content-->
+          <h4 class="font-weight-bold dark-grey-text mt-4">Dougras</h4>
+          <h6 class="font-weight-bold blue-text my-3">Estudante</h6>
+          <p class="font-weight-normal dark-grey-text">
+            <i class="fa fa-quote-left"></i>Moro em uma linda casa, ampla e bem localizada por causa do site, que me ajudou com diversas opções.<i class="fa fa-quote-right"></i></p>
+          <!--Review-->
+              <div class="estrelas">
+                  <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                  <label for="cm_star-1"><i class="fa"></i></label>
+                  <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                  <label for="cm_star-2"><i class="fa"></i></label>
+                  <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                  <label for="cm_star-3"><i class="fa"></i></label>
+                  <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                  <label for="cm_star-4"><i class="fa"></i></label>
+                  <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                  <label for="cm_star-5"><i class="fa"></i></label>
+                  <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                </div>
+        </div>
+  
+      </div>
+      <!--Grid column-->
+  
+      <!--Grid column-->
+      <div class="col-md-6">
+  
+        <div class="testimonial">
+          <!--Avatar-->
+          <div class="avatar mx-auto">
+            <img src="Imgs/rostos/karol1.jpg" class="rounded-circle z-depth-1 img-fluid">
+          </div>
+          <!--Content-->
+          <h4 class="font-weight-bold dark-grey-text mt-4">Maria Karina</h4>
+          <h6 class="font-weight-bold blue-text my-3">Mudelo</h6>
+          <p class="font-weight-normal dark-grey-text">
+            <i class="fa fa-quote-left" ></i>Site muito bom, recomendo! O criador é um gênio.<i class="fa fa-quote-right"></i></p>
+          <!--Review-->
+          <div class="estrelas">
+              <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+              <label for="cm_star-1"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-1" name="fb" value="1"/>
+              <label for="cm_star-2"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-2" name="fb" value="2"/>
+              <label for="cm_star-3"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-3" name="fb" value="3"/>
+              <label for="cm_star-4"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-4" name="fb" value="4"/>
+              <label for="cm_star-5"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-5" name="fb" value="5"/>
+            </div>
+        </div>
+  
+      </div>
+      <!--Grid column-->
+  
+
+    </div> <!--duo2-->
+    </div>
+    <!--Grid row-->
+  
+  </section>
+  <!-- Section: Testimonials -->
+
+
 
 
 
@@ -415,31 +600,18 @@
 <footer class="card-footer">
   <div class="container-rodape">
     <div class="row">
-      <section id="endereco" class="col-sm-4">
-        <div>Navegar</div> <br>
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="Cadastrar.html">Anuncie Aqui</a>
-      </li>
-        <li class="nav-item">
-            <a href="#last-container">Vagas Recentes</a>
-        </li>
-        <li class="nav-item">
-            <a href="anuncio.html">Vagas Disponíveis</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">Pessoas Procurando</a>
-      </li>
-        <li class="nav-item">
-          <a href="login.html">Login</a>
-        </li>
-        <li class="nav-item">
-            <a href="#contato1">Sobre</a>
-        </li>
-        <hr class="d-block d-sm-none">
-      </section>
+        <div class="col-md-3 col-sm-6">
+						<div class="single_rodape">
+							<h4 class="title-secao-rodape">Navegação</h4>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="Cadastrar.html">Anuncie Aqui</a></li>
+								<li><a href="anuncioProcura2.html">Pessoas procurando</a></li>
+								<li><a href="anuncio2.html">Vagas disponíneis</a></li>
+								<li><a href="login.html">Login</a></li>
+							</ul>
+						</div>
+					</div> <!--  End Col -->
 
       <section id="contato1" class="col-sm-4">
         <div>Redes Sociais:</div> <br>

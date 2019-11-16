@@ -230,14 +230,29 @@ ul {
 	word-wrap: break-word;
 }
 
-.single_ftr form{
+.single_rodape form{
 	margin-top: 8px;
 }
-.single_ftr p{
+.single_rodape p{
 	margin-bottom: 10px;
 }
 
-.sf_title{
+.single_rodape li {
+  padding-bottom: 17px;
+  color: #fff;
+}
+.single_rodape a {
+  color: #fff;
+}
+.single_rodape a:hover {
+  color: #33d286;
+}
+
+.single_rodape p{
+	display: inline-block;
+}
+
+.title-secao-rodape{
     color: #33d286;
     text-transform: uppercase;
     font-size: 17px;
@@ -267,9 +282,7 @@ ul {
 	margin-top: 0px;
 	overflow: hidden;
 }
-.single_ftr p{
-	display: inline-block;
-}
+
 .newsletter_form .form-control {
     height: 50px;
     line-height: 50px;
@@ -332,16 +345,6 @@ ul {
 	border-color: #33d286;
 }
 
-.single_ftr li {
-    padding-bottom: 7px;
-    color: #fff;
-}
-.single_ftr a {
-    color: #fff;
-}
-.single_ftr a:hover {
-    color: #33d286;
-}
 
 .ftr_social_icon li {
 	display: inline-block;
