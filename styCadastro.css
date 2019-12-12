@@ -7,7 +7,7 @@ body {
     background-size: cover;
   }
 
-  /*  INDEX*/
+
 
 /* Menu ----  Barra de Navegação ----  */
 #navegacao {
@@ -18,6 +18,14 @@ body {
   padding-top: 15px;
   padding-bottom: 10px;
 }
+
+/*Cor da letra da barra de navegação */
+.navbar-light .navbar-nav .nav-link{
+  color: white;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: inherit;
+}
+
 
 #links-navegacao {
 color: #ffffff;
@@ -31,13 +39,14 @@ text-transform: uppercase;
 
 
 #links-navegacao a:hover {
-  background: #E7E7E7;
+  background: green;
 }
 
 #sitename {
   font: Arial;
   color: #ffffff;
   font-size: 40px;
+  /*margin-top: -35px;*/
 }
 
 
@@ -53,9 +62,12 @@ text-transform: uppercase;
 }
 
 
-#btn-primary{
+.btn-primary{
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
   }
+
 /*  */
 
 
@@ -82,81 +94,31 @@ text-transform: uppercase;
 */
 /* FIM topo do site*/
   
-  #sitename{
-      font: Arial;
-      font-size: 30px;
-  }
-  
-  #navegacao {
-      background-color:rgb(86, 58, 245);
-      border-radius:  0;
-      border: 0;
-      /*height: 100px;*/
-      padding-top: 15px;
-      padding-bottom: 25px;
-  }
-  
-  #links-navegacao {
-      color: #ffffff;
-      text-decoration: none;
-      text-transform: uppercase;
-  }
-  
-  #links-navegacao a:hover {
-      background: #E7E7E7;
-  }
-  
-  #main-content {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      text-align: center;
-  }
-  
-  #main-content .jumbotron {
-      background-size: auto;
-      /*height: 250px;*/
-      /*position: relative; */
-      position: center;
-      text-align: center;
-  }
-  
-  .slideTwo {
-    width: 80px;
-    height: 30px;
-    background: #333;
-    margin: 20px auto;
-    position: relative;
-    border-radius: 50px;
-    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
-  }
 
 
   /*Tela de Cadastrar*/
 
-#main-content-CADASTRAR {
-  
-    margin-top: 1px;
-    margin-bottom: 10px;
-  }
-  
-  .jumbotron-cadastrar{
-  width: 1000px;
-  background-color: #CCC;
-  margin-left: 60px;
-  margin-right: auto;
-  }
-  
-  
-  .btn-bordered.btn-custom {
-    background-color: #55748f;
-    border-bottom: 2px solid #55748f!important;
-  }
-  
-  .container-alt {
+  .caixa-maior-cadastro {
     margin-left: auto;
     margin-right: auto;
+    margin-right: 100px;
+    margin-left: 100px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+
+  }
+
+  .account-content{
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+
+  }
+
+  .box{
+   background-color: lawngreen;
   }
   
   
@@ -182,11 +144,63 @@ text-transform: uppercase;
     padding-right: 10px;
   }
 
+  
+  
+  #register-cont {
+    margin: 5% auto;
+    position: relative;
+    max-width: 640px;
+  }
+  
+  .text-center {
+    text-align: center!important;
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+  
+  .text-uppercase {
+    text-transform: uppercase!important;
+    margin-bottom: .5rem;
+    font-weight: 1000;
+    line-height: 1.2;
+    margin-top: auto;
+    margin-top: 10px;
+  }
 
 
 
-  /*---------------------------------------------------------------*/
-/* Footer */
+
+
+
+
+
+
+
+
+
+
+
+  
+/*---------------------------------------------------------------*/
+/** RODAPE FOOTER
+*/
+.card-footer {
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #062F4F;
+  border-top: 0;
+  color: white
+}
+
+.card-footer div.row {
+  margin-bottom: 35px;
+  margin-left: 100px;
+}
+
+.card-footer hr {
+  width: 80%;
+  background-color: white;
+}
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 section {
     padding: 60px 0;
@@ -263,60 +277,83 @@ section .section-title {
 }
 }
 
-  
-  
-  
-  
-  .row {
-    margin-right: -50px;
-    margin-left: -50px;
-  }
-  
-  #register-cont {
-    margin: 5% auto;
-    position: relative;
-    max-width: 640px;
-  }
-  
-  .m-t-30 {
-    margin-top: 30px!important;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .text-center {
-    text-align: center!important;
-    margin-top: 30px;
-  }
-  
-  .text-uppercase {
-    text-transform: uppercase!important;
-    margin-bottom: .5rem;
-    font-weight: 1000;
-    line-height: 1.2;
-    margin-top: auto;
-    margin-top: 10px;
-  }
 
-
-
-  .card-footer {
-    padding-top: 35px;
-    padding-bottom: 30px;
-    background-color: #222;
-    border-top: 0;
-    color: #ffffff;
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
 }
 
-.card-footer div.row {
-    margin-bottom: 35px;
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
 }
 
-.card-footer hr {
-    width: 80%;
-    background-color: white;
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
 }
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+/* links-rodape*/
+.single_rodape form{
+	margin-top: 8px;
+}
+.single_rodape p{
+	margin-bottom: 10px;
+}
+
+.single_rodape li {
+  padding-bottom: 8px;
+  color: #fff;
+}
+.single_rodape a {
+  color: #fff; /*Cor da letra*/
+}
+}
+
+.single_rodape li {
+  font-size: 20px;
   
-  
+}
+.single_rodape a:hover {
+  color: #33d286;
+}
+
+.single_rodape p{
+	display: inline-block;
+}
+
+.title-secao-rodape{
+    text-transform: uppercase;
+    font-size: 24px;
+	  margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+  margin-bottom: 0;
+}
+
+.ftr_btm_area {
+  background: transparent;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px dotted #888;
+  margin-top: 28px;
+  z-index: 100px;
+  position: relative;
+}

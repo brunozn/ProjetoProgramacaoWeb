@@ -51,7 +51,7 @@ text-transform: uppercase;
   font: Arial;
   color: #ffffff;
   font-size: 40px;
-  margin-top: -35px;
+  /*margin-top: -35px;*/
 }
 
 
@@ -210,7 +210,8 @@ row{
 
 .main-recentes {
   /*padding-bottom: 5%;*/ /* 540/720 */
-  /*background: url('Imgs/quartoBranco.jpg') no-repeat;*/
+  background-size: contain;
+  background: url('Imgs/fundoazul.jpg') no-repeat ;
   background-color: #e5e5e5;
 }
 
@@ -488,7 +489,7 @@ div #testmony-box{
 
 #last-container {
 	text-align: center;
-	padding: 50px 0;
+  padding: 50px 0;
 }
 
 .wrapper {
