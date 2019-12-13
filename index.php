@@ -24,10 +24,10 @@
 <!--<nav id="navegacao" class="navbar navbar-expand-sm navbar-dark"> -->
   <div class="container">
     <!-- Brand/logo -->
-    <a class="navbar-brand" href="index.html" style="background-color: crimson;">
+    <a class="navbar-brand" href="index.php" style="background-color: crimson;">
       <img src="Imgs/logo.png" alt="logo" style="width:50px; height: 50px;">
     </a>
-    <p id="sitename" style="background-color: darkmagenta;">Ajudaí</p>
+    <p id="sitename" style="background-color: darkmagenta;"></p>
 
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#links-navegacao">
@@ -38,7 +38,7 @@
 <div class="collapse navbar-collapse ml-auto" id="links-navegacao">
   <ul class="navbar-nav ml-auto"> <!--ml-auto to the right-->
       <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="index.php">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link"  class="colorido" class="btn btn-primary" href="Cadastrar.html">  Anuncie Aqui  </a>
