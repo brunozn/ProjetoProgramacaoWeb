@@ -18,7 +18,7 @@ body {
 
 /* banner */
 #main-banner{
-	background: url('Elementosindex/elemento0000.png') no-repeat;
+	background: url('../imgs/Elementosindex/elemento0000.png') no-repeat;
 	background-size: cover;
 	background-position: 0 100%;
   position: relative;
