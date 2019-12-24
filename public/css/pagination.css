@@ -1,0 +1,11 @@
+/*PAGINAÇÃO pagination*/
+.pagination>li>a, .pagination>li>span { 
+  border-radius: 50% !important; /* DEIXA ARRENDODADO*/
+  margin: 0 5px; /*espaçamento entre elas*/
+}
+
+.pagination{
+padding-left: 500px;
+padding-top: 50px;
+}
+/*PAGINAÇÃO*/

@@ -1,0 +1,62 @@
+/* Menu ----  Barra de Navegação ----  */
+#navegacao {
+  background-color: #004166;
+  border-radius:  0;
+  border: 0;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+
+
+/*Cor da letra da barra de navegação */
+.navbar-light .navbar-nav .nav-link{
+  color:#ffffff;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: inherit;
+}
+
+
+#links-navegacao {
+color: #00FF00;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+#links-navegacao li {
+  margin-left: 10px;
+}
+
+
+#links-navegacao a:hover {
+  background: orange;
+}
+
+
+
+#colorido:hover{
+  /* visited link */
+    color: #00FF00;  
+  /*color: #00FF00;*/
+}
+
+.btn-container1{
+  margin-top: 400px;
+  font-size: 100px;
+}
+
+
+#btn-primary{
+  text-align: center;
+  margin-top: 200px;
+  }
+
+
+/* */
+img{
+    width: 100px;
+    height: 100px;
+    object-fit: scale-down;
+}
+/*  */

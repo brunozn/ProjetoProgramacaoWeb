@@ -1,0 +1,410 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
+
+*{box-sizing:border-box;}
+/*
+body {
+  font-family: 'open sans', helvetica, arial, sans;
+  background:url(http://farm8.staticflickr.com/7064/6858179818_5d652f531c_h.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+}
+*/
+
+
+
+
+/* banner */
+#main-banner{
+	background: url('Elementosindex/elemento0000.png') no-repeat;
+	background-size: cover;
+	background-position: 0 100%;
+  position: relative;
+}
+
+
+#banner-search {
+	position: relative;
+  width: 50%;
+  margin-left: 50px;
+	/*margin-left: auto;
+	margin-right: auto;*/
+	padding-top: 3em;
+	padding-bottom: 15em;
+  text-align: center;
+  background-size: 100px;
+}
+
+
+#text-inic{
+  color: white;
+}
+
+#banner-search h4{
+  color: white;
+}
+
+#banner-search p{
+  color: #ffffff;
+}
+
+
+#logo-banner img{
+  margin-top: 30px;
+  margin-left: 300px;
+  margin-right: auto;
+}
+
+
+.input-group-append .btn, .input-group-prepend .btn {
+  position: relative;
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*  fim  */
+
+/*----------------------------------------------------------------------------------------------*/
+/*  parte branca do site.... apos banner inicial    container */
+
+
+@media (min-width: 768px)
+.container{
+    width: 950px;
+}
+
+
+.container-two {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+
+.col-md-4{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.centered-icon {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+.centered-icon .icon-wrapp {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+}
+
+.centered-icon .icon-wrapp.icon-primary .fa {
+  border-color: #004166;
+}
+
+.centered-icon .icon-wrapp .fa {
+  position: absolute;
+  font-size: 24px;
+  line-height: 58px;
+  width: 70px;
+  height: 70px;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  border: 5px solid #707479;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+/* fim da parte branca*/
+
+
+
+
+
+
+
+
+
+
+/* CARD da pagina index */
+/* card details start  */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Condensed:400,400i,700,700i');
+section{
+    padding: 100px 0;
+}
+.details-card {
+	background: #ecf0f1;
+}
+
+.title-card{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 300px;
+  margin-right: 300px;
+  color: #ffffff;
+}
+
+.card-content {
+	background: #ffffff;
+	border: 4px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.card-img {
+	position: relative;
+	overflow: hidden;
+	border-radius: 0;
+	z-index: 1;
+}
+
+.card-img img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.card-img span {
+	position: absolute;
+    top: 15%;
+    left: 12%;
+    background: #004166;
+    padding: 6px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transform: translate(-50%,-50%);
+}
+.card-img span h4{
+        font-size: 12px;
+        margin:0;
+        padding:10px 5px;
+         line-height: 0;
+}
+.card-desc {
+	padding: 1.25rem;
+}
+
+.card-desc h3 {
+	color: #000000;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.card-desc p {
+	color: #747373;
+    font-size: 14px;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.5;
+	margin: 0px;
+	margin-bottom: 20px;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+}
+.btn-card{
+	background-color: #004166;
+	color: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    padding: .84rem 2.14rem;
+    font-size: .81rem;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    margin: 0;
+    border: 0;
+    -webkit-border-radius: .125rem;
+    border-radius: .125rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: normal;
+    word-wrap: break-word;
+    color: #fff;
+}
+.btn-card:hover {
+    background: orange;
+}
+a.btn-card {
+    text-decoration: none;
+    color: #fff;
+}
+
+.detalhes{
+  margin-top: 50px;
+  margin-left: 100px;
+}
+.detalhes .btn-card{
+  font-size: large;
+  border-radius: 30%;
+}
+/* FIM CARD da pagina index */
+
+
+
+
+
+
+
+
+/* css da PAGINA DE PESSOAS PROCURANDO*/
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#team {
+    background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #062F4F;
+    border-color: #062F4F; /*borda do botão*/
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* TITULO DA SEÇÃO-- PESSOAS PROCURANDO VAGAS*/
+section .section-title {
+    text-align: center;
+    color: #004166;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+    max-height: 612px;
+}
+
+/*Nome da pessoa - exemplo: Ana ana */
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #004166; !important;
+}
+
+/*Tamanho do espaço da foto da frente*/
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+/* FIM PAGINA DE PESSOAS PROCURANDO*/
+
+
+
+
+
+

@@ -13,65 +13,51 @@
     <script src="node_modules/popper.js/dist/umd/popper.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
   
+ 
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="public/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="public/css/navegation.css">
+    <link rel="stylesheet" type="text/css" href="public/css/pagination.css">
+  </head>
+  <body>
   
-   
-    <link rel="stylesheet" type="text/css" href="style_anuncioPessoas.css">
-<!------ Include the above in your HEAD tag ---------->
-</head>
-<body>
-
-        <div id="topo">
-                <div id="corpo_topo">
-                      <h1> AJUDAÍ </h1>                    
-                </div>
-              
-              </div>
-            
-            
-            <nav id="navegacao" class="navbar navbar-expand-sm navbar-dark">
-              <div class="container">
-                <!-- Brand/logo -->
-                <a class="navbar-brand" href="index.html">
-                  <img src="Imgs/logo.png" alt="logo" style="width:50px; height: 100px;">
-                </a>
-                <p id="sitename">Ajudaí.com</p>
-            
-                <!-- Toggler/collapsibe Button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#links-navegacao">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-            
-            <!-- Links -->
-            <div class="collapse navbar-collapse ml-auto" id="links-navegacao">
-              <ul class="navbar-nav ml-auto"> <!--ml-auto to the right-->
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link"  class="colorido" class="btn btn-primary" href="Cadastrar.html">  Anuncie Aqui  </a>
-                </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#last-container">Vagas Recentes</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="anuncioProcura.html">Pessoas procurando</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="anuncio.html">Vagas Disponíveis</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#contato1">Sobre</a>
-                  </li>
-            </ul>
-            </div>
-            
-              </div>
-            </nav>
-
-
+    <nav id="navegacao" class="navbar navbar-expand-lg navbar-light navbar-laravel">
+      <!--<nav id="navegacao" class="navbar navbar-expand-sm navbar-dark"> -->
+        <div class="container">
+          <!-- Brand/logo -->
+          <a id="navbar-brand" href="index2.html">
+            <img src="Elementosindex/logo01.png" alt="logo" style="width:50px; height: 50px;">
+          </a>
+      
+          <!-- Toggler/collapsibe Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#links-navegacao">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+      <!-- Links -->
+      <div class="collapse navbar-collapse ml-auto" id="links-navegacao">
+        <ul class="navbar-nav ml-auto"> <!--ml-auto to the right-->
+            <li class="nav-item">
+                <a class="nav-link" href="index2.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  class="colorido" class="btn btn-primary" href="Cadastrar.html">  Anuncie Aqui  </a>
+          </li>
+            <li class="nav-item">
+                <a class="nav-link" href="anuncioProcura2.html">Pessoas procurando</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="anuncio2.html">Vagas Recentes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+      </ul>
+      </div>
+      
+        </div>
+      </nav>
+    <!-----------FIM BARRA DE NAVEGAÇÃO--------------------->
 
 <!-- Team -->
 <section id="team" class="pb-5">
@@ -320,20 +306,27 @@
             <!-- ./Team member -->
 
 
-
-            <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">Previous</a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="anuncio2.html">1</a></li>
-                      <li class="page-item"><a class="page-link" href="anuncioProcura.html">2</a></li>
-                      <li class="page-item"><a class="page-link" href="anuncio.html">3</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                      </li>
-                    </ul>
-                  </nav>
+<!-- PAGINAÇÃO DA PÁGINA pagination personalidade -->
+<nave aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">«</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">»</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+  </nave>
+<!--PAGINAÇÃO-->
 
         </div>
     </div>
