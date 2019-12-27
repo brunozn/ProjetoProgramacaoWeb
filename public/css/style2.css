@@ -14,6 +14,24 @@ body {
 */
 
 
+#img-perfil-pesson{
+  width: 100px;
+  height: 100px;
+  object-fit: scale-down;
+}
+
+#img-anuncio{
+  width: 100px;
+  height: 100px;
+  object-fit: scale-down;
+}
+
+#imags{
+  width: 500px;
+  height: 500px;
+
+}
+
 
 
 /* banner */
@@ -78,8 +96,8 @@ body {
 
 
 .container-two {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 25px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -135,6 +153,38 @@ body {
   overflow: hidden;
 }
 /* fim da parte branca*/
+
+
+
+
+/*VAGAS RECENTES*/
+
+.container-recentes{
+  background-color: #004166;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 20px;
+}
+
+/*FIM VAGAS RECENTES*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -278,6 +328,48 @@ a.btn-card {
   border-radius: 30%;
 }
 /* FIM CARD da pagina index */
+
+
+
+
+
+
+
+
+
+
+
+/*seção entre em contato*/
+/* caixa de duvida --  entre em contato*/
+#inputDuvida{
+min-height: 185px;
+}
+
+/*Botão enviar -- entre em contato*/
+#buton-send{
+  width: 100%;
+    background: #004166;
+    color: #fff;
+    border: none;
+    outline: 0;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    display: block;
+    line-height: 60px;
+}
+
+/*texto Entre em*/
+.section-help {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 34px;
+}
+/*texto colorido--> contato <-- */
+.section-help_colorido {
+  color: #004166;
+}
 
 
 
