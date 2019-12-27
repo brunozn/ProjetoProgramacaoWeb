@@ -22,6 +22,7 @@
 <body>
 
 
+
     <nav id="navegacao" class="navbar navbar-expand-sm navbar-light navbar-laravel">
 <!--<nav id="navegacao" class="navbar navbar-expand-sm navbar-dark"> -->
   <div class="container">
@@ -43,17 +44,24 @@
           <a class="nav-link" href="index2.html">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  class="colorido" class="btn btn-primary" href="Cadastrar.html">  Anuncie Aqui  </a>
-    </li>
-      <li class="nav-item">
-          <a class="nav-link" href="anuncioProcura2.html">Pessoas procurando</a>
-      </li>
-      <li class="nav-item">
           <a class="nav-link" href="anuncio2.html">Vagas Recentes</a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link" href="login.html">Login</a>
-      </li>
+        <a class="nav-link" href="anuncioProcura2.html">Pessoas procurando</a>
+    </li>
+
+      <li class="nav-item">
+        <!--<a class="nav-link"  class="colorido" class="btn btn-success" href="Cadastrar.html">Anuncie Aqui</a> -->
+        <a class="nav-link" class="btn btn-success" href="Cadastrar.html">Anuncie Aqui</a>
+    </li>
+</ul>
+
+<ul class="navbar-nav ml-auto">
+<li class="nav-item">
+  <a class="nav-link btn-success href="login.html">Login</a>
+</li>
+
 </ul>
 </div>
 
@@ -70,7 +78,7 @@
       <br>
       <form>
           <div class="input-group mb-6">
-              <input type="text" class="form-control" placeholder="Digite o Bairro" aria-label="Digite o bairro" aria-describedby="button-addon2">
+              <input type="text" class="form-control" placeholder="Digite o bairro" aria-label="Digite o bairro" aria-describedby="button-addon2">
               <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2">Procurar</button>
               </div>
@@ -82,7 +90,8 @@
           </span>	
       <p>
         <br>
-          Você tem um Quarto?
+        <br>
+          Você tem um quarto?
       </p>
         <div class="botAnuc">
       <div class="input-group-append">
@@ -92,7 +101,7 @@
       </div>
       </form>
     </div>
-  </div>
+
 <!---->
 
 <div class="container-two">
@@ -135,9 +144,10 @@
 
 <!--CARROUSEL -->
 
-<section class="details-card" style="background-color:#004166;">
+<section class="details-card">
   <div class="container">
-      <h2 class="title-card"> Pessoas procurando um lugar</h2>
+      <h3 class="col-md-6 col-sm-12" id="title-card"> PESSOAS PROCURANDO UM LUGAR...</h2>
+      <br>
       <div class="row">
           <div class="col-md-4">
               <div class="card-content">
@@ -179,10 +189,9 @@
               </div>
           </div>
       </div>
-      <div class="col-sm-8">
-      <div class="detalhes">
-        <a href="anuncioProcura2.html" class="btn btn-light btn-lg"><strong>Encontre mais pessoas </strong> </a> 
-      </div>
+      <br>
+      <div class="col-md-6 col-sm-12" id="anchor-details">
+        <a href="anuncioProcura2.html" class="btn btn-light"><strong>Encontre mais pessoas </strong> </a> 
       </div> <!--fim col-->
   </div>
 </section>
@@ -290,16 +299,16 @@
 <footer class="card-footer">
   <div class="container">
     <div class="row">
-      <section id="endereco" class="col-sm-4">
+      <section id="endereco" class="col-sm-3">
         <div>Navegar</div> <br>
         <li>
-            <a href="index.html">Home</a>
+            <a href="index2.html">Home</a>
         </li>
         <li class="nav-item">
           <a href="Cadastrar.html">Anuncie Aqui</a>
       </li>
         <li class="nav-item">
-            <a href="#last-container">Vagas Recentes</a>
+            <a href="anuncioProcura2.html">Pessoas procurando</a>
         </li>
         <li class="nav-item">
             <a href="anuncio.html">Vagas Disponíveis</a>
@@ -316,7 +325,7 @@
         <hr class="d-block d-sm-none">
       </section>
 
-      <section id="contato1" class="col-sm-4">
+      <section id="contato1" class="col-sm-3">
         <div>Redes Sociais:</div> <br>
         <!-- Add icon library -->
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -327,18 +336,17 @@
             
         <hr class="d-block d-sm-none">
       </section>
-      <section id="sobre" class="col-sm-4">
+      <section id="sobre" class="col-sm-6 justify-content-center">
         <div>Sobre</div> <br>
         Ferramenta inteligente para ajudar você a encontrar o lugar perfeito. Plataforma mais simples e completa para quem está buscando ou oferecendo quartos para alugar ou moradias compartilhadas. Em poucos passos, você encontra o lugar perfeito para morar com seu colega de quarto ideal.
         <hr class="d-block d-sm-none">
       </section>
     </div>
-    <div class="text-center"> &copy; Copyright ZeND 2018
+    <div class="text-center"> &copy; Copyright ZeND 2019
 
     </div>
   </div> 
 </footer>
-
 
 </body>
  
