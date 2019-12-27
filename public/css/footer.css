@@ -9,6 +9,10 @@
   margin-bottom: 5px;
 }
 
+.card-footer #contato2{
+  margin-top: 50px;
+}
+
 .card-footer hr {
   width: 50%;
   background-color: #ffffff;
