@@ -29,17 +29,19 @@ body {
 #imags{
   width: 500px;
   height: 500px;
-
 }
 
 
 
 /* banner */
 #main-banner{
-	background: url('../imgs/Elementosindex/elemento0000.png') no-repeat;
+  position: relative;
+	background: url('../imgs/fundo-principal.png') no-repeat;
 	background-size: cover;
 	background-position: 0 100%;
-  position: relative;
+  max-height:650px;
+  width: auto;
+  height: auto;
 }
 
 
@@ -53,26 +55,41 @@ body {
 	padding-bottom: 15em;
   text-align: center;
   background-size: 100px;
+  font-size: 1rem;
+}
+
+.text-inic{
+  color: white;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
 }
 
 
-#text-inic{
-  color: white;
+#text-idd{
+    margin-bottom: 30px;
+      font-size: 1.2rem;
 }
 
 #banner-search h4{
   color: white;
+  margin-top: 30px;
 }
 
 #banner-search p{
   color: #ffffff;
 }
 
-
-#logo-banner img{
+#logo-banner{
   margin-top: 30px;
-  margin-left: 300px;
-  margin-right: auto;
+}
+#logo-banner img{
+  position: relative;
+  margin-left: 250px;
+  margin-top: 30px;
+  margin-right:auto;
+  font-size: 1.2rem;
+  max-width:100%;
+	height:auto;
 }
 
 

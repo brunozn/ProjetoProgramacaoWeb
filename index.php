@@ -31,22 +31,22 @@
     <!--<nav id="navegacao" class="navbar navbar-expand-sm navbar-dark"> -->
       <div class="container">
         <!-- Brand/logo -->
-        <a id="navbar-brand" href="index.php">
+        <a id="navbar-brand" href="index2.html">
           <img id="logo-nav" src="public/imgs/logos/logo01.png" alt="logo">
         </a>
         
     
         <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#links-navegacao">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#links-navegacao" >
           <span class="navbar-toggler-icon"></span>
         </button>
     
     
     <!-- Links -->
-    <div class="collapse navbar-collapse ml-auto" id="links-navegacao" id="mainNav">
+    <div class="collapse navbar-collapse ml-auto" id="links-navegacao" id="mainNav" style="background-color: #004166">
       <ul class="navbar-nav ml-auto"> <!--ml-auto to the right-->
           <li class="nav-item">
-              <a class="nav-link" href="index2.html">Home</a>
+              <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="anuncio2.html">Vagas Recentes</a>
@@ -68,7 +68,7 @@
     
     <ul class="navbar-nav ml-auto">
     <li class="nav-item">
-      <a class="nav-link btn-success href="login.html">Login</a>
+      <a class="nav-link btn-md" href="login.html">Login</a>
     </li>
     
     </ul>
@@ -85,11 +85,12 @@
 
 <!-- Banner inicial-->
 <div id="main-banner">
+<div class="col-md-12 col-sm-4">
   <div id="logo-banner">
-    <img id="logo-banner" src="Elementosindex/logo01.png" alt="logo-HouseMate"> 
+    <img src="public/imgs/logos/logo01.png" alt="logo-HouseMate"> 
   </div>
     <div id="banner-search">
-      <h1 id="text-inic">À procura de um apê pra dividir em Pau dos Ferros?</h1>
+      <h1 class="text-inic">À procura de um apê pra dividir em Pau dos Ferros?</h1>
 
       <form>
           <div class="input-group mb-6">
@@ -99,13 +100,11 @@
               </div>
       </div>
       <span>
-        <br>
-            <h4>Encontre pessoas em comum <br>e evite dores de cabeça</h4>		
+      
+            <h4 id="text-idd">Encontre pessoas em comum e evite dores de cabeça</h4>		
         <br>
           </span>	
       <p>
-        <br>
-        <br>
           Você tem um quarto?
       </p>
         <div class="botAnuc">
@@ -116,7 +115,7 @@
       </div>
       </form>
     </div>
-
+  </div>
 
 
 
@@ -512,7 +511,7 @@
       <section id="endereco" class="col-sm-3">
         <div>Navegar</div> <br>
         <li>
-            <a href="index.php">Home</a>
+            <a href="index2.html">Home</a>
         </li>
 
         <li class="nav-item">
