@@ -68,7 +68,7 @@
     
     <ul class="navbar-nav ml-auto">
     <li class="nav-item">
-      <a class="nav-link btn-md" href="login.html">Login</a>
+      <a class="nav-link btn-md" href="signlog.html">Login</a>
     </li>
     
     </ul>
@@ -527,7 +527,7 @@
       </li>
 
         <li class="nav-item">
-          <a href="login.html">Login</a>
+          <a href="signlog.html">Login</a>
         </li>
 
         <hr class="d-block d-sm-none">
