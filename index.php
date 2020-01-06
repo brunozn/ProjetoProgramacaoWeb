@@ -19,64 +19,48 @@
 
   <link rel="stylesheet" type="text/css" href="public/css/style2.css">
   <link rel="stylesheet" type="text/css" href="public/css/footer.css">
-  <link rel="stylesheet" type="text/css" href="public/css/navegation.css">
+  <link rel="stylesheet" type="text/css" href="public/css/NavNew.css">
   
 </head>
 <body>
 
 <!----------------------------->
 <!-- Barra de navegação-->
-
-  <nav id="navegacao" class="navbar fixed-top navbar-expand-sm navbar-light navbar-laravel">
-    <!--<nav id="navegacao" class="navbar navbar-expand-sm navbar-dark"> -->
-      <div class="container">
-        <!-- Brand/logo -->
-        <a id="navbar-brand" href="index2.html">
-          <img id="logo-nav" src="public/imgs/logos/logo01.png" alt="logo">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a href="#" class="navbar-brand ml-3"> 
+            <img class="img-navbar" src="../HouseMate/public/imgs/logos/logo01.png" style="width: 80px;" alt="">
         </a>
-        
-    
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#links-navegacao" >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-    
-    <!-- Links -->
-    <div class="collapse navbar-collapse ml-auto" id="links-navegacao" id="mainNav" style="background-color: #004166">
-      <ul class="navbar-nav ml-auto"> <!--ml-auto to the right-->
-          <li class="nav-item">
-              <a class="nav-link" href="index.php">Home</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="anuncio2.html">Vagas Recentes</a>
-          </li>
-    
-          <li class="nav-item">
-            <a class="nav-link" href="anuncioProcura2.html">Pessoas procurando</a>
-        </li>
-    
-          <li class="nav-item">
-            <a class="nav-link" href="#contato1">Sobre</a>
-          </li>
-    
-          <li class="nav-item">
-            <!--<a class="nav-link"  class="colorido" class="btn btn-success" href="Cadastrar.html">Anuncie Aqui</a> -->
-            <a class="nav-link" class="btn btn-success" href="Cadastrar.html">Anuncie Aqui</a>
-        </li>
-    </ul>
-    
-    <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-      <a class="nav-link btn-md" href="signlog.html">Login</a>
-    </li>
-    
-    </ul>
-    </div>
-    
-      </div>
-    </nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
+          <div class="collapse navbar-collapse"></div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#container-recentess">Vagas recentes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#atalho-pessoas">Pessoas procurando</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contato1">Sobre</a>
+              </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+              
+              <button class="btn menu-right-btn-anuncie border" type="submit">Anuncie Aqui</button>
+              <button class="btn menu-right-btn border" type="submit">Login</button>
+            </form>
+          </div>
+    </nav>
+</header>
 <!-- FIM da Barra de navegação-->
 <!----------------------------->
 
@@ -85,9 +69,10 @@
 
 <!-- Banner inicial-->
 <div id="main-banner">
+  <div class="container-banner"> 
 <div class="col-md-12 col-sm-4">
   <div id="logo-banner">
-    <img src="public/imgs/logos/logo01.png" alt="logo-HouseMate"> 
+    <img src="public/imgs/logos/logo01.png" style="width: 200px;" alt="logo-HouseMate"> 
   </div>
     <div id="banner-search">
       <h1 class="text-inic">À procura de um apê pra dividir em Pau dos Ferros?</h1>
@@ -115,6 +100,8 @@
       </div>
       </form>
     </div>
+  </div>
+
   </div>
 
 
@@ -155,8 +142,9 @@
 
 
 
+
 <!--CARROUSEL -->
-<div class="container-recentes">
+<div id="container-recentess" class="container-recentes">
   <h3 class="col-md-6 col-sm-12" id="title-card"> Vagas recentes</h2>
     <br>
 
@@ -350,7 +338,7 @@
 
 
 
-<section class="details-card">
+<section class="details-card" id="atalho-pessoas">
   <div class="container">
       <h3 class="col-md-6 col-sm-12" id="title-card"> PESSOAS PROCURANDO UM LUGAR...</h2>
       <br>

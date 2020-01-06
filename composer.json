@@ -1,0 +1,13 @@
+{
+    "name": "housemate",
+    "type": "project",
+    "require": {
+        "facebook/php-business-sdk": "^3.0.0"
+    },
+    "authors": [
+        {
+            "name": "Bruno",
+            "email": "brunonogueira95@hotmail.com"
+        }
+    ]
+}

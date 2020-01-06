@@ -31,6 +31,10 @@ body {
   height: 500px;
 }
 
+.container-banner{
+  padding-top: 80px;
+}
+
 
 
 /* banner */
@@ -43,6 +47,7 @@ body {
   width: auto;
   height: auto;
 }
+
 
 
 #banner-search {
@@ -108,6 +113,7 @@ body {
 
 @media (min-width: 768px)
 .container{
+    padding: 100px;
     width: 950px;
 }
 
@@ -212,9 +218,9 @@ body {
 
 
 
-
-
-
+.container-card{
+  padding-top: 100px;
+}
 
 
 /* CARD da pagina index */
@@ -423,9 +429,10 @@ section {
 /* TITULO DA SEÇÃO-- PESSOAS PROCURANDO VAGAS*/
 section .section-title {
     text-align: center;
-    color: #ffffff;
+    color: #004166;
     margin-bottom: 50px;
     text-transform: uppercase;
+    padding-top: 100px;
 }
 
 #team .card {

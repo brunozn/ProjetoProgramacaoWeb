@@ -1,0 +1,211 @@
+.navbar{
+    background-color: #004166;
+}
+
+.navbar-brand {
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    /*color: rgb(165, 0 , 203) !important; */
+    color: brown;
+}
+.nav-link {
+    font-size: 16px;
+    margin: 15px;
+    color:white !important;
+}
+.nav-link:hover{
+    color: rgb(6, 255, 27) !important;
+}
+.active .nav-link{
+    color: rgb(27, 190, 81) !important;
+}
+
+/*BOTAO DE LOGIN*/
+.menu-right-btn{
+    padding: 13px 36px;
+    /* margin-right: 4%; */
+    background-color: transparent !important;
+    color: white;
+    border: 2px solid rgb(34, 203, 0) !important;
+    transition: all 300ms ease-in;
+}
+
+.menu-right-btn-anuncie{
+    padding: 13px 20px;
+    /* margin-right: 4%; */
+    background-color: transparent !important;
+    color: white;
+    border: 2px solid rgb(203, 0, 0) !important;
+    transition: all 300ms ease-in;
+}
+
+.menu-right-btn:hover{
+    background-color: rgb(240, 198, 47) !important;
+    color: rgb(165, 0 , 203) !important;
+}
+
+.menu-right-btn-anuncie:hover{
+    background-color: rgb(240, 198, 47) !important;
+    color: rgb(165, 0 , 203) !important;
+}
+
+.site-content {
+    background-image: url('./images/main\ \(1\).jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+.site-title{
+    margin-top: 30%;
+    margin-bottom: 6%;
+    color: rgb(203, 0, 0) !important;
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 50px;
+}
+.site-desc {
+    font-size: 14px;
+}
+.site-btn1{
+    margin-left: 25%;
+    background: rgb(94, 255, 0) !important;
+    border: rgb(200, 203, 0) !important;
+    color: white !important;
+}
+.site-btn2{
+    background: rgb(240, 198, 47) !important;
+    color: white;
+}
+.site-btn1:hover{
+    background: rgb(240, 198, 47) !important;
+    color: white !important;
+}
+.site-btn2:hover{
+    background: rgb(165, 0 , 203) !important;
+    color: white !important;
+    border: none;
+}
+.site-btn1, .site-btn2{
+    margin-top: 5%;
+    margin-bottom: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
