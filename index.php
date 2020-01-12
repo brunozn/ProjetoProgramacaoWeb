@@ -55,8 +55,8 @@
 
             <form class="form-inline my-2 my-lg-0">
               
-              <button class="btn menu-right-btn-anuncie border" type="submit">Anuncie Aqui</button>
-              <button class="btn menu-right-btn border" type="submit">Login</button>
+              <button class="btn menu-right-btn-anuncie border" type="submit" value ="anuncio" formaction="./App/models/cadastrar/signlog.html">Anuncie Aqui</button>
+              <button class="btn menu-right-btn border" type="submit" value ="login" formaction="./App/models/cadastrar/signlog.html">Login</button>
             </form>
           </div>
     </nav>
@@ -79,10 +79,12 @@
 
       <form>
           <div class="input-group mb-6">
-              <input type="text" class="form-control" placeholder="Digite o bairro" aria-label="Digite o bairro" aria-describedby="button-addon2">
+            <form action="busca.php" method="POST">
+              <input type="text" class="form-control" name="bairro" placeholder="Digite o bairro" aria-label="Digite o bairro" aria-describedby="button-addon2">
               <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2">Procurar</button>
               </div>
+              </form>
       </div>
       <span>
       
@@ -280,7 +282,7 @@
 
 <br>
       <div class="col-md-6 col-sm-12" id="anchor-details">
-        <a href="anuncio2.html" class="btn btn-light"><strong>Mais vagas </strong> </a> 
+        <a href="./App/views/anuncio2.html" class="btn btn-light"><strong>Mais vagas </strong> </a> 
       </div> <!--fim col-->
       <br>
 
@@ -385,7 +387,7 @@
       </div>
       <br>
       <div class="col-md-6 col-sm-12" id="anchor-details">
-        <a href="anuncioProcura2.html" class="btn btn-light"><strong>Encontre mais pessoas </strong> </a> 
+        <a href="./App/views/anuncioProcura2.html" class="btn btn-light"><strong>Encontre mais pessoas </strong> </a> 
       </div> <!--fim col-->
   </div>
 </section>

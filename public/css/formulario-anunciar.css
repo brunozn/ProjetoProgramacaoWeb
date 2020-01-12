@@ -1,0 +1,392 @@
+/* pagina de formulario*/
+/*-------------------------------------------------------------*/
+
+.container-maior{
+  padding-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-box-dicas{
+ padding-left: inherit;
+ margin-left: auto;
+ margin-right: auto;
+ padding-right: 200px;
+}
+
+
+#anuncio-box{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.caixaform{
+  margin-top: 1px;
+  margin-left: 0px;
+}
+
+
+.form-group-form{
+  margin-top: 10px;  /* distancia de uma caixa pra outra*/
+  margin-left: 50px;
+}
+
+
+ .control-label{
+   font-size: 20px;
+   color: #004166;
+ }
+
+.input-group-addon{
+  width: 1000px;
+}
+
+.input-group{
+  border: 1px #004166 solid;
+  border-radius: 10px;
+}
+
+
+  
+  .mobile-panels {
+    padding-bottom: 60px;
+  }
+  /* */
+  .col-md-4{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+   padding-left: 1px;
+  }
+
+  .col-md-5{
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 250px;
+  }
+  
+  
+  
+  .mobile-panels>div.show {
+    display: block;
+  }
+  
+  .mobile-panels>div {
+    position: absolute;
+    left: 0;
+    width: 90%;
+    padding: 0 5% 20px;
+    height: calc(100% - 135px);
+    overflow: auto;
+    margin-bottom: 60px;
+    animation: none;
+    display: none;
+  }
+  
+  .align-center {
+    text-align: center;
+  }
+  
+  
+  .title-anuncie {
+    color:#062F4F;
+  }
+  
+  
+  
+  .icone {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  
+
+  
+
+  
+
+
+
+
+
+
+/* The radio */
+.radio {
+    display: block;
+   position: relative;
+   padding-left: 30px;
+   margin-bottom: 12px;
+   cursor: pointer;
+   font-size: 20px;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none
+}
+
+/* Hide the browser's default radio button */
+.radio input {
+   position: absolute;
+   opacity: 0;
+   cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkround {
+
+   position: absolute;
+   top: 6px;
+   left: 0;
+   height: 20px;
+   width: 20px;
+   background-color: #fff ;
+   border-color:#004166; /*borda do botão*/
+   border-style:solid;
+   border-width:2px;
+    border-radius: 50%;
+}
+
+
+/* When the radio button is checked, add a blue background */
+.radio input:checked ~ .checkround {
+   background-color: #fff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkround:after {
+   content: "";
+   position: absolute;
+   display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .checkround:after {
+   display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio .checkround:after {
+    left: 2px;
+   top: 2px;
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   background:#000;
+
+}
+
+/* The check */
+.check-two {
+   display: block;
+   position: relative;
+   padding-left: 25px;
+   margin-bottom: 12px;
+   padding-right: 15px;
+   cursor: pointer;
+   font-size: 18px;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.check-two input {
+   position: absolute;
+   opacity: 0;
+   cursor: pointer;
+}
+
+
+
+.cust-btn{
+   margin-bottom: 10px;
+   background-color: greenyellow;
+   border-width: 2px;
+   border-color: black;
+   color: #fff;
+}
+.cust-btn:hover{
+   
+   border-color: #f8204f;
+   background-color: #fff;
+   color: #f8204f;
+   border-radius: 20px;
+   transform-style: 2s;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
+
+
+
+.form-wrap {
+  background-color: #fff;
+  width: 820px;
+  margin: 3em auto;
+  box-shadow: 0px 1px 8px #BEBEBE;
+  -webkit-box-shadow: 0px 1px 8px #BEBEBE;
+  -moz-box-shadow: 0px 1px 8px #BEBEBE; 
+}
+
+.form-wrap .tabs {
+  overflow: hidden; 
+}
+
+.form-wrap .tabs h3 {
+  margin: 0;
+  float: left;
+  width: 33.3333333%; /* dimenssão da parte de selec formular*/
+}
+
+.form-wrap .tabs h3 a {
+  padding: 0.5em 0;
+  text-align: center;
+  font-weight: 400;
+  background-color: #e6e7e8;
+  display: block;
+  color: #004166;
+}
+
+.form-wrap .tabs h3 a.active {
+  background-color: #fff; 
+}
+
+.form-wrap .tabs-content {
+  padding: 1.5em;
+}
+
+.form-wrap .tabs-content div[id$="tab-content"] {
+  display: none; 
+}
+
+.form-wrap .tabs-content .active {
+  display: block !important; 
+}
+
+.form-wrap form .input {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  padding: .8em 0 10px .8em;
+  border: 1px solid #CFCFCF;
+  outline: 0;
+  display: inline-block;
+  margin: 0 0 .8em 0;
+  padding-right: 2em;
+  width: 100%;
+}
+
+.form-wrap form .button {
+  width: 100%;
+  //padding: .8em 0 10px .8em;
+  //background-color: #28A55F;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase; 
+}
+
+.form-wrap form .checkbox {
+  visibility: hidden;
+  padding: 20px;
+  margin: .5em 0 1.5em; 
+}
+
+.form-wrap form .checkbox:checked + label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1; 
+}
+
+.form-wrap form label[for] {
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer; 
+}
+
+.form-wrap form label[for]:before {
+  content: '';
+  position: absolute;
+  border: 1px solid #CFCFCF;
+  width: 17px;
+  height: 17px;
+  top: 0px;
+  left: -14px; 
+}
+
+.form-wrap form label[for]:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  background-color: transparent;
+  top: 4px;
+  left: -10px;
+  border: 3px solid #28A55F;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); 
+}
+
+.form-wrap .help-text p {
+  text-align: center;
+  font-size: 14px; 
+ }
