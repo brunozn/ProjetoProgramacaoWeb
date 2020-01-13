@@ -50,12 +50,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     
   } else if(move_uploaded_file($_FILES["file"]["tmp_name"], $alvoDiretorio . $newfilename)){
-      $sql = "INSERT INTO anuncio_quarto (bairro, nomeEsobre, telefone, quartomobilado, valor_aluguel, descricao, file_name, uploaded_on) 
-      VALUES (:bairro,:nomeEsobre, :telefone, :quartomobilado, :valor_aluguel, :descricao, '".$newfilename."', NOW())";
+      $sql = "INSERT INTO anuncio_quarto (bairro, nomeEsobre, telefone, quartomobilado, valor_aluguel, descricao, file_name) 
+      VALUES (:bairro,:nomeEsobre, :telefone, :quartomobilado, :valor_aluguel, :descricao, :newfilename)";
       $stmt = $pdo->prepare($sql);
       
-      $stmt->execute(['bairro' => $bairro,'nomeEsobre' => $nomeEsobre, 'telefone' => $telefone, 'quartomobilado' => $quartomobilado, 'valor_aluguel' => $valor_aluguel , 'descricao' => $descricao, 'file_name' => $newfilename]);
- 
+      $stmt->execute(['bairro'=> $bairro,'nomeEsobre'=> $nomeEsobre, 'telefone'=> $telefone, 'quartomobilado'=> $quartomobilado, 'valor_aluguel'=> $valor_aluguel , 'descricao'=> $descricao, 'file_name'=> $newfilename]);
+
+      
 
 }else{
     $statusMsg = "Desculpe, ocorreu um erro ao fazer upload do seu arquivo.";

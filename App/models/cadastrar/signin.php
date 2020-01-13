@@ -23,12 +23,9 @@ $sql = mysqli_query($conn, "SELECT count(*) as total from signup WHERE email = '
 $row = mysqli_fetch_array($sql);
  
 if($row["total"] > 0){
-    ?>
-    <script>
-        alert('Logado com sucesso');
-    </script>
-     
-    <?php
+    
+         include("menu.html");     
+
 }
 else{
     ?>

@@ -77,17 +77,20 @@
     <div id="banner-search">
       <h1 class="text-inic">À procura de um apê pra dividir em Pau dos Ferros?</h1>
 
-      <form>
+ 
           <div class="input-group mb-6">
-            <form action="busca.php" method="POST">
-              <input type="text" class="form-control" name="bairro" placeholder="Digite o bairro" aria-label="Digite o bairro" aria-describedby="button-addon2">
+            <form action="busca.php" method="post">
+
               <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Procurar</button>
+                <input class="form-control" type="text" name="bairro" placeholder="Digite o bairro"><br><br>
+                <input  id="button-addon2" class="btn btn-outline-secondary" type="submit" name="Find" value="Procurar">
               </div>
-              </form>
-      </div>
+
+
+            </form>
+          </div>
+
       <span>
-      
             <h4 id="text-idd">Encontre pessoas em comum e evite dores de cabeça</h4>		
         <br>
           </span>	
