@@ -1,6 +1,6 @@
 <?php
+include_once('cabecalho.php');
 
-include 'dbconfig.php';
 
 $id = "";
 $nome = "";
@@ -30,19 +30,23 @@ if(isset($_POST['Find'])){
     $bairro = $_POST['bairro'];
     
      // mysql de busca
-    $pdoQuery = "SELECT * FROM anuncio_quarto WHERE bairro = :bairro";
+    $pesquisa ="'%" . $bairro . "%'";
+    $pdoQuery = "SELECT * FROM anuncio_ape WHERE bairro LIKE " . $pesquisa;
+    //echo $pdoQuery;
     
     $pdoResult = $pdoConnect->prepare($pdoQuery);
-
+    //echo $pesquisa;
 
     //defina sua vaviavel de busca para a variavel de busca do banco
-    $pdoExec = $pdoResult->execute(array(":bairro"=>$bairro));
+    $pdoExec = $pdoResult->execute(array(":bairro"=>$pesquisa));
 
 
     if($pdoExec){
             // Se variavel existe  
             // mostra dados na entrada
+
         if($pdoResult->rowCount()>0){
+          
             /*
 ///////////// Aqui mostra apenas um dado
             foreach($pdoResult as $row){
@@ -57,7 +61,24 @@ if(isset($_POST['Find'])){
 ////////////// Aqui mostra todos os dados de acordo com a variavel de busca
                 while ($linha = $pdoResult->fetch(PDO::FETCH_ASSOC)) {
                     // aqui eu mostro os valores de minha consulta
-                    echo "nome: {$linha['nome']} - telefone: {$linha['telefone']}<br />";
+                    //include('busca.html');
+                    
+                    echo '<div class="col-md-6">';
+                    echo '  <div class="card flex-md-row mb-4 shadow-sm h-md-250">';
+                    echo '      <div class="card-body d-flex flex-column align-items-start">';
+                    echo '     <strong class="d-inline-block mb-2 text-primary"> casa</strong>';
+                    echo '      <h6 class="mb-0">';
+                    echo '         <a class="text-dark" href="#">' . $linha["descricao"] . '</a>';
+                    echo '      </h6>';
+                    echo '      <div class="mb-1 text-muted small">Nov 12</div>';
+                    echo '      <p class="card-text mb-auto">Casa a 5 minutos da Facep, </p>';
+                    echo '      <a class="btn btn-outline-primary btn-sm" role="button" href="index.html">Ver Detalhes</a>';
+                    echo '   </div>';
+                    echo '   <img id="img-anuncio" class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="App/models/cadastrar/uploads/' . $linha["file_name"] . '" style="width: 200px; height: 250px;">';
+                    echo '</div>';
+                    echo '</div>';
+                    
+                    //echo "nome: {$linha['nome']} - telefone: {$linha['telefone']}<br />";
                 }
               
             
@@ -72,6 +93,8 @@ if(isset($_POST['Find'])){
     }
 }
 
+
+include_once('rodape.php');
 
 ?>
 
