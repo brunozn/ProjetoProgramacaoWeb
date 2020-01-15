@@ -83,7 +83,18 @@
 
               <div class="input-group-append">
                 <input class="form-control" type="text" name="bairro" placeholder="Digite o bairro"><br><br>
+
                 <input  id="button-addon2" class="btn btn-outline-secondary" type="submit" name="Find" value="Procurar">
+              </div>
+
+              <div class="input-group">
+
+                <select name="seletor-form" class="form-control selectpicker" >
+                  <option value=" " >O que deseja buscar?</option>
+                  <option> Quarto</option>
+                  <option> Apê</option>
+                  <option> Casa</option>
+                </select>
               </div>
 
 

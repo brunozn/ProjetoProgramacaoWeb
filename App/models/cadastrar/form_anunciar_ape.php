@@ -174,7 +174,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="text-center card-box">
                     <div class="member-card">
                         <div class="thumb-xl member-thumb m-b-10 center-block">
-                            <img src="public/imgs/avatar.png" alt="user-img">
+                            <img src="./HouseMate/public/imgs/avatar.png" alt="user-img">
                         </div> <div><h4 class="m-b-5">Brunozn</h4>
                         </div> <hr> 
                         <div class="text-left">

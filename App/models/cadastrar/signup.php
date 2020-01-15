@@ -24,11 +24,9 @@ $sql = "INSERT INTO signup (name, genero, email, password, passwordRepet)
 VALUES ('$name','$genero','$email', '$password', '$passwordRepet')";
  
 if($conn->query($sql) === TRUE){
-    ?>
-    <script>
-        alert('Valores foram inseridos');
-    </script>
-    <?php
+    
+    include("menu.html");     
+
 }
 else{
     ?>
