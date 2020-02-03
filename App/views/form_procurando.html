@@ -1,0 +1,661 @@
+<DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+      <title>HouseMate</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="node_modules/bootstrap/compile/bootstrap.css">
+    
+      <!--Adicionei para o carosel funcionar-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    
+      <script src="node_modules/jquery/dist/jquery.js"></script>
+      <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+      <script src="../../vendor/node_modules/bootstrap-slider/dist/bootstrap-slider"> </script>
+      <script src="../../vendor/node_modules/bootstrap-slider/dist/bootstrap-slider.min"> </script>
+      
+
+    
+      <link rel="stylesheet" type="text/css" href="../../vendor/node_modules/bootstrap-slider/dist/css/bootstrap-slider.css">
+
+      <link rel="stylesheet" type="text/css" href="../../public/css/NavNew.css">
+      <link rel="stylesheet" type="text/css" href="../../public/css/style2.css">
+      <link rel="stylesheet" type="text/css" href="../../public/css/footer.css">
+      <link rel="stylesheet" type="text/css" href="../../public/css/formulario-anunciar.css">
+
+
+
+
+    </head>
+    <body>
+
+  
+<!----------------------------->
+<!-- Barra de navegação-->
+<!-- Navigation -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <a href="#" class="navbar-brand ml-3"> 
+          <img class="img-navbar" src="../../public/imgs/logos/logo01.png" style="width: 80px;" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse"></div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../../index.php">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../models/buscar/busca.php">Vagas recentes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../models/buscar/busca2.php">Pessoas procurando</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            
+            <button class="btn menu-right-btn-anuncie border" type="submit">Anuncie Aqui</button>
+            <button class="btn menu-right-btn border" type="submit">Login</button>
+          </form>
+        </div>
+  </nav>
+</header>
+
+  <!-- FIM da Barra de navegação-->
+  <!----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-maior">
+
+
+<div class="container-box-dicas">
+
+  <div id="anuncio-box" class="col-md-12 row" style="align-items: center; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
+    <div class="col-md-5">
+      <!--<img src="../HouseMate/Imgs/home.svg"> -->
+      <h2>Dicas para anunciar um lugar</h2> 
+    </div>
+
+    <div class="col-md-6 col-sm-6"> 
+      <p class="icone"> &#10004     Na descrição, informe suas preferencias, como: número de quartos, tamanho do imovél que procura </p>
+      <p class="icone"> &#10004      Não deixe de falar também sobre o perfil da vizinhança e estabelecimentos que deseja próximo (colégio, supermercado...).    </p>
+      <p class="icone"> &#10004      No campo “Preço”, selecione o valor que está disposto a pagar por mês.  </p>
+    </div>
+
+  </div>
+    
+     
+  </div> <!--FIM DO container-box-dicas-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-box-form"> 
+
+    <div class="box-content align-center">
+        <h1 class="title-anuncie">ANUNCIE!</h1>
+            <br>
+      </div> <!--box-content -->
+
+    <div class="form-wrap">
+      <!--
+        <div class="tabs">
+            <h3 class="signup-tab">
+                <a class="active" href="#quarto-tab-content">Quarto</a></h3>
+            <h3 class="login-tab">
+                <a href="#ape-tab-content">Apê</a></h3>
+            <h3 class="login-tab">
+                <a href="#casa-tab-content">Casa</a></h3>
+        </div>
+        
+        tabs-->
+
+
+<!-- tabs containes-->
+        <div class="tabela">
+
+        
+
+          <form id="form-procurando" action="../models/form_procurando.php" enctype="multipart/form-data"  method="POST">
+            <div class="form-row">
+              <div class="form-group col-md-6 col-sm-3">
+                <label>A procura de:</label>
+                <select name="tipo" id="tipo" class="form-control">
+                  <option selected>O que procura?</option>
+                  <option> Quarto</option>
+                  <option>Apê</option>
+                  <option>Casa</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Bairro de interesse</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select name="bairro" class="form-control selectpicker" >
+                <option value=" " >Selecione o Bairro</option>
+                <option value="Alto do Açude"> Alto do Açude</option>
+                <option value="Aluísio Diógenes Pessoa"> Aluísio Diógenes Pessoa</option>
+                <option value="Bela Vista"> Bela Vista</option>
+                <option value="Chico Cajá"> Chico Cajá</option>
+                <option value="Domingos Gameleira"> Domingos Gameleira</option>
+                <option value="Frei Damião"> Frei Damião</option>
+                <option value="João Catingueira"> João Catingueira</option>
+                <option value="João XXIII"> João XXIII</option>
+                <option value="Paraíso"> Paraíso</option>
+                <option value="Riacho do Meio"> Riacho do Meio</option>	
+                <option value="São Benedito"> São Benedito</option>
+                <option value="São Geraldo"> São Geraldo</option>
+                <option value="São Judas Tadeu"> São Judas Tadeu</option>
+                <option value=" São Vicente de Paulo"> São Vicente de Paulo</option>
+                <option value=" Zeca Pedro"> Zeca Pedro</option>
+              </select>
+            </div>
+              </div>
+            </div>
+
+            <div class="form-group" class="slidecontainer">
+              <label >Valor do aluguel desejado</label>
+              <input name="valor_aluguel" type="range" min="1" max="1000" value="50" class="slider" id="myRange">
+
+            </div>
+            
+
+            <div class="form-row">
+              <div class="form-group col-md-6 col-sm-3">
+                <label>Nome </label>
+                <input name="nome" type="nome" class="form-control" id="nome" placeholder="Nome e sobrenome">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Telefone de Contato</label>
+                <input name="telefone" type="text" class="form-control" id="fone">
+              </div>
+              <div class="form-group col-md-2">
+                <label>idade</label>
+                <input name="Idade" type="text" class="form-control" id="idade">
+              </div>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>Tem interesse em quarto compartilhado?</label>
+            <label class="radio">SIM 
+              <input type="radio" checked="checked" name="quartomobilado" value="quartomobiladosim">
+              <span class="checkround"></span>
+            </label>
+            <label class="radio">NÃO
+              <input type="radio" name="quartomobilado" value="quartomobiladonao">
+              <span class="checkround"></span>
+            </label>
+
+        </div> <!--fim box quarto-mobilado-->
+
+            <div class="form-group">
+              <label>Descrição</label>
+              <textarea name="descricao" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+            </div>
+
+
+           
+              <div class="form-group ">
+                <label>Adicione uma foto</label>
+                <input type="file" name="file" class="form-control-file" id="imag">
+              </div>
+
+              <div class="form-group" style="text-align: center;">
+
+                <button class="btn btn-light" class="buttons-login">Anunciar!</button>
+              </div>
+           
+          </form>
+
+        </div><!--.tabs-content-->
+
+            
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+</div><!--.form-wrap-->
+
+
+  </div> <!--  <div class="container-box-form"> -->
+
+
+
+
+
+
+    <!------------------>
+<!--RODAPE-->
+<footer class="card-footer">
+  <div class="container">
+    <div class="row">
+      <section id="endereco" class="col-sm-3">
+        <div>Navegar</div> <br>
+        <li>
+            <a href="index2.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="anuncio.html">Vagas recentes</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="anuncioProcura2.html">Pessoas procurando</a>
+      </li>
+
+        <li class="nav-item">
+          <a href="Cadastrar.html">Anuncie aqui</a>
+      </li>
+
+        <li class="nav-item">
+          <a href="signlog.html">Login</a>
+        </li>
+
+        <hr class="d-block d-sm-none">
+      </section>
+
+      <section id="contato1" class="col-sm-3">
+        <div>
+          Redes Sociais:
+        </div> <br>
+        <!-- Add icon library -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+          <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            
+        <hr class="d-block d-sm-none">
+        <div id="contato2">
+          Contato:
+          <br>
+          +55 (88) 9 9635 1705
+        </div> <br>
+
+      </section>
+      <section id="sobre" class="col-sm-6 justify-content-center">
+        <div>Sobre</div> <br>
+        Ferramenta inteligente para ajudar você a encontrar o lugar perfeito. Plataforma mais simples e completa para quem está buscando ou oferecendo quartos para alugar ou moradias compartilhadas. Em poucos passos, você encontra o lugar perfeito para morar com seu colega de quarto ideal.
+        <hr class="d-block d-sm-none">
+      </section>
+    </div>
+    <div class="text-center"> &copy; Copyright ZeND 2019
+
+    </div>
+  </div> 
+</footer>
+
+<!--THE END RODAPE-->
+<!------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+  
+  
+  
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
+
+
+
+
+<script>
+  // With JQuery
+  $("#ex2").slider({});
+  
+  // Without JQuery
+  var slider = new Slider('#ex2', {});
+  
+  </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+    <script src="fo.js"></script>
+
+    <script type="text/javascript">
+      const signUpButton = document.getElementById('signUp');
+      const signInButton = document.getElementById('signIn');
+      const container = document.getElementById('container-login');
+    
+      signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+      });
+      signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+      });
+    </script>
+-->
+    </body>
+
+    </html>

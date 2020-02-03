@@ -21,6 +21,7 @@
       <link rel="stylesheet" type="text/css" href="../../../public/css/NavNew.css">
       <link rel="stylesheet" type="text/css" href="../../../public/css/style2.css">
       <link rel="stylesheet" type="text/css" href="../../../public/css/footer.css">
+
       <link rel="stylesheet" type="text/css" href="../../../public/css/formulario-anunciar.css">
 
 
@@ -35,7 +36,7 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <a href="#" class="navbar-brand ml-3"> 
-          <img class="img-navbar" src="../HouseMate/public/imgs/logos/logo01.png" style="width: 80px;" alt="">
+          <img class="img-navbar" src="../../../public/imgs/logos/logo01.png" style="width: 80px;" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,13 +47,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="../../../index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="anuncio2.html">Vagas recentes</a>
+              <a class="nav-link" href="../../../App/views/anuncio2.html">Vagas recentes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="anuncioProcura2.html">Pessoas procurando</a>
+              <a class="nav-link" href="../../../App/views/anuncioProcura2.html">Pessoas procurando</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#sobre">Sobre</a>
@@ -66,71 +67,22 @@
         </div>
   </nav>
 </header>
-
   <!-- FIM da Barra de navegação-->
   <!----------------------------->
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!---------------------------->
+<!-- inicio container-maior-->
 <div class="container-maior">
 
 
 <div class="container-box-dicas">
 
   <div id="anuncio-box" class="col-md-12 row">
-    <div class="col-md-5">
-      <img src="../HouseMate/Imgs/home.svg">
-      <h2>Dicas para anunciar</h2> 
+    <div class="col-md-4" style="margin-left: 100px;">
+      <h2 style="margin-bottom: 10px;">Dicas para anunciar</h2> 
+      <img src="../../../public/imgs/elemento5-1.png" style="width: 200px;">
     </div>
 
     <div class="col-md-6 col-sm-6"> 
@@ -212,14 +164,16 @@
             <div id="quarto-tab-content" class="active">
 
             <div class="container-box-form"> 
-              <form id="form-quarto" action="form_anunciar_quarto.php" method="POST">
+              <form id="form-quarto" enctype="multipart/form-data" action="../../models/cadastrar/form_anunciar_quarto.php" method="POST">
   
+                
+
                 <!-- Select Basic -->   
             <div class="form-group-form"> 
               <label class="col-md-4 control-label">Bairro</label>
                 <div class="col-md-4 selectContainer">
                 <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <span class="input-group-addon"></span>
                 <select name="bairro" class="form-control selectpicker" >
                   <option value=" " >Selecione o Bairro</option>
                   <option> Alto do Açude</option>
@@ -276,8 +230,7 @@
                         <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
                             <span class="input-group-addon">
-                            <i class="glyphi
-                            con glyphicon-pencil"></i></span>
+                            </span>
                             <textarea class="form-control" name="descricao" placeholder="Descreva o imóvel"></textarea>
                     </div>
                     </div>
@@ -292,7 +245,7 @@
                         <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input  name="nome" placeholder="Digite seu nome e sobrenome " class="form-control"  type="text">
+                            <input  name="nomeEsobre" placeholder="Digite seu nome e sobrenome " class="form-control"  type="text">
                             </div>
                         </div>
                         </div>
@@ -308,13 +261,25 @@
                             </div>
                             </div>
                         </div>
+<br>
+
+                        <div class="form-group-form">
+                          <label class="col-md-4 control-label">Selecione a imagem para uplod</label>  
+                          <div class="col-md-4 inputGroupContainer">
+                           
+                              <input  type="text" name="namenome" placeholder="Nome">
+                              Select Image File to Upload:
+                              <input type="file" name="file">
+       
+                              
+                              </div>
+                          </div>
+
+
             
                     <button class="btn cust-btn" class="buttons-login">Avançar</button>
             
-                    <!--BOTAO -->            
-                <div class="form-group-form">
-                    <button  class="btn cust-btn " type="button" id="btn-registration" style="font-size: 20px;letter-spacing: 1px;">Anunciar</button>
-                </div>
+              
 
 
             
@@ -351,8 +316,12 @@
         <div id="ape-tab-content" class="active">
 
             <div class="container-box-form"> 
-              <form id="form-ape" action="form_anunciar_ape.php" method="POST">
+              <form id="form-ape" action="../../models/cadastrar/form_anunciar_ape.php" method="POST" enctype="multipart/form-data">
               
+
+                <div class="box-box">
+
+
                 <!-- Select Basic -->   
             <div class="form-group-form"> 
               <label class="col-md-4 control-label">Bairro</label>
@@ -361,20 +330,20 @@
                     <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
                 <select name="bairro" class="form-control selectpicker" >
                   <option value=" " >Selecione o Bairro</option>
-                  <option> Alto do Açude</option>
-                  <option> Aluísio Diógenes Pessoa</option>
+                  <option> Alto do Acude</option>
+                  <option> Aluísio Diogenes Pessoa</option>
                   <option> Bela Vista</option>
-                  <option> Chico Cajá</option>
+                  <option> Chico Caja</option>
                   <option> Domingos Gameleira</option>
-                  <option> Frei Damião</option>
+                  <option> Frei Damiao</option>
                   <option> João Catingueira</option>
-                  <option> João XXIII</option>
-                  <option> Paraíso</option>
+                  <option> Joao XXIII</option>
+                  <option> Paraiso</option>
                   <option> Riacho do Meio</option>	
-                  <option> São Benedito</option>
-                  <option> São Geraldo</option>
-                  <option> São Judas Tadeu</option>
-                  <option> São Vicente de Paulo</option>
+                  <option> Sao Benedito</option>
+                  <option> Sao Geraldo</option>
+                  <option> Sao Judas Tadeu</option>
+                  <option> Sao Vicente de Paulo</option>
                   <option> Zeca Pedro</option>
                 </select>
               </div>
@@ -392,6 +361,8 @@
                   </div>
                 </div>
               </div>
+
+            </div> <!--id-->
           
             
             
@@ -432,6 +403,19 @@
                             </div>
                             </div>
                         </div>
+
+                        <div class="form-group-form">
+                          <label class="col-md-4 control-label">Selecione a imagem para uplod</label>  
+                          <div class="col-md-4 inputGroupContainer">
+                           
+                              <input  type="text" name="namenome" placeholder="Nome">
+                              Select Image File to Upload:
+                              <input type="file" name="file">
+       
+                              
+                              </div>
+                          </div>
+
             
                     <button class="btn cust-btn" class="buttons-login">Avançar</button>
   
@@ -465,7 +449,7 @@
 <div id="casa-tab-content" class="active">
 
   <div class="container-box-form"> 
-    <form id="form-casa" action="form_anunciar_casa.php" method="POST">
+    <form id="form-casa" action="../../models/cadastrar/form_anunciar_casa.php" method="POST">
     
       <!-- Select Basic -->   
   <div class="form-group-form"> 
@@ -546,6 +530,18 @@
                   </div>
                   </div>
               </div>
+
+              <div class="form-group-form">
+                <label class="col-md-4 control-label">Selecione a imagem para uplod</label>  
+                <div class="col-md-4 inputGroupContainer">
+                 
+                    <input  type="text" name="namenome" placeholder="Nome">
+                    Select Image File to Upload:
+                    <input type="file" name="file">
+
+                    
+                    </div>
+                </div>
   
           <button class="btn cust-btn" class="buttons-login">Avançar</button>
 
@@ -569,10 +565,12 @@
 
 
 
+  </div> <!--container-maior-->
+<!----------------------------->
+<!--FIM container-maior-->
 
 
-
-    <!------------------>
+<!------------------>
 <!--RODAPE-->
 <footer class="card-footer">
   <div class="container">
@@ -580,23 +578,23 @@
       <section id="endereco" class="col-sm-3">
         <div>Navegar</div> <br>
         <li>
-            <a href="index2.html">Home</a>
+            <a href="../../../index.php">Home</a>
         </li>
 
         <li class="nav-item">
-          <a href="anuncio.html">Vagas recentes</a>
+          <a href="../../../App/views/anuncio2.html">Vagas recentes</a>
         </li>
 
         <li class="nav-item">
-          <a href="anuncioProcura2.html">Pessoas procurando</a>
+          <a href="../../../App/views/anuncioProcura2.html">Pessoas procurando</a>
       </li>
 
         <li class="nav-item">
-          <a href="Cadastrar.html">Anuncie aqui</a>
+          <a href="../../../App/views/Cadastrar.html">Anuncie aqui</a>
       </li>
 
         <li class="nav-item">
-          <a href="signlog.html">Login</a>
+          <a href="../../../signlog.html">Login</a>
         </li>
 
         <hr class="d-block d-sm-none">
@@ -632,8 +630,7 @@
 
     </div>
   </div> 
-</footer>
-
+</footer> <!--RODAPE-->
 <!--THE END RODAPE-->
 <!------------------->
 
@@ -649,206 +646,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="fo.js"></script>
+    <script src="../../../public/js/form_anunciar.js"></script>
 
     <script type="text/javascript">
       const signUpButton = document.getElementById('signUp');

@@ -55,7 +55,7 @@
 
             <form class="form-inline my-2 my-lg-0">
               
-              <button class="btn menu-right-btn-anuncie border" type="submit" value ="anuncio" formaction="./App/models/cadastrar/signlog.html">Anuncie Aqui</button>
+              <button class="btn menu-right-btn-anuncie border" type="submit" value ="anuncio" formaction="./App/models/cadastrar/signlog.html">Anuncie um lugar</button>
               <button class="btn menu-right-btn border" type="submit" value ="login" formaction="./App/models/cadastrar/signlog.html">Login</button>
             </form>
           </div>
@@ -68,57 +68,48 @@
 
 
 <!-- Banner inicial-->
-<div id="main-banner">
+<div id="main-banner"> <!-- Banner maior de todos-->
   <div class="container-banner"> 
-<div class="col-md-12 col-sm-4">
-  <div id="logo-banner">
-    <img src="public/imgs/logos/logo01.png" style="width: 200px;" alt="logo-HouseMate"> 
-  </div>
-    <div id="banner-search">
-      <h1 class="text-inic">À procura de um apê pra dividir em Pau dos Ferros?</h1>
+    <!--
+    <div class="col-md-6 col-sm-12">
+        <img src="public/imgs/logos/logo01.png" class="img-fluid" alt="logo-HouseMate"> 
+      </div>
+-->
+      
+      <div id="banner-search"> <!--banner de busca-->
+        <h3 class="text-inic">À procura de um lugar pra dividir em Pau dos Ferros?</h3>
+        
+        <div class="div_formulario"> <!--Div formulario-->
+          <form class="form-inline" action="App/models/buscar/busca.php" method="post">
+            <select class="form-control mb-2 mr-sm-2" name="seletorform">
+              <option name=" " >O que deseja buscar?</option>
+              <option name="quarto"> Quarto</option>
+              <option name="ape"> Apê</option>
+              <option name="casa"> Casa</option>
+          </select>
 
- 
-          <div class="input-group mb-6">
-            <form action="busca.php" method="post">
-
-              <div class="input-group-append">
-                <input class="form-control" type="text" name="bairro" placeholder="Digite o bairro"><br><br>
-
-                <input  id="button-addon2" class="btn btn-outline-secondary" type="submit" name="Find" value="Procurar">
-              </div>
-
-              <div class="input-group">
-
-                <select name="seletor-form" class="form-control selectpicker" >
-                  <option value=" " >O que deseja buscar?</option>
-                  <option> Quarto</option>
-                  <option> Apê</option>
-                  <option> Casa</option>
-                </select>
-              </div>
-
-
+            <input type="text" class="form-control mb-2 mr-sm-2" name="bairro" placeholder="Digite o bairro">
+            <input  id="button-addon2" class="btn btn-light mb-2" type="submit" name="Find" value="Procurar">
+          </form>
+        </div> <!--Div formulario-->
+    
+          <h4 id="text-idd">Não encontrou o que procurava?</h4>
+    
+          <div class="div_f" style="left: 50%; position: absolute; transform: translateX(-50%);"> <!--Div formulario-->
+            <form class="form-inline" action="App/views/form_procurando.html" form_procurando" method="post">
+            <p class="mb-2 mr-sm-1">Anuncie a sua busca</p>
+            <input  id="button-addon2" class="btn btn-primary" type="submit" name="procura" value="aqui">
             </form>
-          </div>
+          
+        </div> <!--Div -->
+   
+     
+    </div>
 
-      <span>
-            <h4 id="text-idd">Encontre pessoas em comum e evite dores de cabeça</h4>		
-        <br>
-          </span>	
-      <p>
-          Você tem um quarto?
-      </p>
-        <div class="botAnuc">
-      <div class="input-group-append">
-        <a class="btn btn-light btn-lg" href="Cadastrar.html" role="button">Anuncie aqui</a> <br> <br> 
-      </div>
-    </div>
-      </div>
-      </form>
-    </div>
-  </div>
 
   </div>
+  </div>
+
 
 
 
@@ -296,7 +287,9 @@
 
 <br>
       <div class="col-md-6 col-sm-12" id="anchor-details">
-        <a href="./App/views/anuncio2.html" class="btn btn-light"><strong>Mais vagas </strong> </a> 
+      <form action="App/models/buscar/busca.php" method="post">
+      <input  id="button-addon2" class="btn btn-light" type="submit" name="Finde" value="Mais Vagas">
+      </form>
       </div> <!--fim col-->
       <br>
 
@@ -325,7 +318,7 @@
         <p>
           Encontre pessoas buscando casa ou quarto para alugar na sua área.
         </p>
-        <p><a href="Cadastrar.html" class="btn btn-primary btn-sm">Anuncie seu quarto</a></p>
+        <p><a href="App/models/cadastrar/signlog.html" class="btn btn-primary btn-sm">Anuncie seu lugar</a></p>
       </div>
     </div>
     <div class="col-md-6">
@@ -335,7 +328,7 @@
         <p>
           Encontre o quarto perfeito para você, contate o dono e marque uma visita hoje mesmo!
         </p>
-        <p><a href="Cadastrar.html" class="btn btn-success btn-sm">Encontre um quarto</a></p>
+        <p><a href="App/models/cadastrar/signlog.html" class="btn btn-success btn-sm">Encontre um lugar</a></p>
       </div>
     </div>
   </div>
@@ -401,7 +394,7 @@
       </div>
       <br>
       <div class="col-md-6 col-sm-12" id="anchor-details">
-        <a href="./App/views/anuncioProcura2.html" class="btn btn-light"><strong>Encontre mais pessoas </strong> </a> 
+        <a href="App/models/buscar/busca2.php" class="btn btn-light"><strong>Encontre mais pessoas </strong> </a> 
       </div> <!--fim col-->
   </div>
 </section>
@@ -437,19 +430,19 @@
 
       <div class="row justify-content-center mb-5">
           <div class="col-sm-12 col-md-10 col-lg-8">
-              <form>
+            <form action="App/models/cadastrar/contatoinfo.php" method="post">
 
                   <div class="form-row">
 
                       <!-- <label for="inputNome"> Digite seu nome </label> -->
                       <div class="form-group col-sm-5">
-                          <input type="text" class="form-control" id="inputNome" placeholder="Nome">
+                          <input name="name" type="text" class="form-control" id="inputNome" placeholder="Nome">
                       </div>
                       <div class="form-group col-sm-5">
-                          <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
+                          <input name="sobrename" type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
                       </div>
                       <div class="form-group col-sm-2">
-                          <select id="inputSexo" class="form-control">
+                          <select name="sexo" id="inputSexo" class="form-control">
                               <option selected>Feminino</option>
                               <option>Masculino</option>
                               <option>Prefiro não identificar</option>
@@ -461,7 +454,7 @@
                   <div class="form-row">
 
                       <div class="form-group col-sm-12">
-                          <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                          <input name="email" type="text" class="form-control" id="inputEmail" placeholder="Email">
                       </div>
 
                   </div>
@@ -470,7 +463,7 @@
                   <div class="form-row">
 
                       <div class="form-group col-sm-12">
-                          <input type="text" class="form-control" id="inputDuvida" placeholder="Descreva sua dúvida">
+                          <input name="message" type="text" class="form-control" id="inputDuvida" placeholder="Descreva sua dúvida">
                       </div>
 
                   </div>
@@ -515,7 +508,7 @@
       <section id="endereco" class="col-sm-3">
         <div>Navegar</div> <br>
         <li>
-            <a href="index2.html">Home</a>
+            <a href="index.php">Home</a>
         </li>
 
         <li class="nav-item">

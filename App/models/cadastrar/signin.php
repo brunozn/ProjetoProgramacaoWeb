@@ -24,7 +24,7 @@ $row = mysqli_fetch_array($sql);
  
 if($row["total"] > 0){
     
-         include("menu.html");     
+         include("../../views/menu.html");     
 
 }
 else{

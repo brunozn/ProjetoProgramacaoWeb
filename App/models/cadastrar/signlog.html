@@ -25,6 +25,58 @@
 	<script src="node_modules/popper.js/dist/umd/popper.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
+
+
+<script type="text/javascript">
+function validate(){
+ var error="";
+ var name = document.getElementById( "name_of_user" );
+ if( name.value == "" ){
+  error = " Digite seu nome ";
+  document.getElementById( "error_para" ).innerHTML = error;
+  return false;
+ }
+
+ var email = document.getElementById( "email_of_user" );
+ if( email.value == "" || email.value.indexOf( "@" ) == -1 )
+ {
+  error = " You Have To Write Valid Email Address. ";
+  document.getElementById( "error_para" ).innerHTML = error;
+  return false;
+ }
+
+ var password = document.getElementById( "password_of_user" );
+ if( password.value == "" || password.value >= 8 )
+ {
+  error = " Password Must Be More Than Or Equal To 8 Digits. ";
+  document.getElementById( "error_para" ).innerHTML = error;
+  return false;
+ }
+
+ else
+ {
+  return true;
+ }
+}
+
+</script>
+<!---
+</head>
+<body>
+		
+<form method="POST" action="store_detail.php" onsubmit="return validate();">
+ <input type="text" name="nome" id="name_of_user">
+ <input type="text" name="idade" id="email_of_user">
+ <input type="password" name="profissao" id="password_of_user">
+ <input type="submit" name="submit_row" value="Submit">
+</form>
+
+<p id="error_para" ></p>
+-->
+
+
+	
+
 </head>
 <body>
 
@@ -34,7 +86,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <a href="#" class="navbar-brand ml-3"> 
-            <img class="img-navbar" src="../HouseMate/public/imgs/logos/logo01.png" style="width: 80px;" alt="">
+            <img class="img-navbar" src="../../../public/imgs/logos/logo01.png" style="width: 80px;" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +96,7 @@
           <div class="collapse navbar-collapse"></div>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
+				<li class="nav-item">
 				  <a class="nav-link" href="../../../index.php">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
@@ -76,11 +128,13 @@
 
 <form id="form-login" action="signup.php" method="POST">
 	<h1 id="text-h1">Criar Conta</h1>
+	<!--
 	<div class="social-container">
 		<a id="text-a" href="#" class="social"><i class="fa fa-facebook"></i></a>
 		<a id="text-a" href="#" class="social"><i class="fa fa-linkedin"></i></a>
 	</div>
-	<span id="span-span">ou use seu email para se cadastrar</span>
+-->
+	<span id="span-span">Divulgue um lugar ou anúncie sua procura</span>
 	<input id="input-login" type="text" name="name" placeholder="Nome">
 	<select id="input-login" name="genero" style="color: #7f8c8d;">
 		<option selected>Feminino</option>
@@ -96,11 +150,8 @@
 <div class="form-container sign-in-container">
 	<form id="form-login" action="signin.php" method="POST">
 		<h1>Entrar</h1>
-		<div class="social-container">
-		<a id="text-a" href="#" class="social"><i class="fa fa-facebook"></i></a>
-		<a id="text-a" href="#" class="social"><i class="fa fa-linkedin"></i></a>
-	</div>
-	<span id="span-span">ou use sua conta</span>
+
+	<span id="span-span">Entre e acompanhe seus anúncios</span>
 	<input id="input-login" type="email" name="email" placeholder="Email">
 	<input id="input-login" type="password" name="password" placeholder="Senha">
 	<a id="text-a" href="#">Esqueceu sua senha?</a>

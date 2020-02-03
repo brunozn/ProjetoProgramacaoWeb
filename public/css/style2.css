@@ -64,14 +64,14 @@ body {
 }
 
 .text-inic{
-  color: white;
-    font-size: 1.6rem;
-    margin-bottom: 30px;
+  color: blueviolet;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 
 #text-idd{
-    margin-bottom: 30px;
+    margin-bottom: 25px;
       font-size: 1.2rem;
 }
 
@@ -80,22 +80,12 @@ body {
   margin-top: 30px;
 }
 
-#banner-search p{
-  color: #ffffff;
+#banner-search h4{
+  color: #108d6f;
 }
 
-#logo-banner{
-  margin-top: 10px;
-}
-#logo-banner img{
-  position: relative;
-  margin-left: 250px;
-  margin-right:auto;
-  font-size: 1.2rem;
-  max-width:100%;
-  height:auto;
-  
-}
+
+
 
 
 .input-group-append .btn, .input-group-prepend .btn {

@@ -16,7 +16,7 @@ try {
 }
 
 // File upload path
-$alvoDiretorio = "uploads/";
+$alvoDiretorio = "../../core/uploads/anuncio/";
 $NamedoArquivo = basename($_FILES["file"]["name"]);
 $CaminhoAlvoDoDiretorio = $alvoDiretorio . $NamedoArquivo;
 $fileType = pathinfo($CaminhoAlvoDoDiretorio,PATHINFO_EXTENSION);
@@ -58,6 +58,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
       
         $stmt->execute(['bairro' => $bairro,'nome' => $nome, 'telefone' => $telefone, 'valor_aluguel' => $valor_aluguel , 'descricao' => $descricao, 'file_name' => $newfilename]);
         $statusMsg = "Anuncio cadastrado com sucesso";
+        echo 'teste';
+        echo $statusMsg;
       }
   }
   }else{
