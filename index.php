@@ -77,7 +77,8 @@
 -->
       
       <div id="banner-search"> <!--banner de busca-->
-        <h3 class="text-inic">À procura de um lugar pra dividir em Pau dos Ferros?</h3>
+        <h3 class="text-inic" style="color: white;
+    font-size: 1.4rem;">À procura de um lugar pra dividir em Pau dos Ferros?</h3>
         
         <div class="div_formulario"> <!--Div formulario-->
           <form class="form-inline" action="App/models/buscar/busca.php" method="post">
@@ -93,11 +94,11 @@
           </form>
         </div> <!--Div formulario-->
     
-          <h4 id="text-idd">Não encontrou o que procurava?</h4>
+          <h4 style=" color: #ffffff;" id="text-idd">Não encontrou o que procurava?</h4>
     
           <div class="div_f" style="left: 50%; position: absolute; transform: translateX(-50%);"> <!--Div formulario-->
             <form class="form-inline" action="App/views/form_procurando.html" form_procurando" method="post">
-            <p class="mb-2 mr-sm-1">Anuncie a sua busca</p>
+            <p style="color: white;" class="mb-2 mr-sm-1">Anuncie a sua busca</p>
             <input  id="button-addon2" class="btn btn-primary" type="submit" name="procura" value="aqui">
             </form>
           

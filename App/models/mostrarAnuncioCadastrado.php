@@ -1,3 +1,4 @@
+
 <DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -18,9 +19,10 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="../../../public/css/menu.css">
-  <link rel="stylesheet" type="text/css" href="../../../public/css/NavNew.css">
-  <link rel="stylesheet" type="text/css" href="../../../public/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="../../public/css/menu.css">
+  <link rel="stylesheet" type="text/css" href="../../public/css/NavNew.css">
+  <link rel="stylesheet" type="text/css" href="../../public/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="../../public/css/style2.css">
   
 </head>
 <body>
@@ -30,7 +32,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <a href="#" class="navbar-brand ml-3"> 
-            <img class="img-navbar" src="../../../public/imgs/logos/logo01.png" style="width: 80px;" alt="">
+            <img class="img-navbar" src="../../public/imgs/logos/logo01.png" style="width: 80px;" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,13 +43,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Procurar <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="buscar/busca2.php">Procurar</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Mensagens</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Meus anúncios </a>
+                <a class="nav-link" href="#">Meus anúncios <span class="sr-only">(current)</span> </a>
               </li>
 
               <li class="nav-item">
@@ -61,7 +63,7 @@
             <div>
                 <li class="dropdown navbar-c-items open">
                     <a href="" class="dropdown-toggle waves-effect waves-light profile" data-toggle="dropdown" aria-expanded="true">
-                        <img src="../../../public/imgs/avatar.png" alt="user-img">
+                        <img src="../../public/imgs/avatar.png" alt="user-img">
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list">
                         <li class="text-center">
@@ -83,61 +85,94 @@
 
 
 
-<div class="container-box" style="padding-top: 100px;">
+<div class="container-box" style="padding-top: 150px;">
 
     <div class="container-box2">
         <div class="minha-conta">
-            <h2  class="text-center"> MINHA CONTA</h2>
+            <h2  class="text-center"> 
+              <?php
+                 echo $statusMsg;
+              ?>
+            </h2>
         </div>
       
 
 
 
         <div class="row">
-            <div class="col-xs-12 col-lg-3 col-md-4">
-                <div class="text-center">
-                    <!--<div class="member-card"> 
-                        <div class="thumb-xl member-thumb m-b-10 center-block">  -->
-                            <img src="../../../public/imgs/logos/logo05.png" style="width: 200px; height: 200px;" alt="logo">
-                       <!-- </div> 
-</div>--> 
-</div>
-<br>
-</div> 
-<div class="col-xs-12 col-md-8 col-lg-9" style="margin-bottom: 50px;">
-    <div class="row">
-        <div class="col-md-12 col-sm-12 col-lg-9">
-            <h4>Olá, você ainda não criou seu anúncio no House Mate!</h4> 
-            <ul>
-                <li>Você não receberá contatos de outras pessoas sem criar um anúncio.</li> 
-                <li>Você precisa anunciar um quarto ou criar um perfil de busca de quarto para contatar pessoas pelo House Mate</li> 
-                <li>Inclua uma foto em seu anúncio, para receber ainda mais contatos.</li>
-            </ul> 
-            <div class="row" style="margin-right: 20px;">
+            
 
-            <div class="m-t-30 text-center">
-              <h4 class="mr-2"> Anúncie um lugar ou <br></h4>
-                <a href="../../views/form_anunciar.html" class="btn btn-danger waves-effect waves-light">Anúncio</a>
-            </div>
 
-            <div class="m-t-30 text-center" class="col-xs-12 col-lg-3 col-md-6"> 
-              <h4> Anúncie sua procura</h4>
-                <a href="../../views/form_anunciar.html" class="btn btn-success waves-effect waves-light">Anúncio</a>
-            </div>
-             <hr>
+
             </div> 
-          
-                            </div>
-                        </div>
-                    </div>
-
-
-       
-       
+      
 
         
     </div>
 </div>
+
+
+<?php
+
+$id = "";
+$nome = "";
+$bairro = "";
+$telefone = "";
+$quartomobilado = "";
+$descricao = "";
+
+
+$servername ="localhost";
+$username = "root";
+$password = "";
+$dbname = "db-housemate";
+
+        // conexão para o banco mysql
+        try {
+            $dsn = "mysql:host=" . $servername . ";dbname=" . $dbname;
+            $pdoConnect = new PDO($dsn, $username, $password);
+          } catch(PDOException $e) {
+            echo "Falha na conexão " . $e->getMessage();
+    }
+
+
+    $pdoQuery = "SELECT * FROM anuncio_procurando";
+    //echo $pdoQuery;
+    
+    $pdoResult = $pdoConnect->prepare($pdoQuery);
+
+    $pdoExec = $pdoResult->execute();
+
+
+    while ($linha = $pdoResult->fetch(PDO::FETCH_ASSOC)) {
+        // aqui eu mostro os valores de minha consulta
+        //include('busca.html');
+        
+        echo '<div class="col-md-3 col-sm-12">';
+        echo '<div class="card-content">';
+        echo    '<div class="card-img">';
+        echo '   <img id="img-perfil-pesson" class="card-img-right flex-auto d-none d-lg-block" alt="#" src="../core/uploads/pessoas/' . $linha["file_name"] . '" style="width: 100px; height: 100px;">';
+
+        echo        '<span><h4>' .$linha["tipo"].'</h4></span>';
+        echo    '</div>';
+        echo    '<div class="card-desc">';
+        echo        '<h3>' .$linha["nome"]. '</h3>';
+        echo        '<a>' .$linha["telefone"]. '</a>';
+        echo '<br>';
+        echo        '<a> Posso pagar até: R$' .$linha["valor_aluguel"]. ',00 </a>';
+        echo        '<p>' . $linha["descricao"] . '.</p>';
+        echo            '<a href="#" class="btn btn-danger">Excluir</a>'; 
+        echo            '<a href="#" class="btn btn-warning">Editar</a>';     
+        echo    '</div>';
+        echo '</div>';
+    echo '</div>';
+
+    }
+              
+        
+
+?>
+
 
 
 
@@ -218,4 +253,3 @@
 
 </body>
 </html>
- 

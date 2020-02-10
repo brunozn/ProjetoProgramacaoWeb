@@ -18,15 +18,9 @@
     
     
 
-      <link rel="stylesheet" type="text/css" href="../../../public/css/NavNew.css">
-      <link rel="stylesheet" type="text/css" href="../../../public/css/style2.css">
-      <link rel="stylesheet" type="text/css" href="../../../public/css/footer.css">
-      <link rel="stylesheet" type="text/css" href="../../../public/css/formulario-anunciar.css">
-
       <link rel="stylesheet" type="text/css" href="../../public/css/NavNew.css">
       <link rel="stylesheet" type="text/css" href="../../public/css/style2.css">
       <link rel="stylesheet" type="text/css" href="../../public/css/footer.css">
-      <link rel="stylesheet" type="text/css" href="../../public/css/formulario-anunciar.css">
 
       <link rel="stylesheet" type="text/css" href="../../../public/css/formulario-anunciar.css">
 
@@ -42,7 +36,7 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <a href="#" class="navbar-brand ml-3"> 
-          <img class="img-navbar" src="../../public/imgs/logos/logo01.png" style="width: 80px;" alt="">
+          <img class="img-navbar" src="../../../public/imgs/logos/logo01.png" style="width: 80px;" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,7 +82,7 @@
   <div id="anuncio-box" class="col-md-12 row">
     <div class="col-md-4" style="margin-left: 100px;">
       <h2 style="margin-bottom: 10px;">Dicas para anunciar</h2> 
-      <img src="../../public/imgs/elemento5-1.png" style="width: 200px;">
+      <img src="../../../public/imgs/elemento5-1.png" style="width: 200px;">
     </div>
 
     <div class="col-md-6 col-sm-6"> 
@@ -414,7 +408,7 @@
                           <label class="col-md-4 control-label">Selecione a imagem para uplod</label>  
                           <div class="col-md-4 inputGroupContainer">
                            
-                              <!--<input  type="text" name="namenome" placeholder="Nome"> -->
+                              <input  type="text" name="namenome" placeholder="Nome">
                               Select Image File to Upload:
                               <input type="file" name="file">
        
@@ -652,22 +646,7 @@
 
 
 
-    <script>
-    jQuery(document).ready(function($) {
-	tab = $('.tabs h3 a');
-
-	tab.on('click', function(event) {
-		event.preventDefault();
-		tab.removeClass('active');
-		$(this).addClass('active');
-
-		tab_content = $(this).attr('href');
-		$('div[id$="tab-content"]').removeClass('active');
-		$(tab_content).addClass('active');
-	});
-  
-});
-    </script>
+    <script src="../../../public/js/form_anunciar.js"></script>
 
     <script type="text/javascript">
       const signUpButton = document.getElementById('signUp');
